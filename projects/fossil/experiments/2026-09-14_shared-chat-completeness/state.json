@@ -1,0 +1,20 @@
+{
+  "schema_version": "lab.state.v1",
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "status": "ready",
+  "updated_at": "2026-09-14T12:45:00Z",
+  "current_focus": "Reproduce the long shared-chat completeness defect locally against the exact pinned FOSSIL revision before changing implementation.",
+  "last_checkpoint": {
+    "id": "cp-0001",
+    "path": "checkpoints/0001-initial.md",
+    "summary": "Experiment created; local reproduction is the next action."
+  },
+  "next_action": "On the local machine, fetch the supplied ChatGPT share exhaustively, preserve the exact retrieved representation, record message/node accounting and completeness evidence, then run the current FOSSIL ingestion path without patching it first.",
+  "blockers": [
+    "Cloud environment cannot fetch the ChatGPT share directly; acquisition must be executed locally."
+  ],
+  "important_findings": [
+    "Owner observed that long shared chats can be only partially ingested until a local agent is explicitly told to inspect the whole conversation.",
+    "fossil-core issue #247 now tracks the requirement that complete ingestion must be proven mechanically rather than inferred from a successful first fetch."
+  ]
+}
