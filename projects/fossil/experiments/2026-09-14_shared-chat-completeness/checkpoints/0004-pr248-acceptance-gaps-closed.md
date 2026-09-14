@@ -47,4 +47,18 @@ This closes the three bounded acceptance gaps: source receipt SHA-256/byte_count
 
 The mounted Windows filesystem produced the known hardlink `errno 1` during the first probe attempt. The same code and bytes were rerun on WSL ext4 without an upstream workaround, and all exact-byte assertions passed.
 
-Hosted exact-head checks and independent review are still pending. No merge, production change, provider-policy change, or acceptance weakening occurred.
+## Hosted exact-head evidence
+
+All hosted checks passed on exact head `a73ae7c00c6e7b4c61a7fede8639727f10a08c23`, with the PR still draft/open and unmerged:
+
+- DKG contract tests: run `34876757272`
+- architecture-boundaries, dependency integrity, pyproject consistency, vulnerability scan: run `34876757275`
+- promotion: run `34876757274`
+- lifecycle: run `34876757281`
+- durable store: run `34876757322`
+- projection lifecycle: run `34876757364`
+- engineering contracts: run `34876757337`
+- PackAccess: run `34876757389`
+- dedicated shared-chat capture mutation assurance: run `34876757413` (4m04s, pass)
+
+Independent review found no remaining acceptance-gap defect in the changed diff. No merge, production change, provider-policy change, or acceptance weakening occurred.

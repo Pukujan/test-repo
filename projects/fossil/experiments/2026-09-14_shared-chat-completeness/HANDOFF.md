@@ -11,7 +11,7 @@ Can current FOSSIL capture the entire long shared ChatGPT conversation, prove co
 
 ## Current focus
 
-Validate hosted PR #248 acceptance-gap fixes and keep semantic downstream checks blocked until provider completeness is available.
+Hold for independent human acceptance of hosted-green PR #248 while keeping semantic downstream checks blocked until provider completeness is available.
 
 ## Last durable checkpoint
 
@@ -19,7 +19,7 @@ Validate hosted PR #248 acceptance-gap fixes and keep semantic downstream checks
 
 ## Exact next action
 
-Await exact-head hosted checks and review for PR #248; resume semantic query/lineage/rebuild only after a complete capture can be obtained or a provider continuation can be traversed.
+Human review and acceptance decision for draft PR #248; do not merge automatically. Resume semantic query/lineage/rebuild only after a complete capture can be obtained or a provider continuation can be traversed.
 
 ## Blockers
 
@@ -40,6 +40,7 @@ Await exact-head hosted checks and review for PR #248; resume semantic query/lin
 - Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result.
 - Against PR #248 exact head a73ae7c00c6e7b4c61a7fede8639727f10a08c23, the exact Run 2 bytes were retained as art_9f9c4789c123938d7163a74ffe11cec4 with a bound SHA-256/byte_count receipt, then complete-conversation promotion was refused because /continue remained unresolved.
 - The dedicated shared-chat mutation lane generated 563 mutants: 480 killed, 83 reviewed survivors, zero no-tests, zero timeouts, score 85.26%, and passed its explicit 84%/90-survivor/zero-no-tests gate.
+- All hosted exact-head checks passed on a73ae7c00c6e7b4c61a7fede8639727f10a08c23, including dedicated mutation run 34876757413; PR #248 remains draft/open/unmerged for human acceptance.
 
 ## Resume protocol
 
