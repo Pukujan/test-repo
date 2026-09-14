@@ -1,0 +1,7 @@
+{
+  "schema_version": "lab.project.v1",
+  "id": "fossil",
+  "name": "FOSSIL",
+  "upstream_repository": "https://github.com/Pukujan/fossil-core",
+  "purpose": "Empirical product, ingestion, durability, retrieval, portability, and recovery experiments for FOSSIL."
+}
