@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/lab/run-v1.schema.json",
+  "title": "Lab Run v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "experiment_id", "status", "upstream_revision", "command", "started_at"],
+  "properties": {
+    "schema_version": {"const": "lab.run.v1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["running", "pass", "fail", "blocked"]},
+    "upstream_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "command": {"type": "string", "minLength": 1},
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": ["string", "null"], "format": "date-time"},
+    "environment": {"type": "object"},
+    "outputs": {"type": "array"},
+    "notes": {"type": "string"}
+  }
+}
