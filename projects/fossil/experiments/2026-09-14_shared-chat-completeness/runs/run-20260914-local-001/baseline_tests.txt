@@ -1,0 +1,16 @@
+.........................F..............                                 [100%]
+=================================== FAILURES ===================================
+__________ test_source_snapshot_validation_enforces_date_time_formats __________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_source_snapshot_validatio0')
+
+    def test_source_snapshot_validation_enforces_date_time_formats(tmp_path: Path) -> None:
+        store = source_store(tmp_path)
+
+>       with pytest.raises(ValidationError):
+E       Failed: DID NOT RAISE ValidationError
+
+tests/test_source_citation_properties.py:337: Failed
+=========================== short test summary info ============================
+FAILED tests/test_source_citation_properties.py::test_source_snapshot_validation_enforces_date_time_formats
+1 failed, 39 passed in 43.61s

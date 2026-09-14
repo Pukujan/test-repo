@@ -1,0 +1,29 @@
+{
+  "schema_version": "lab.fossil-ingest-probe.v1",
+  "result": "accepted_without_completeness_gate",
+  "source": {
+    "path": "runs/run-20260914-local-001/artifacts/source.response",
+    "sha256": "a07c069b6a23678bdf989f22225c031c50deecd11c2ae1f7cf938100bede39e5",
+    "bytes": 1430356,
+    "status_presented_to_current_path": "verbatim",
+    "capture_completeness_known_to_current_path": false
+  },
+  "durable_outputs": {
+    "artifact_count": 1,
+    "source_snapshot_count": 1,
+    "citation_count": 1,
+    "conversation_envelope_count": 1,
+    "event_count": 1,
+    "lineage_count": 0,
+    "claim_count": 0,
+    "relation_count": 0
+  },
+  "refs": {
+    "snapshot_id": "snap_d73725c87b4a4e954d1ba7fd",
+    "citation_id": "cite_662de0dd52efb37c07a8b07f",
+    "conversation_id": "conv_live_share_probe_20260914",
+    "event_id": "evt_e136aa3c9015f69074462f930a25d7fc",
+    "artifact_id": "art_a07c069b6a23678bdf989f22225c031c"
+  },
+  "finding": "The current ConversationStore/EventStore path accepts a manually bounded verbatim subset and emits durable artifacts, snapshot, citation, envelope, and event, but has no shared-chat completeness field/gate and emits no semantic lineage, claims, or relations."
+}

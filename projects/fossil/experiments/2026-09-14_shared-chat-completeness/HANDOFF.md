@@ -3,7 +3,7 @@
 > Generated from `experiment.json` + `state.json`. Do not edit directly.
 
 **Experiment:** `fossil-2026-09-14-shared-chat-completeness`  
-**Status:** `ready`
+**Status:** `blocked`
 
 ## Question
 
@@ -11,24 +11,31 @@ Can current FOSSIL capture the entire long shared ChatGPT conversation, prove co
 
 ## Current focus
 
-Reproduce the long shared-chat completeness defect locally against the exact pinned FOSSIL revision before changing implementation.
+Preserve the local public-share capture, prove exposed-node accounting, and record the current FOSSIL baseline before any implementation change.
 
 ## Last durable checkpoint
 
-`checkpoints/0001-initial.md` — Experiment created; local reproduction is the next action.
+`checkpoints/0002-local-capture-and-baseline.md` — Local capture and exposed graph accounting completed; overall completeness remains incomplete because the exposed continuation URL is blocked.
 
 ## Exact next action
 
-On the local machine, fetch the supplied ChatGPT share exhaustively, preserve the exact retrieved representation, record message/node accounting and completeness evidence, then run the current FOSSIL ingestion path without patching it first.
+Keep the exact local response and derived accounting immutable; resume semantic query/lineage/rebuild only after a completeness-aware importer exists or the provider continuation can be traversed. Do not patch fossil-core in this experiment checkpoint.
 
 ## Blockers
 
-- Cloud environment cannot fetch the ChatGPT share directly; acquisition must be executed locally.
+- The public-share response exposes a /continue URL, but local HTTP probing returned HTTP 403 with a Cloudflare challenge; overall capture completeness is therefore incomplete.
+- The current pinned FOSSIL path has no shared-chat completeness field/gate and only accepts a manually bounded conversation subset.
+- Downstream semantic query, lineage, and retrieval-rebuild checks are blocked because the baseline path emitted no full conversation lineage, claims, relations, or rebuildable retrieval projection.
 
 ## Important findings
 
 - Owner observed that long shared chats can be only partially ingested until a local agent is explicitly told to inspect the whole conversation.
 - fossil-core issue #247 now tracks the requirement that complete ingestion must be proven mechanically rather than inferred from a successful first fetch.
+- The captured response body is verbatim evidence for the public-share representation: 1,430,356 bytes, SHA-256 a07c069b6a23678bdf989f22225c031c50deecd11c2ae1f7cf938100bede39e5.
+- The response graph contains 517 exposed nodes and 516 unique message-bearing nodes: 40 system, 18 user, 236 assistant, and 222 tool messages; one root/current traversal covers all exposed mapping nodes with zero unresolved child references.
+- The local browser's initial accessible surface exposed 18 prompt controls, demonstrating why a surface-only importer cannot account for the provider graph.
+- The current FOSSIL baseline accepted a bounded verbatim subset without knowing capture completeness; the focused conversation tests passed 7/7 under WSL Ubuntu 22.04, while the broader 40-test baseline had 39 passes and one unrelated date-format failure.
+- The exact current FOSSIL artifact publisher fails on this Windows filesystem with WinError 1 from os.link; the baseline probe completed under WSL without changing upstream code.
 
 ## Resume protocol
 

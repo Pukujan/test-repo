@@ -1,0 +1,53 @@
+{
+  "schema_version": "lab.shared-chat-completeness.v1",
+  "source_representation": {
+    "parser": "React Router streamed devalue graph decoder",
+    "response_bytes": 1430356,
+    "response_sha256": "a07c069b6a23678bdf989f22225c031c50deecd11c2ae1f7cf938100bede39e5",
+    "conversation_id": "6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+    "title": "Productizing Fossil Core",
+    "is_public": true,
+    "current_node": "45bb61e6-dbbd-4563-a71e-8ca27014845b",
+    "root_nodes": [
+      "286a32b2-b3ad-48a0-b13e-1e15a3c34953"
+    ],
+    "mapping_node_count": 517,
+    "message_bearing_node_count": 516,
+    "unique_message_id_count": 516,
+    "linear_conversation_count": 517,
+    "role_counts": {
+      "system": 40,
+      "user": 18,
+      "assistant": 236,
+      "tool": 222
+    },
+    "active_branch_node_count": 517,
+    "active_branch_message_count": 516,
+    "non_active_exposed_node_count": 0,
+    "unresolved_child_reference_count": 0,
+    "active_branch_first_node": "286a32b2-b3ad-48a0-b13e-1e15a3c34953",
+    "active_branch_last_node": "45bb61e6-dbbd-4563-a71e-8ca27014845b",
+    "continuation_field": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue"
+  },
+  "completeness": "incomplete",
+  "completeness_scope": "the mapping graph exposed in this public-share response is fully accounted for, but an exposed continuation URL could not be traversed",
+  "completeness_basis": [
+    "source mapping enumerated",
+    "source linear_conversation sequence counted",
+    "root and current node recorded",
+    "active parent traversal terminated at root",
+    "all child references resolved",
+    "no exposed non-active mapping nodes remained",
+    "provider continuation URL was probed and returned HTTP 403 Cloudflare challenge"
+  ],
+  "continuation_probe": {
+    "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue",
+    "http_status": 403,
+    "outcome": "blocked_by_provider_challenge",
+    "completeness_effect": "unresolved continuation prevents complete classification"
+  },
+  "limitations": [
+    "This is not an authenticated account export.",
+    "Completeness does not claim access to provider data not exposed by this public-share response."
+  ]
+}

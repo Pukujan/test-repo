@@ -3,8 +3,18 @@
   "source_id": "chatgpt-share-6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
   "provider": "chatgpt-share",
   "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
-  "fidelity": "unknown",
-  "completeness": "unknown",
-  "captured_artifact": null,
-  "notes": "Owner reports local access works. Cloud ChatGPT environment could not fetch the share. Exact capture bytes/digest must be added by the local run; do not reconstruct them here."
+  "fidelity": "verbatim",
+  "completeness": "incomplete",
+  "captured_artifact": {
+    "kind": "local-only-response-body",
+    "path": "runs/run-20260914-local-001/artifacts/source.response",
+    "media_type": "text/html",
+    "bytes": 1430356,
+    "sha256": "a07c069b6a23678bdf989f22225c031c50deecd11c2ae1f7cf938100bede39e5",
+    "retrieved_at": "2026-09-14T13:22:59Z",
+    "acquisition_method": "local curl.exe GET with Accept-Encoding: identity",
+    "public_repo_committed": false,
+    "exclusion_reason": "The exact response includes runtime/session metadata; retain locally and publish only digest and derived safe accounting."
+  },
+  "notes": "The public-share response was captured verbatim locally. Its exposed mapping graph is fully accounted for, but the exposed /continue URL returned HTTP 403 with a Cloudflare challenge, so overall capture completeness remains incomplete. This is not an authenticated account export."
 }

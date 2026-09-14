@@ -1,0 +1,26 @@
+{
+  "schema_version": "lab.run.v1",
+  "run_id": "run-20260914-local-001",
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "status": "fail",
+  "upstream_revision": "c080572905238d9d326401f85e66d04a84832014",
+  "command": "Local curl capture; React Router streamed graph decode; bounded current FOSSIL ConversationStore/SourceSnapshotStore/EventStore probe; focused pytest under WSL Ubuntu 22.04",
+  "started_at": "2026-09-14T13:22:59Z",
+  "finished_at": "2026-09-14T13:34:45Z",
+  "environment": {
+    "lab_repo": "https://github.com/Pukujan/test-repo@ba9fa48113d4e888a8df4e66eb1cc0441491ae30",
+    "fossil_repo": "https://github.com/Pukujan/fossil-core@c080572905238d9d326401f85e66d04a84832014",
+    "local_host": "Windows with WSL Ubuntu 22.04",
+    "browser": "Codex in-app browser",
+    "raw_capture_publicly_committed": false
+  },
+  "outputs": [
+    {"path": "source_capture.json", "kind": "capture-metadata"},
+    {"path": "browser_surface.json", "kind": "surface-accounting"},
+    {"path": "completeness.json", "kind": "completeness-receipt"},
+    {"path": "fossil_ingest_probe.json", "kind": "fossil-baseline-probe"},
+    {"path": "focused_tests.txt", "kind": "focused-baseline-tests"},
+    {"path": "baseline_tests.txt", "kind": "broader-baseline-tests"}
+  ],
+  "notes": "The public-share mapping graph was completely accounted for, but the exposed /continue URL returned HTTP 403 Cloudflare challenge, so acquisition is incomplete. The current FOSSIL path accepted a manually bounded verbatim subset without a completeness field/gate and emitted no semantic lineage, claims, or relations. Windows artifact publication also failed with WinError 1; the probe completed under WSL without changing FOSSIL."
+}

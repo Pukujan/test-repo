@@ -1,0 +1,14 @@
+{
+  "schema_version": "lab.shared-chat-browser-surface.v1",
+  "capture_method": "local Codex in-app browser accessibility tree",
+  "source_url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "accessibility_tree_character_count": 28558,
+  "prompt_control_count": 18,
+  "prompt_controls_observed": "Prompt 1 through Prompt 18",
+  "rendered_surface_limitation": "The initial accessibility surface exposes prompt controls and rendered text but does not mechanically account for provider mapping nodes, tool messages, parent/child links, or continuation termination.",
+  "comparison": {
+    "initial_surface_prompt_controls": 18,
+    "provider_mapping_message_nodes": 516,
+    "provider_mapping_total_nodes": 517
+  }
+}

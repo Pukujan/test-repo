@@ -1,0 +1,16 @@
+{
+  "schema_version": "lab.source-capture.v1",
+  "source_id": "chatgpt-share-6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "retrieved_at": "2026-09-14T13:22:59Z",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "body_bytes": 1430356,
+  "body_sha256": "a07c069b6a23678bdf989f22225c031c50deecd11c2ae1f7cf938100bede39e5",
+  "fidelity": "verbatim",
+  "completeness": "incomplete",
+  "raw_body_path": "runs/run-20260914-local-001/artifacts/source.response",
+  "raw_body_retention": "local-only; ignored by Git",
+  "headers": "retrieval headers were inspected but cookie-bearing headers were redacted and are not evidence",
+  "reason": "The response body is exact primary evidence for the public-share representation, but it also contains runtime/session metadata and is not suitable for public repository storage."
+}

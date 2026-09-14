@@ -4,4 +4,4 @@
 
 | Project | Experiment | Status | Question |
 |---|---|---|---|
-| `fossil` | [`fossil-2026-09-14-shared-chat-completeness`](projects/fossil/experiments/2026-09-14_shared-chat-completeness/README.md) | `ready` | Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning? |
+| `fossil` | [`fossil-2026-09-14-shared-chat-completeness`](projects/fossil/experiments/2026-09-14_shared-chat-completeness/README.md) | `blocked` | Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning? |

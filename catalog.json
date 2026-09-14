@@ -5,8 +5,8 @@
       "path": "projects/fossil/experiments/2026-09-14_shared-chat-completeness",
       "project": "fossil",
       "question": "Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning?",
-      "status": "ready",
-      "updated_at": "2026-09-14T12:45:00Z"
+      "status": "blocked",
+      "updated_at": "2026-09-14T13:34:45Z"
     }
   ],
   "schema_version": "lab.catalog.v1"

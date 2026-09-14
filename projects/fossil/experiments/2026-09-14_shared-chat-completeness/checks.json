@@ -5,62 +5,86 @@
     {
       "id": "CAP-001",
       "description": "Reproduce the owner-observed partial long-chat acquisition behavior before changing FOSSIL.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "surface-only undercount versus provider graph", "path": "runs/run-20260914-local-001/browser_surface.json"},
+        {"label": "current path accepted bounded subset without completeness", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+      ]
     },
     {
       "id": "CAP-002",
       "description": "Preserve exact retrieved shared-page/source bytes with digest and retrieval metadata.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "local response digest and retrieval metadata", "path": "runs/run-20260914-local-001/source_capture.json"},
+        {"label": "decoded response digest", "path": "runs/run-20260914-local-001/completeness.json"}
+      ]
     },
     {
       "id": "CAP-003",
       "description": "Produce machine-readable completeness evidence instead of inferring completeness from HTTP/render success.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "machine-readable graph and continuation receipt", "path": "runs/run-20260914-local-001/completeness.json"}
+      ]
     },
     {
       "id": "CAP-004",
       "description": "Account for every exposed conversation message/node and identify active branch versus other exposed nodes.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "517-node mapping accounting", "path": "runs/run-20260914-local-001/completeness.json"}
+      ]
     },
     {
       "id": "FID-001",
       "description": "Record source fidelity separately from capture completeness.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "fidelity/completeness separation", "path": "runs/run-20260914-local-001/source_capture.json"}
+      ]
     },
     {
       "id": "ING-001",
       "description": "Ingest the captured conversation into a fresh FOSSIL pack and inspect durable artifacts, snapshots, events, citations, claims and relations.",
-      "status": "pending",
-      "evidence": []
+      "status": "fail",
+      "evidence": [
+        {"label": "current baseline probe result", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"},
+        {"label": "focused baseline tests", "path": "runs/run-20260914-local-001/focused_tests.txt"}
+      ]
     },
     {
       "id": "QRY-001",
       "description": "Query what FOSSIL currently understands about the product discussion and obtain grounded source references.",
-      "status": "pending",
-      "evidence": []
+      "status": "blocked",
+      "evidence": [
+        {"label": "no complete importer output to query", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+      ]
     },
     {
       "id": "LIN-001",
       "description": "Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing.",
-      "status": "pending",
-      "evidence": []
+      "status": "blocked",
+      "evidence": [
+        {"label": "no semantic lineage emitted by current path", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+      ]
     },
     {
       "id": "REB-001",
       "description": "Destroy rebuildable retrieval/projection state, rebuild from durable FOSSIL state, and repeat the query suite without semantic loss.",
-      "status": "pending",
-      "evidence": []
+      "status": "blocked",
+      "evidence": [
+        {"label": "no rebuildable retrieval projection produced", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+      ]
     },
     {
       "id": "PORT-001",
       "description": "Inventory the actual portable output produced today and identify missing consumer export/product surfaces from evidence rather than assumption.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {"label": "portable output inventory", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"},
+        {"label": "safe public evidence boundary", "path": "runs/run-20260914-local-001/source_capture.json"}
+      ]
     }
   ]
 }
