@@ -1,0 +1,8 @@
+{
+  "mapping_node_count": 517,
+  "message_bearing_node_count": 516,
+  "note": "Run 2 used the raw public-share response and graph decoder; no browser accessibility surface was used as a completeness oracle.",
+  "run_id": "run-20260914-local-002",
+  "schema_version": "lab.surface-accounting.v1",
+  "surface": "raw_http_capture"
+}

@@ -50,7 +50,18 @@
       "status": "fail",
       "evidence": [
         {"label": "current baseline probe result", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"},
-        {"label": "focused baseline tests", "path": "runs/run-20260914-local-001/focused_tests.txt"}
+        {"label": "focused baseline tests", "path": "runs/run-20260914-local-001/focused_tests.txt"},
+        {"label": "incomplete Run 2 refused before writes by PR #248 candidate", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"}
+      ]
+    },
+    {
+      "id": "GATE-001",
+      "description": "Reject an incomplete shared-chat capture before writing durable FOSSIL events or conversations.",
+      "status": "pass",
+      "evidence": [
+        {"label": "PR #248 exact-head fail-closed probe", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
+        {"label": "sanitized Run 2 receipt", "path": "runs/run-20260914-local-002/capture_receipt.json"},
+        {"label": "candidate probe source", "path": "runs/run-20260914-local-002/fossil_pr248_ingest_probe.py"}
       ]
     },
     {

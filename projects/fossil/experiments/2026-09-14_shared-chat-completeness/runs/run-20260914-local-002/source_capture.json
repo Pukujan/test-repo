@@ -1,0 +1,16 @@
+{
+  "completeness": "incomplete",
+  "continuation_probe": {
+    "http_status": 403,
+    "outcome": "blocked_by_provider_challenge",
+    "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue"
+  },
+  "external_ref": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "fidelity": "verbatim",
+  "http_status": 200,
+  "raw_capture_publicly_committed": false,
+  "response_bytes": 1513860,
+  "response_sha256": "9f9c4789c123938d7163a74ffe11cec4723e5194081eea0f5acaa97cfb12a141",
+  "run_id": "run-20260914-local-002",
+  "schema_version": "lab.source-capture.v1"
+}

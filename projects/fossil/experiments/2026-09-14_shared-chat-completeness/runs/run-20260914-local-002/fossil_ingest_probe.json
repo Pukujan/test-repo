@@ -1,0 +1,29 @@
+{
+  "assertions": {
+    "incomplete_capture_rejected": true,
+    "no_conversations_written": true,
+    "no_events_written": true
+  },
+  "continuation": {
+    "attempts": [
+      {
+        "outcome": "http_error",
+        "ref": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue",
+        "status_code": 403
+      }
+    ],
+    "mechanism": "/continue",
+    "state": "unresolved",
+    "termination_reason": "http_error"
+  },
+  "durable_conversation_files": [],
+  "durable_event_files": [],
+  "error": "shared-chat capture completeness is incomplete; complete conversation ingestion is refused",
+  "error_type": "SharedChatCaptureError",
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "receipt_completeness": "incomplete",
+  "result": "incomplete_capture_refused_before_writes",
+  "run_id": "run-20260914-local-002",
+  "schema_version": "lab.fossil-ingest-probe.v1",
+  "upstream_revision": "4078cdd"
+}

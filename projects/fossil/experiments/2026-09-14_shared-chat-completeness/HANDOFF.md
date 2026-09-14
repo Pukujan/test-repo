@@ -11,20 +11,20 @@ Can current FOSSIL capture the entire long shared ChatGPT conversation, prove co
 
 ## Current focus
 
-Preserve the local public-share capture, prove exposed-node accounting, and record the current FOSSIL baseline before any implementation change.
+Validate PR #248's completeness gate against a fresh live Run 2 capture and preserve the fail-closed result.
 
 ## Last durable checkpoint
 
-`checkpoints/0002-local-capture-and-baseline.md` — Local capture and exposed graph accounting completed; overall completeness remains incomplete because the exposed continuation URL is blocked.
+`checkpoints/0003-pr248-run2-fail-closed.md` — Fresh Run 2 exposed-node accounting completed; PR #248 refused promotion before durable writes because /continue remained blocked.
 
 ## Exact next action
 
-Keep the exact local response and derived accounting immutable; resume semantic query/lineage/rebuild only after a completeness-aware importer exists or the provider continuation can be traversed. Do not patch fossil-core in this experiment checkpoint.
+Await exact-head hosted checks and review for PR #248; resume semantic query/lineage/rebuild only after a complete capture can be obtained or a provider continuation can be traversed.
 
 ## Blockers
 
 - The public-share response exposes a /continue URL, but local HTTP probing returned HTTP 403 with a Cloudflare challenge; overall capture completeness is therefore incomplete.
-- The current pinned FOSSIL path has no shared-chat completeness field/gate and only accepts a manually bounded conversation subset.
+- The pinned baseline lacked a shared-chat completeness field/gate; PR #248 now provides a candidate fail-closed gate, but it is not yet the pinned mainline.
 - Downstream semantic query, lineage, and retrieval-rebuild checks are blocked because the baseline path emitted no full conversation lineage, claims, relations, or rebuildable retrieval projection.
 
 ## Important findings
@@ -36,6 +36,8 @@ Keep the exact local response and derived accounting immutable; resume semantic 
 - The local browser's initial accessible surface exposed 18 prompt controls, demonstrating why a surface-only importer cannot account for the provider graph.
 - The current FOSSIL baseline accepted a bounded verbatim subset without knowing capture completeness; the focused conversation tests passed 7/7 under WSL Ubuntu 22.04, while the broader 40-test baseline had 39 passes and one unrelated date-format failure.
 - The exact current FOSSIL artifact publisher fails on this Windows filesystem with WinError 1 from os.link; the baseline probe completed under WSL without changing upstream code.
+- Run 2 retrieved 1,513,860 bytes with SHA-256 9f9c4789c123938d7163a74ffe11cec4723e5194081eea0f5acaa97cfb12a141; the exposed graph again contained 517 mapping nodes and 516 message-bearing nodes, while /continue returned HTTP 403.
+- Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result.
 
 ## Resume protocol
 
