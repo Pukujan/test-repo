@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/lab/state-v1.schema.json",
+  "title": "Lab State v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "experiment_id", "status", "updated_at", "current_focus", "next_action", "blockers", "important_findings"],
+  "properties": {
+    "schema_version": {"const": "lab.state.v1"},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["planned", "ready", "running", "blocked", "completed", "superseded"]},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "current_focus": {"type": "string"},
+    "last_checkpoint": {
+      "type": ["object", "null"],
+      "properties": {
+        "id": {"type": "string"},
+        "path": {"type": "string"},
+        "summary": {"type": "string"}
+      },
+      "required": ["id", "path", "summary"],
+      "additionalProperties": false
+    },
+    "next_action": {"type": "string"},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "important_findings": {"type": "array", "items": {"type": "string"}}
+  }
+}
