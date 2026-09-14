@@ -1,0 +1,66 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "checks": [
+    {
+      "id": "CAP-001",
+      "description": "Reproduce the owner-observed partial long-chat acquisition behavior before changing FOSSIL.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "CAP-002",
+      "description": "Preserve exact retrieved shared-page/source bytes with digest and retrieval metadata.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "CAP-003",
+      "description": "Produce machine-readable completeness evidence instead of inferring completeness from HTTP/render success.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "CAP-004",
+      "description": "Account for every exposed conversation message/node and identify active branch versus other exposed nodes.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "FID-001",
+      "description": "Record source fidelity separately from capture completeness.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "ING-001",
+      "description": "Ingest the captured conversation into a fresh FOSSIL pack and inspect durable artifacts, snapshots, events, citations, claims and relations.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "QRY-001",
+      "description": "Query what FOSSIL currently understands about the product discussion and obtain grounded source references.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LIN-001",
+      "description": "Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "REB-001",
+      "description": "Destroy rebuildable retrieval/projection state, rebuild from durable FOSSIL state, and repeat the query suite without semantic loss.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "PORT-001",
+      "description": "Inventory the actual portable output produced today and identify missing consumer export/product surfaces from evidence rather than assumption.",
+      "status": "pending",
+      "evidence": []
+    }
+  ]
+}
