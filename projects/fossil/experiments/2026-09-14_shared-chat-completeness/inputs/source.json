@@ -1,0 +1,10 @@
+{
+  "schema_version": "lab.source-ref.v1",
+  "source_id": "chatgpt-share-6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "provider": "chatgpt-share",
+  "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "fidelity": "unknown",
+  "completeness": "unknown",
+  "captured_artifact": null,
+  "notes": "Owner reports local access works. Cloud ChatGPT environment could not fetch the share. Exact capture bytes/digest must be added by the local run; do not reconstruct them here."
+}
