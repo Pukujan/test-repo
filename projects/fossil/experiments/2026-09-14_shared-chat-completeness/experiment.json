@@ -1,0 +1,24 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "fossil-2026-09-14-shared-chat-completeness",
+  "project": "fossil",
+  "title": "Real shared-chat ingestion completeness and roundtrip",
+  "created_at": "2026-09-14T12:45:00Z",
+  "question": "Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning?",
+  "upstream": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/Pukujan/fossil-core",
+      "revision": "c080572905238d9d326401f85e66d04a84832014"
+    },
+    {
+      "kind": "issue",
+      "repository": "https://github.com/Pukujan/fossil-core",
+      "number": 247,
+      "url": "https://github.com/Pukujan/fossil-core/issues/247"
+    }
+  ],
+  "source_refs": [
+    "inputs/source.json"
+  ]
+}
