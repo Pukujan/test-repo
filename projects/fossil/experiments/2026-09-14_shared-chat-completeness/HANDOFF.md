@@ -11,11 +11,11 @@ Can current FOSSIL capture the entire long shared ChatGPT conversation, prove co
 
 ## Current focus
 
-Validate PR #248's completeness gate against a fresh live Run 2 capture and preserve the fail-closed result.
+Validate hosted PR #248 acceptance-gap fixes and keep semantic downstream checks blocked until provider completeness is available.
 
 ## Last durable checkpoint
 
-`checkpoints/0003-pr248-run2-fail-closed.md` — Fresh Run 2 exposed-node accounting completed; PR #248 refused promotion before durable writes because /continue remained blocked.
+`checkpoints/0004-pr248-acceptance-gaps-closed.md` — Run 2 exact bytes were retained with a bound receipt and incomplete promotion was refused; local focused/full/mutation validation passed on PR #248 acceptance-gap fixes.
 
 ## Exact next action
 
@@ -38,6 +38,8 @@ Await exact-head hosted checks and review for PR #248; resume semantic query/lin
 - The exact current FOSSIL artifact publisher fails on this Windows filesystem with WinError 1 from os.link; the baseline probe completed under WSL without changing upstream code.
 - Run 2 retrieved 1,513,860 bytes with SHA-256 9f9c4789c123938d7163a74ffe11cec4723e5194081eea0f5acaa97cfb12a141; the exposed graph again contained 517 mapping nodes and 516 message-bearing nodes, while /continue returned HTTP 403.
 - Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result.
+- Against PR #248 exact head a73ae7c00c6e7b4c61a7fede8639727f10a08c23, the exact Run 2 bytes were retained as art_9f9c4789c123938d7163a74ffe11cec4 with a bound SHA-256/byte_count receipt, then complete-conversation promotion was refused because /continue remained unresolved.
+- The dedicated shared-chat mutation lane generated 563 mutants: 480 killed, 83 reviewed survivors, zero no-tests, zero timeouts, score 85.26%, and passed its explicit 84%/90-survivor/zero-no-tests gate.
 
 ## Resume protocol
 

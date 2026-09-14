@@ -1,0 +1,32 @@
+{
+  "schema_version": "lab.mutation-assurance.v1",
+  "run_id": "run-20260914-local-002",
+  "experiment_id": "2026-09-14_shared-chat-completeness",
+  "upstream_revision": "a73ae7c",
+  "tool": "mutmut",
+  "tool_revision": "dc58270d5234752e22247f814431750eafcf6e5f",
+  "mutable_source": "src/fossil_core/application/ingest/shared_chat_capture.py",
+  "test_scope": [
+    "tests/test_shared_chat_capture_completeness.py",
+    "tests/test_shared_chat_capture_faults.py",
+    "tests/test_shared_chat_capture_accounting.py",
+    "tests/test_shared_chat_capture_properties.py",
+    "tests/test_shared_chat_ingestion.py"
+  ],
+  "total": 563,
+  "killed": 480,
+  "survived": 83,
+  "no_tests": 0,
+  "skipped": 0,
+  "suspicious": 0,
+  "timeout": 0,
+  "segfault": 0,
+  "score_percent": 85.26,
+  "gate": {
+    "minimum_score_percent": 84.0,
+    "maximum_survivors": 90,
+    "maximum_no_tests": 0,
+    "passed": true
+  },
+  "notes": "Bounded module-only mutation lane. Reviewed survivors were diagnostic-message/equivalence residuals; source-binding and incomplete-preservation semantics were covered by killed mutants."
+}

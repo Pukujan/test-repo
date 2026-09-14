@@ -1,15 +1,15 @@
 {
-  "command": "Run 2 public-share capture; graph decode; PR #248 ingest gate against incomplete receipt",
+  "command": "Run 2 public-share capture; graph decode; PR #248 evidence preservation and promotion gate",
   "environment": {
     "browser": null,
-    "fossil_repo": "https://github.com/Pukujan/fossil-core@4078cdd",
+    "fossil_repo": "https://github.com/Pukujan/fossil-core@a73ae7c",
     "lab_repo": "https://github.com/Pukujan/test-repo",
-    "local_host": "Windows PowerShell",
+    "local_host": "WSL Ubuntu on Windows workspace",
     "raw_capture_publicly_committed": false
   },
   "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
-  "finished_at": "2026-09-14T15:07:30Z",
-  "notes": "The exposed mapping graph is fully accounted for, but the provider continuation returned HTTP 403. PR #248 rejected the incomplete receipt before writing events or conversations.",
+  "finished_at": "2026-09-14T17:42:44Z",
+  "notes": "The exposed mapping graph is fully accounted for, but the provider continuation returned HTTP 403. PR #248 durably retained the exact source artifact and bound receipt, then rejected complete-conversation promotion before writing events or conversations.",
   "outputs": [
     {
       "kind": "capture-metadata",
@@ -32,13 +32,17 @@
       "path": "manifest.json"
     },
     {
+      "kind": "bound-fossil-capture-receipt",
+      "path": "fossil_capture_receipt_bound.json"
+    },
+    {
       "kind": "fossil-pr248-gate-probe",
       "path": "fossil_ingest_probe.json"
     }
   ],
   "run_id": "run-20260914-local-002",
   "schema_version": "lab.run.v1",
-  "started_at": "2026-09-14T15:07:30Z",
+  "started_at": "2026-09-14T17:42:42Z",
   "status": "pass",
-  "upstream_revision": "4078cdd"
+  "upstream_revision": "a73ae7c"
 }

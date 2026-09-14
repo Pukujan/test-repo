@@ -2,12 +2,12 @@
   "schema_version": "lab.state.v1",
   "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
   "status": "blocked",
-  "updated_at": "2026-09-14T15:08:00Z",
-  "current_focus": "Validate PR #248's completeness gate against a fresh live Run 2 capture and preserve the fail-closed result.",
+  "updated_at": "2026-09-14T17:44:33Z",
+  "current_focus": "Validate hosted PR #248 acceptance-gap fixes and keep semantic downstream checks blocked until provider completeness is available.",
   "last_checkpoint": {
-    "id": "cp-0003",
-    "path": "checkpoints/0003-pr248-run2-fail-closed.md",
-    "summary": "Fresh Run 2 exposed-node accounting completed; PR #248 refused promotion before durable writes because /continue remained blocked."
+    "id": "cp-0004",
+    "path": "checkpoints/0004-pr248-acceptance-gaps-closed.md",
+    "summary": "Run 2 exact bytes were retained with a bound receipt and incomplete promotion was refused; local focused/full/mutation validation passed on PR #248 acceptance-gap fixes."
   },
   "next_action": "Await exact-head hosted checks and review for PR #248; resume semantic query/lineage/rebuild only after a complete capture can be obtained or a provider continuation can be traversed.",
   "blockers": [
@@ -24,6 +24,8 @@
     "The current FOSSIL baseline accepted a bounded verbatim subset without knowing capture completeness; the focused conversation tests passed 7/7 under WSL Ubuntu 22.04, while the broader 40-test baseline had 39 passes and one unrelated date-format failure.",
     "The exact current FOSSIL artifact publisher fails on this Windows filesystem with WinError 1 from os.link; the baseline probe completed under WSL without changing upstream code.",
     "Run 2 retrieved 1,513,860 bytes with SHA-256 9f9c4789c123938d7163a74ffe11cec4723e5194081eea0f5acaa97cfb12a141; the exposed graph again contained 517 mapping nodes and 516 message-bearing nodes, while /continue returned HTTP 403.",
-    "Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result."
+    "Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result.",
+    "Against PR #248 exact head a73ae7c00c6e7b4c61a7fede8639727f10a08c23, the exact Run 2 bytes were retained as art_9f9c4789c123938d7163a74ffe11cec4 with a bound SHA-256/byte_count receipt, then complete-conversation promotion was refused because /continue remained unresolved.",
+    "The dedicated shared-chat mutation lane generated 563 mutants: 480 killed, 83 reviewed survivors, zero no-tests, zero timeouts, score 85.26%, and passed its explicit 84%/90-survivor/zero-no-tests gate."
   ]
 }

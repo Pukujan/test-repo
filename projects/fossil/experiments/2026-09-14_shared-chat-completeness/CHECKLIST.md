@@ -18,10 +18,15 @@
   - current baseline probe result: runs/run-20260914-local-001/fossil_ingest_probe.json
   - focused baseline tests: runs/run-20260914-local-001/focused_tests.txt
   - incomplete Run 2 refused before writes by PR #248 candidate: runs/run-20260914-local-002/fossil_ingest_probe.json
-- [x] **GATE-001** — Reject an incomplete shared-chat capture before writing durable FOSSIL events or conversations. (`pass`)
-  - PR #248 exact-head fail-closed probe: runs/run-20260914-local-002/fossil_ingest_probe.json
-  - sanitized Run 2 receipt: runs/run-20260914-local-002/capture_receipt.json
+- [x] **GATE-001** — Preserve an incomplete shared-chat capture as immutable evidence while refusing complete-conversation promotion. (`pass`)
+  - PR #248 exact-head preservation and promotion probe: runs/run-20260914-local-002/fossil_ingest_probe.json
+  - bound FOSSIL capture receipt: runs/run-20260914-local-002/fossil_capture_receipt_bound.json
   - candidate probe source: runs/run-20260914-local-002/fossil_pr248_ingest_probe.py
+- [x] **BIND-001** — Bind capture receipt SHA-256, byte_count, and content-addressed artifact identity to the exact bytes ingested. (`pass`)
+  - Run 2 byte/hash/artifact equality assertions: runs/run-20260914-local-002/fossil_ingest_probe.json
+  - sanitized receipt with bound source metadata: runs/run-20260914-local-002/fossil_capture_receipt_bound.json
+- [x] **MUT-001** — Run the dedicated bounded shared-chat-capture mutation lane with no untested mutants and an explicit assurance gate. (`pass`)
+  - PR #248 bounded mutation assurance receipt: runs/run-20260914-local-002/mutation_shared_chat_capture.json
 - [-] **QRY-001** — Query what FOSSIL currently understands about the product discussion and obtain grounded source references. (`blocked`)
   - no complete importer output to query: runs/run-20260914-local-001/fossil_ingest_probe.json
 - [-] **LIN-001** — Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing. (`blocked`)

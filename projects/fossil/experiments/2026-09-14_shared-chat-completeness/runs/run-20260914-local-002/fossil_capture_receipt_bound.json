@@ -2104,7 +2104,7 @@
   "provider": "chatgpt-share",
   "schema_version": "fossil.shared-chat-capture-receipt.v1",
   "source": {
-    "artifact_id": null,
+    "artifact_id": "art_9f9c4789c123938d7163a74ffe11cec4",
     "byte_count": 1513860,
     "captured_at": "2026-09-14T17:42:42Z",
     "external_ref": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",

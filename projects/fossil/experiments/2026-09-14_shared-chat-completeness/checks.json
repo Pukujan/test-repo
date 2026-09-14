@@ -56,12 +56,29 @@
     },
     {
       "id": "GATE-001",
-      "description": "Reject an incomplete shared-chat capture before writing durable FOSSIL events or conversations.",
+      "description": "Preserve an incomplete shared-chat capture as immutable evidence while refusing complete-conversation promotion.",
       "status": "pass",
       "evidence": [
-        {"label": "PR #248 exact-head fail-closed probe", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
-        {"label": "sanitized Run 2 receipt", "path": "runs/run-20260914-local-002/capture_receipt.json"},
+        {"label": "PR #248 exact-head preservation and promotion probe", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
+        {"label": "bound FOSSIL capture receipt", "path": "runs/run-20260914-local-002/fossil_capture_receipt_bound.json"},
         {"label": "candidate probe source", "path": "runs/run-20260914-local-002/fossil_pr248_ingest_probe.py"}
+      ]
+    },
+    {
+      "id": "BIND-001",
+      "description": "Bind capture receipt SHA-256, byte_count, and content-addressed artifact identity to the exact bytes ingested.",
+      "status": "pass",
+      "evidence": [
+        {"label": "Run 2 byte/hash/artifact equality assertions", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
+        {"label": "sanitized receipt with bound source metadata", "path": "runs/run-20260914-local-002/fossil_capture_receipt_bound.json"}
+      ]
+    },
+    {
+      "id": "MUT-001",
+      "description": "Run the dedicated bounded shared-chat-capture mutation lane with no untested mutants and an explicit assurance gate.",
+      "status": "pass",
+      "evidence": [
+        {"label": "PR #248 bounded mutation assurance receipt", "path": "runs/run-20260914-local-002/mutation_shared_chat_capture.json"}
       ]
     },
     {
