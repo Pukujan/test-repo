@@ -1,0 +1,51 @@
+{
+  "command": "fresh public-share capture; graph-terminal proof; complete FOSSIL ingest; QRY/LIN/REB",
+  "environment": {
+    "browser": "Codex in-app browser observed the public share page",
+    "fossil_repo": "https://github.com/Pukujan/fossil-core@2b20dc8a7704d4bf93f2e00fa26e229ac529cba4",
+    "lab_repo": "https://github.com/Pukujan/test-repo",
+    "local_host": "WSL Ubuntu on Windows workspace",
+    "raw_capture_publicly_committed": false
+  },
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "finished_at": "2026-09-14T20:30:29Z",
+  "outputs": [
+    {
+      "kind": "capture-metadata",
+      "path": "source_capture.json"
+    },
+    {
+      "kind": "surface-accounting",
+      "path": "browser_surface.json"
+    },
+    {
+      "kind": "continuation-diagnosis",
+      "path": "continuation_diagnosis.json"
+    },
+    {
+      "kind": "completeness-receipt",
+      "path": "completeness.json"
+    },
+    {
+      "kind": "fossil-capture-receipt",
+      "path": "capture_receipt.json"
+    },
+    {
+      "kind": "sanitized-fossil-ingest-manifest",
+      "path": "manifest.json"
+    },
+    {
+      "kind": "bound-fossil-capture-receipt",
+      "path": "fossil_capture_receipt_bound.json"
+    },
+    {
+      "kind": "fossil-ingest-query-lineage-rebuild-probe",
+      "path": "fossil_ingest_probe.json"
+    }
+  ],
+  "run_id": "run-20260914-local-003",
+  "schema_version": "lab.run.v1",
+  "started_at": "2026-09-14T20:13:51Z",
+  "status": "pass",
+  "upstream_revision": "2b20dc8a7704d4bf93f2e00fa26e229ac529cba4"
+}

@@ -1,0 +1,15 @@
+{
+  "copy_notice_observed": true,
+  "embedded_mapping_node_count": 517,
+  "embedded_message_count": 516,
+  "note": "Browser rendering corroborates the share surface; graph completeness is decided by the captured payload checks, not by final visible text.",
+  "prompt_anchor_count": 18,
+  "run_id": "run-20260914-local-003",
+  "schema_version": "lab.surface-accounting.v1",
+  "surface": "in_app_browser_share_page",
+  "title": "Productizing Fossil Core",
+  "url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "visible_continuation_control_observed": false,
+  "visible_message_nodes_after_prompt_navigation": 7,
+  "visible_message_nodes_before_prompt_navigation": 4
+}

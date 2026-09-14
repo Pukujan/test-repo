@@ -1,0 +1,95 @@
+{
+  "schema_version": "lab.shared-chat-source-graph-inspection.v1",
+  "graph": {
+    "response_bytes": 1517420,
+    "conversation_id": "6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+    "title": "Productizing Fossil Core",
+    "current_node": "45bb61e6-dbbd-4563-a71e-8ca27014845b",
+    "root_nodes": [
+      "286a32b2-b3ad-48a0-b13e-1e15a3c34953"
+    ],
+    "mapping_node_count": 517,
+    "message_bearing_node_count": 516,
+    "unique_message_id_count": 516,
+    "active_branch_node_count": 517,
+    "active_branch_message_count": 516,
+    "non_active_exposed_node_count": 0,
+    "unresolved_child_reference_count": 0,
+    "role_counts": {
+      "system": 40,
+      "user": 18,
+      "assistant": 236,
+      "tool": 222
+    },
+    "continuation_field": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue"
+  },
+  "linear_conversation": {
+    "is_array": true,
+    "length": 517,
+    "first_type": "object",
+    "first_id": "286a32b2-b3ad-48a0-b13e-1e15a3c34953",
+    "last_id": "45bb61e6-dbbd-4563-a71e-8ca27014845b",
+    "keys": []
+  },
+  "linear_ids_sample": {
+    "first": [
+      "286a32b2-b3ad-48a0-b13e-1e15a3c34953",
+      "b849b546-f5f5-499c-b2f9-58dd89c7fe91",
+      "8b1e526b-b5aa-4939-9409-0bf69a93f14e"
+    ],
+    "last": [
+      "68e6d9ba-73c1-4957-bb39-a86cf8459405",
+      "264aa9d3-bbdb-4d2d-a011-fef82dc557b7",
+      "45bb61e6-dbbd-4563-a71e-8ca27014845b"
+    ]
+  },
+  "linear_checks": {
+    "count_matches_mapping": true,
+    "count_matches_active_branch": true,
+    "ids_are_node_ids": true,
+    "ids_match_active_branch_order": true,
+    "ids_match_active_branch_set": true
+  },
+  "marker_diagnostics": {
+    "message_count": 516,
+    "id_present_count": 516,
+    "first_line_present_count": 376,
+    "escaped_first_line_present_count": 376,
+    "text_bearing_count": 376
+  },
+  "source_keys": [
+    "backing_conversation_id",
+    "blocked_urls",
+    "context_scopes",
+    "continue_conversation_url",
+    "conversation_id",
+    "create_time",
+    "current_node",
+    "default_model_slug",
+    "disabled_tool_ids",
+    "has_user_editable_context",
+    "highlighted_message_id",
+    "is_archived",
+    "is_better_metatags_enabled",
+    "is_do_not_remember",
+    "is_indexable",
+    "is_potion_share",
+    "is_public",
+    "is_study_mode",
+    "is_temporary_chat",
+    "linear_conversation",
+    "mapping",
+    "memory_scope",
+    "moderation_results",
+    "moderation_state",
+    "og_description",
+    "og_image_variant",
+    "og_title",
+    "safe_urls",
+    "sugar_item_visible",
+    "title",
+    "update_time",
+    "x_metadata_policy"
+  ],
+  "continuation_field_type": "string"
+}

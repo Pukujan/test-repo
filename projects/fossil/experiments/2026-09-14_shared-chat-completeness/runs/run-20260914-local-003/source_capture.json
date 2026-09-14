@@ -1,0 +1,27 @@
+{
+  "acquisition": "normal HTTP share-page fetch plus in-app browser observation",
+  "captured_at": "2026-09-14T20:13:51Z",
+  "completeness": "complete",
+  "external_ref": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58",
+  "fidelity": "verbatim",
+  "graph_proof": {
+    "all_child_references_resolved": true,
+    "current_has_no_children": true,
+    "current_is_last_linear_node": true,
+    "linear_count_matches_active_branch": true,
+    "linear_count_matches_mapping": true,
+    "linear_ids_are_mapping_nodes": true,
+    "linear_ids_match_active_branch_order": true,
+    "mapping_nonempty": true,
+    "message_ids_unique": true,
+    "no_non_active_exposed_nodes": true,
+    "root_present": true
+  },
+  "http_status": 200,
+  "optional_action_url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue",
+  "raw_capture_publicly_committed": false,
+  "response_bytes": 1517420,
+  "response_sha256": "9e77214c5be6f3958be8d9eceea2ecd568b877a86b4c7a33db578546b199eb4b",
+  "run_id": "run-20260914-local-003",
+  "schema_version": "lab.source-capture.v1"
+}

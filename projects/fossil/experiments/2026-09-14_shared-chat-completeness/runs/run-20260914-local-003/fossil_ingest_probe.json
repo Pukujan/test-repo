@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "capture_receipt_complete": true,
+    "complete_promotion_allowed": true,
+    "durable_artifact_exact": true,
+    "durable_conversation_written": true,
+    "durable_event_written": true,
+    "durable_lineage_written": true,
+    "lin": true,
+    "qry": true,
+    "reb": true
+  },
+  "continuation": {
+    "attempts": [],
+    "mechanism": null,
+    "state": "not_present",
+    "termination_reason": "source_terminal"
+  },
+  "counts": {
+    "artifacts": 1,
+    "capture_receipts": 1,
+    "citations_for_current_node": 1,
+    "conversations": 1,
+    "current_conclusions": 1,
+    "events": 1,
+    "lineage_edges": 515,
+    "lineage_nodes": 516,
+    "messages": 516,
+    "spans": 516
+  },
+  "durable_output_root_local_only": "/tmp/fossil-run3-acceptance/output",
+  "experiment_id": "fossil-2026-09-14-shared-chat-completeness",
+  "lin": {
+    "citation_summary": [
+      {
+        "artifact_id": "art_9e77214c5be6f3958be8d9eceea2ecd5",
+        "byte_end": 574256,
+        "byte_start": 574189,
+        "evidence_status": "reconstructed",
+        "span_id": "span_33656363ed47a3278940"
+      }
+    ],
+    "current_conclusion_ids": [
+      "ln_src_45bb61e6dbbd4563a71e8ca27014845b"
+    ],
+    "lineage_node_count": 516,
+    "mode": "ConversationLineage structural traversal and citation resolution",
+    "passed": true,
+    "path_length": 516
+  },
+  "product_gaps": [
+    "Public-share bytes are verbatim evidence for the exposed share representation, not an authenticated account export.",
+    "Derived messages and lineage are reconstructed; the run does not promote them to verbatim semantic claims.",
+    "The current importer provides deterministic message-term query and lineage traversal, not a production semantic/vector retrieval service.",
+    "The lineage in this run is a structural source-order reconstruction, not provider-native semantic claim extraction.",
+    "Raw source bytes and runtime markers remain local-only; a reviewer cannot independently rerun acquisition from the lab repository alone."
+  ],
+  "qry": {
+    "all_hits_reconstructed": true,
+    "hit_counts": {
+      "FOSSIL": 12,
+      "shared": 2
+    },
+    "mode": "deterministic message-term query over durable conversation envelope",
+    "terms": [
+      "FOSSIL",
+      "shared"
+    ]
+  },
+  "reb": {
+    "benchmarks": {
+      "lineage": true,
+      "query": true
+    },
+    "candidate_digest": "209bf5f9ebd56dc3d03d05f7082ecfad3988d8092d153d4855f5e39e36b04011",
+    "citations_preserved": true,
+    "destroyed_slot_absent": true,
+    "expected_digest": "209bf5f9ebd56dc3d03d05f7082ecfad3988d8092d153d4855f5e39e36b04011",
+    "mismatches": [],
+    "mode": "destroy isolated projection slot, rebuild from durable events, compare semantic snapshot",
+    "passed": true,
+    "query_after_digest": "c2b612f3a52132742920549c01d9af0dbc475aa25cb3e3360142fef50af88820",
+    "query_before_digest": "c2b612f3a52132742920549c01d9af0dbc475aa25cb3e3360142fef50af88820"
+  },
+  "receipt_completeness": "complete",
+  "result": "complete_source_ingested_and_roundtripped",
+  "run_id": "run-20260914-local-003",
+  "schema_version": "lab.fossil-ingest-probe.v1",
+  "source_binding": {
+    "artifact_id": "art_9e77214c5be6f3958be8d9eceea2ecd5",
+    "byte_count": 1517420,
+    "matches_capture": true,
+    "receipt_byte_count_matches": true,
+    "receipt_hash_matches": true,
+    "sha256": "9e77214c5be6f3958be8d9eceea2ecd568b877a86b4c7a33db578546b199eb4b"
+  },
+  "upstream_revision": "2b20dc8a7704d4bf93f2e00fa26e229ac529cba4"
+}

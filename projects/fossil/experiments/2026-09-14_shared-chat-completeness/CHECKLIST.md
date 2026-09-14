@@ -8,16 +8,22 @@
 - [x] **CAP-002** — Preserve exact retrieved shared-page/source bytes with digest and retrieval metadata. (`pass`)
   - local response digest and retrieval metadata: runs/run-20260914-local-001/source_capture.json
   - decoded response digest: runs/run-20260914-local-001/completeness.json
+  - fresh Run 3 exact response digest and capture time: runs/run-20260914-local-003/source_capture.json
 - [x] **CAP-003** — Produce machine-readable completeness evidence instead of inferring completeness from HTTP/render success. (`pass`)
   - machine-readable graph and continuation receipt: runs/run-20260914-local-001/completeness.json
+  - Run 3 terminal graph proof: runs/run-20260914-local-003/completeness.json
+  - Run 3 optional-action diagnosis: runs/run-20260914-local-003/continuation_diagnosis.json
 - [x] **CAP-004** — Account for every exposed conversation message/node and identify active branch versus other exposed nodes. (`pass`)
   - 517-node mapping accounting: runs/run-20260914-local-001/completeness.json
+  - Run 3 exact linear/active ID accounting: runs/run-20260914-local-003/source_graph_inspection.json
 - [x] **FID-001** — Record source fidelity separately from capture completeness. (`pass`)
   - fidelity/completeness separation: runs/run-20260914-local-001/source_capture.json
-- [!] **ING-001** — Ingest the captured conversation into a fresh FOSSIL pack and inspect durable artifacts, snapshots, events, citations, claims and relations. (`fail`)
+- [x] **ING-001** — Ingest the captured conversation into a fresh FOSSIL pack and inspect durable artifacts, snapshots, events, citations, claims and relations. (`pass`)
   - current baseline probe result: runs/run-20260914-local-001/fossil_ingest_probe.json
-  - focused baseline tests: runs/run-20260914-local-001/focused_tests.txt
-  - incomplete Run 2 refused before writes by PR #248 candidate: runs/run-20260914-local-002/fossil_ingest_probe.json
+  - incomplete Run 2 refused before writes by merged PR #248: runs/run-20260914-local-002/fossil_ingest_probe.json
+  - complete Run 3 ingest/query/lineage/rebuild result: runs/run-20260914-local-003/fossil_ingest_probe.json
+  - merged FOSSIL focused tests: runs/run-20260914-local-003/focused_tests.txt
+  - merged FOSSIL full suite: runs/run-20260914-local-003/full_tests.txt
 - [x] **GATE-001** — Preserve an incomplete shared-chat capture as immutable evidence while refusing complete-conversation promotion. (`pass`)
   - PR #248 exact-head preservation and promotion probe: runs/run-20260914-local-002/fossil_ingest_probe.json
   - bound FOSSIL capture receipt: runs/run-20260914-local-002/fossil_capture_receipt_bound.json
@@ -25,14 +31,20 @@
 - [x] **BIND-001** — Bind capture receipt SHA-256, byte_count, and content-addressed artifact identity to the exact bytes ingested. (`pass`)
   - Run 2 byte/hash/artifact equality assertions: runs/run-20260914-local-002/fossil_ingest_probe.json
   - sanitized receipt with bound source metadata: runs/run-20260914-local-002/fossil_capture_receipt_bound.json
+  - Run 3 complete source binding: runs/run-20260914-local-003/fossil_ingest_probe.json
+  - Run 3 bound receipt: runs/run-20260914-local-003/fossil_capture_receipt_bound.json
 - [x] **MUT-001** — Run the dedicated bounded shared-chat-capture mutation lane with no untested mutants and an explicit assurance gate. (`pass`)
   - PR #248 bounded mutation assurance receipt: runs/run-20260914-local-002/mutation_shared_chat_capture.json
-- [-] **QRY-001** — Query what FOSSIL currently understands about the product discussion and obtain grounded source references. (`blocked`)
-  - no complete importer output to query: runs/run-20260914-local-001/fossil_ingest_probe.json
-- [-] **LIN-001** — Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing. (`blocked`)
-  - no semantic lineage emitted by current path: runs/run-20260914-local-001/fossil_ingest_probe.json
-- [-] **REB-001** — Destroy rebuildable retrieval/projection state, rebuild from durable FOSSIL state, and repeat the query suite without semantic loss. (`blocked`)
-  - no rebuildable retrieval projection produced: runs/run-20260914-local-001/fossil_ingest_probe.json
+- [x] **QRY-001** — Query what FOSSIL currently understands about the product discussion and obtain grounded source references. (`pass`)
+  - Run 3 deterministic query result and grounded hit counts: runs/run-20260914-local-003/fossil_ingest_probe.json
+- [x] **LIN-001** — Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing. (`pass`)
+  - Run 3 lineage path and citation resolution: runs/run-20260914-local-003/fossil_ingest_probe.json
+- [x] **REB-001** — Destroy rebuildable retrieval/projection state, rebuild from durable FOSSIL state, and repeat the query suite without semantic loss. (`pass`)
+  - Run 3 destroy/rebuild semantic snapshot comparison: runs/run-20260914-local-003/fossil_ingest_probe.json
 - [x] **PORT-001** — Inventory the actual portable output produced today and identify missing consumer export/product surfaces from evidence rather than assumption. (`pass`)
   - portable output inventory: runs/run-20260914-local-001/fossil_ingest_probe.json
   - safe public evidence boundary: runs/run-20260914-local-001/source_capture.json
+  - Run 3 product-gap inventory: runs/run-20260914-local-003/fossil_ingest_probe.json
+- [x] **CONT-001** — Classify the exposed /continue field without bypassing provider controls and record why the embedded graph is terminal for this source representation. (`pass`)
+  - Run 3 continuation diagnosis: runs/run-20260914-local-003/continuation_diagnosis.json
+  - Run 3 graph checks: runs/run-20260914-local-003/completeness.json

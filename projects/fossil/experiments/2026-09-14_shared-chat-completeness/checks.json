@@ -17,7 +17,8 @@
       "status": "pass",
       "evidence": [
         {"label": "local response digest and retrieval metadata", "path": "runs/run-20260914-local-001/source_capture.json"},
-        {"label": "decoded response digest", "path": "runs/run-20260914-local-001/completeness.json"}
+        {"label": "decoded response digest", "path": "runs/run-20260914-local-001/completeness.json"},
+        {"label": "fresh Run 3 exact response digest and capture time", "path": "runs/run-20260914-local-003/source_capture.json"}
       ]
     },
     {
@@ -25,7 +26,9 @@
       "description": "Produce machine-readable completeness evidence instead of inferring completeness from HTTP/render success.",
       "status": "pass",
       "evidence": [
-        {"label": "machine-readable graph and continuation receipt", "path": "runs/run-20260914-local-001/completeness.json"}
+        {"label": "machine-readable graph and continuation receipt", "path": "runs/run-20260914-local-001/completeness.json"},
+        {"label": "Run 3 terminal graph proof", "path": "runs/run-20260914-local-003/completeness.json"},
+        {"label": "Run 3 optional-action diagnosis", "path": "runs/run-20260914-local-003/continuation_diagnosis.json"}
       ]
     },
     {
@@ -33,7 +36,8 @@
       "description": "Account for every exposed conversation message/node and identify active branch versus other exposed nodes.",
       "status": "pass",
       "evidence": [
-        {"label": "517-node mapping accounting", "path": "runs/run-20260914-local-001/completeness.json"}
+        {"label": "517-node mapping accounting", "path": "runs/run-20260914-local-001/completeness.json"},
+        {"label": "Run 3 exact linear/active ID accounting", "path": "runs/run-20260914-local-003/source_graph_inspection.json"}
       ]
     },
     {
@@ -47,11 +51,13 @@
     {
       "id": "ING-001",
       "description": "Ingest the captured conversation into a fresh FOSSIL pack and inspect durable artifacts, snapshots, events, citations, claims and relations.",
-      "status": "fail",
+      "status": "pass",
       "evidence": [
         {"label": "current baseline probe result", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"},
-        {"label": "focused baseline tests", "path": "runs/run-20260914-local-001/focused_tests.txt"},
-        {"label": "incomplete Run 2 refused before writes by PR #248 candidate", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"}
+        {"label": "incomplete Run 2 refused before writes by merged PR #248", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
+        {"label": "complete Run 3 ingest/query/lineage/rebuild result", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"},
+        {"label": "merged FOSSIL focused tests", "path": "runs/run-20260914-local-003/focused_tests.txt"},
+        {"label": "merged FOSSIL full suite", "path": "runs/run-20260914-local-003/full_tests.txt"}
       ]
     },
     {
@@ -70,7 +76,9 @@
       "status": "pass",
       "evidence": [
         {"label": "Run 2 byte/hash/artifact equality assertions", "path": "runs/run-20260914-local-002/fossil_ingest_probe.json"},
-        {"label": "sanitized receipt with bound source metadata", "path": "runs/run-20260914-local-002/fossil_capture_receipt_bound.json"}
+        {"label": "sanitized receipt with bound source metadata", "path": "runs/run-20260914-local-002/fossil_capture_receipt_bound.json"},
+        {"label": "Run 3 complete source binding", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"},
+        {"label": "Run 3 bound receipt", "path": "runs/run-20260914-local-003/fossil_capture_receipt_bound.json"}
       ]
     },
     {
@@ -84,25 +92,25 @@
     {
       "id": "QRY-001",
       "description": "Query what FOSSIL currently understands about the product discussion and obtain grounded source references.",
-      "status": "blocked",
+      "status": "pass",
       "evidence": [
-        {"label": "no complete importer output to query", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+        {"label": "Run 3 deterministic query result and grounded hit counts", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"}
       ]
     },
     {
       "id": "LIN-001",
       "description": "Query historical lineage showing how the interpretation moved from handoff framing to durable semantic memory/retrieval framing.",
-      "status": "blocked",
+      "status": "pass",
       "evidence": [
-        {"label": "no semantic lineage emitted by current path", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+        {"label": "Run 3 lineage path and citation resolution", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"}
       ]
     },
     {
       "id": "REB-001",
       "description": "Destroy rebuildable retrieval/projection state, rebuild from durable FOSSIL state, and repeat the query suite without semantic loss.",
-      "status": "blocked",
+      "status": "pass",
       "evidence": [
-        {"label": "no rebuildable retrieval projection produced", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"}
+        {"label": "Run 3 destroy/rebuild semantic snapshot comparison", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"}
       ]
     },
     {
@@ -111,7 +119,17 @@
       "status": "pass",
       "evidence": [
         {"label": "portable output inventory", "path": "runs/run-20260914-local-001/fossil_ingest_probe.json"},
-        {"label": "safe public evidence boundary", "path": "runs/run-20260914-local-001/source_capture.json"}
+        {"label": "safe public evidence boundary", "path": "runs/run-20260914-local-001/source_capture.json"},
+        {"label": "Run 3 product-gap inventory", "path": "runs/run-20260914-local-003/fossil_ingest_probe.json"}
+      ]
+    },
+    {
+      "id": "CONT-001",
+      "description": "Classify the exposed /continue field without bypassing provider controls and record why the embedded graph is terminal for this source representation.",
+      "status": "pass",
+      "evidence": [
+        {"label": "Run 3 continuation diagnosis", "path": "runs/run-20260914-local-003/continuation_diagnosis.json"},
+        {"label": "Run 3 graph checks", "path": "runs/run-20260914-local-003/completeness.json"}
       ]
     }
   ]

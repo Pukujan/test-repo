@@ -1,0 +1,5 @@
+FOSSIL revision: 2b20dc8a7704d4bf93f2e00fa26e229ac529cba4
+Tree: 7c09f724e2a7698dcc34e5013a3abd143306a908
+Command: python3 -m pytest -q
+Result: 754 passed, 1 skipped, 2 warnings in 99.67s
+Warnings: Starlette anyio BlockingPortal deprecation; legacy dkg package deprecation.

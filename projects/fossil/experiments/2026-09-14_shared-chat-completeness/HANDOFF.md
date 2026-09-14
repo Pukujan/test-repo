@@ -3,7 +3,7 @@
 > Generated from `experiment.json` + `state.json`. Do not edit directly.
 
 **Experiment:** `fossil-2026-09-14-shared-chat-completeness`  
-**Status:** `blocked`
+**Status:** `completed`
 
 ## Question
 
@@ -11,21 +11,21 @@ Can current FOSSIL capture the entire long shared ChatGPT conversation, prove co
 
 ## Current focus
 
-Hold for independent human acceptance of hosted-green PR #248 while keeping semantic downstream checks blocked until provider completeness is available.
+Run 3 completed the public-share representation round trip against merged FOSSIL main; residual product gaps are recorded as scope, not hidden as completeness.
 
 ## Last durable checkpoint
 
-`checkpoints/0004-pr248-acceptance-gaps-closed.md` — Run 2 exact bytes were retained with a bound receipt and incomplete promotion was refused; local focused/full/mutation validation passed on PR #248 acceptance-gap fixes.
+`checkpoints/0005-run3-complete-public-share-roundtrip.md` — Run 3 proved the exposed public-share graph terminal, ingested the exact bytes through merged FOSSIL, and passed deterministic QRY/LIN/REB with product gaps recorded.
 
 ## Exact next action
 
-Human review and acceptance decision for draft PR #248; do not merge automatically. Resume semantic query/lineage/rebuild only after a complete capture can be obtained or a provider continuation can be traversed.
+Independent review of the scoped Run 3 conclusion. Start a new additive run only if an authenticated account export, provider continuation contract, or production semantic retrieval surface is required.
 
 ## Blockers
 
-- The public-share response exposes a /continue URL, but local HTTP probing returned HTTP 403 with a Cloudflare challenge; overall capture completeness is therefore incomplete.
-- The pinned baseline lacked a shared-chat completeness field/gate; PR #248 now provides a candidate fail-closed gate, but it is not yet the pinned mainline.
-- Downstream semantic query, lineage, and retrieval-rebuild checks are blocked because the baseline path emitted no full conversation lineage, claims, relations, or rebuildable retrieval projection.
+- The public-share representation is not an authenticated account export; the result is scoped to all data exposed by this exact share response.
+- Derived message and lineage records are explicitly reconstructed, and the current run's lineage is structural source order rather than provider-native semantic claim extraction.
+- Raw source bytes and runtime markers remain local-only, so independent acquisition replay requires a new legitimate source capture.
 
 ## Important findings
 
@@ -40,7 +40,10 @@ Human review and acceptance decision for draft PR #248; do not merge automatical
 - Against PR #248 exact head 4078cdd, the sanitized incomplete receipt was rejected as SharedChatCaptureError before any durable event or conversation file was written; this is the expected fail-closed result.
 - Against PR #248 exact head a73ae7c00c6e7b4c61a7fede8639727f10a08c23, the exact Run 2 bytes were retained as art_9f9c4789c123938d7163a74ffe11cec4 with a bound SHA-256/byte_count receipt, then complete-conversation promotion was refused because /continue remained unresolved.
 - The dedicated shared-chat mutation lane generated 563 mutants: 480 killed, 83 reviewed survivors, zero no-tests, zero timeouts, score 85.26%, and passed its explicit 84%/90-survivor/zero-no-tests gate.
-- All hosted exact-head checks passed on a73ae7c00c6e7b4c61a7fede8639727f10a08c23, including dedicated mutation run 34876757413; PR #248 remains draft/open/unmerged for human acceptance.
+- All hosted exact-head checks passed on a73ae7c00c6e7b4c61a7fede8639727f10a08c23, including dedicated mutation run 34876757413; PR #248 then merged into FOSSIL main at 2b20dc8a7704d4bf93f2e00fa26e229ac529cba4.
+- Run 3 fresh response: 1,517,420 bytes, SHA-256 9e77214c5be6f3958be8d9eceea2ecd568b877a86b4c7a33db578546b199eb4b; 517 mapping nodes, 516 messages, exact linear/active ID equality, current node terminal, zero unresolved child references, and zero non-active exposed nodes.
+- Run 3 complete promotion wrote one content-addressed artifact art_9e77214c5be6f3958be8d9eceea2ecd5, one event, one conversation, one lineage, 516 reconstructed messages, and 516 reconstructed lineage nodes; exact-byte binding, QRY, LIN, and REB all passed.
+- The /continue field was recorded separately: plain GET returned 403 with a provider challenge and browser direct GET returned 404; no bypass was attempted. The full embedded graph was classified terminal because its linear IDs exactly match the active parent walk and end at current_node with no child obligations.
 
 ## Resume protocol
 

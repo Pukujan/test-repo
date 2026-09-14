@@ -1,0 +1,27 @@
+{
+  "action_url": "https://chatgpt.com/share/6aa7eabe-92b4-83ea-899b-7c11fb3fcf58/continue",
+  "browser_direct_probe": {
+    "heading": "404 Not Found",
+    "method": "GET",
+    "outcome": "route_not_a_data_pagination_response",
+    "status": 404,
+    "title": "Unhandled Thrown Response!"
+  },
+  "classification": "optional_user_action_not_pagination",
+  "classification_basis": [
+    "the URL is a singleton continue_conversation_url field, not a next/cursor/page token",
+    "the full mapping and linear_conversation are embedded in the share response",
+    "linear IDs exactly equal the active parent walk and terminate at current_node",
+    "the current node has no child obligations and the exposed graph has no unresolved references"
+  ],
+  "decision": "The optional action is not treated as an unresolved acquisition obligation for this already-terminal exposed graph.",
+  "plain_http_probe": {
+    "cf_mitigated": "challenge",
+    "method": "GET",
+    "outcome": "provider_challenge_observed_no_bypass_attempted",
+    "status": 403
+  },
+  "run_id": "run-20260914-local-003",
+  "safety": "No CAPTCHA, Cloudflare, token, session, or anti-bot control was bypassed.",
+  "schema_version": "lab.continuation-diagnosis.v1"
+}
