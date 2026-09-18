@@ -11,15 +11,15 @@ Can a calibrated LLM classifier and a locally trained lightweight classifier be 
 
 ## Current focus
 
-Prepare the first local baseline run: freeze a labeled train/calibration/test split, evaluate a closed-set LLM with calibratable class scores, train a Potion/Model2Vec classifier, and compare both on the identical untouched test IDs.
+Prepare Run 1 with observability as part of the evidence contract: freeze the dataset splits, instrument a small smoke subset with stable sample/trace correlation, reconcile telemetry completeness, then execute the calibrated LLM and Potion/Model2Vec baselines on the same untouched test IDs.
 
 ## Last durable checkpoint
 
-`checkpoints/0001-initial-plan.md` — Created the isolated classifier-calibration experiment, fixed scope to LLM calibration plus local classifier training/evaluation, and recorded the first-run contract.
+`checkpoints/0002-observability-contract.md` — Made benchmark observability a Run 1 acceptance requirement using OpenTelemetry correlation, Langfuse trace inspection, structured event logs, optional Promptfoo evaluation, optional Prometheus/Grafana runtime metrics, and machine-readable reconciliation.
 
 ## Exact next action
 
-Locally clone Pukujan/test-repo, read this experiment HANDOFF.md and PLAN.md, place only a safe dataset manifest or local-only dataset path/hash into the run inputs, freeze train/calibration/test IDs, then execute the first LLM and Potion/Model2Vec baseline without changing the test split.
+Locally clone Pukujan/test-repo; read HANDOFF.md, PLAN.md, and OBSERVABILITY.md; freeze train/calibration/test IDs; configure a privacy-safe telemetry content mode; run a small observability smoke subset and reconcile sample/prediction/trace/event counts before launching the full LLM calibration and Potion/Model2Vec baseline.
 
 ## Blockers
 
@@ -27,10 +27,13 @@ Locally clone Pukujan/test-repo, read this experiment HANDOFF.md and PLAN.md, pl
 
 ## Important findings
 
-- Scope is intentionally narrow: calibrated LLM classification, local classifier training/testing, result comparison, and iteration only.
-- Triage, consensus/jury, routing, graph construction, and orchestration are explicitly out of scope for this experiment.
-- The repository is public; private corpora, credentials, proprietary source text, model weights, and sensitive raw predictions must remain local and be represented here only by safe manifests, hashes, aggregate metrics, or sanitized fixtures.
-- The LLM calibration set and the final test set must be disjoint; the test set stays frozen during iteration.
+- Scope remains narrow: calibrated LLM classification, local classifier training/testing, result comparison, controlled iteration, and only the observability required to prove/debug those benchmark runs.
+- Triage, consensus/jury, routing, graph construction, RAG, and unrelated orchestration remain explicitly out of scope.
+- OpenTelemetry is the instrumentation/correlation contract; Langfuse is the primary human trace/debug UI; Promptfoo is an optional eval runner; Prometheus/Grafana are reserved for local model-server/runtime metrics.
+- Structured row/event artifacts and deterministic metric files remain the durable evidence; dashboards are secondary views and must reconcile with those artifacts.
+- Run 1 must begin with a small observability smoke subset proving stable IDs, inspectable traces, structured events, privacy/content-mode compliance, and count reconciliation.
+- The repository is public; private corpora, credentials, proprietary source text, model weights, raw sensitive predictions, and telemetry secrets must remain local and be represented here only by safe manifests, hashes, aggregate metrics, or sanitized fixtures.
+- The LLM calibration set and final test set must be disjoint; the final test set stays frozen during iteration.
 - Both the LLM and local classifier must be evaluated on the same test row IDs and label schema.
 
 ## Resume protocol

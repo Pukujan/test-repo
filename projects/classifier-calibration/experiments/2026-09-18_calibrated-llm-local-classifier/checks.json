@@ -45,6 +45,42 @@
       "evidence": []
     },
     {
+      "id": "OBS-001",
+      "description": "Assign stable experiment/run/sample IDs and propagate trace correlation identifiers through the benchmark execution.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-002",
+      "description": "Produce structured per-sample events or a safe durable digest/manifest with model, prediction, score, timing, and correlation metadata.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-003",
+      "description": "Capture inspectable OpenTelemetry/Langfuse traces for the Run 1 smoke subset without violating the configured telemetry content mode.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-004",
+      "description": "Reconcile expected samples, completed predictions, unique sample IDs, traces, structured events, missing IDs, and duplicates in a machine-readable run artifact.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-005",
+      "description": "Verify dashboard/trace aggregates agree with deterministic row-level and run-level metric artifacts for the smoke subset and final run.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-006",
+      "description": "Record observability configuration, tool versions, sampling/content policy, and telemetry privacy boundary without committing secrets.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
       "id": "ITER-001",
       "description": "Inspect disagreement/error slices and record one concrete next hypothesis or controlled change for the following run.",
       "status": "pending",

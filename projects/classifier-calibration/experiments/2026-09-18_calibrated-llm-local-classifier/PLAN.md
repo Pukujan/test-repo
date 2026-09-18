@@ -14,11 +14,13 @@ Then inspect errors and run controlled iterations.
 
 This experiment does **not** test triage, consensus, routing, graph construction, RAG, or production orchestration.
 
+Observability for this benchmark is in scope because it is required to prove and debug the experiment. It must remain benchmark-focused rather than becoming a separate platform project.
+
 The unit of work is a benchmark run under `runs/<run-id>/`.
 
 ## OSS stack
 
-Minimal dependencies:
+Core benchmark dependencies:
 
 - Python 3.11+
 - `pandas`
@@ -29,7 +31,17 @@ Minimal dependencies:
 - optional `netcal` only if the desired calibration method is not convenient in scikit-learn
 - optional `setfit` only as a comparison baseline after the Potion baseline exists
 
+Observability/evaluation dependencies:
+
+- OpenTelemetry for trace context and instrumentation;
+- Langfuse as the primary LLM/application trace UI;
+- Promptfoo when useful for prompt/model test matrices and assertions;
+- Prometheus + Grafana only when needed for local model-server/runtime metrics;
+- structured JSONL event logs as the durable local forensic record.
+
 Do not introduce another framework unless a concrete missing capability blocks a run.
+
+Read `OBSERVABILITY.md` before executing Run 1.
 
 ## Dataset contract
 
@@ -145,6 +157,24 @@ Also record:
 - model size or serving footprint where relevant;
 - failed/invalid-output count for the LLM.
 
+## Observability contract
+
+Observability is a required part of every benchmark run.
+
+Use stable `experiment_id`, `run_id`, `sample_id`, `trace_id`, and relevant model/config identifiers so a single prediction can be followed across:
+
+- row-level result;
+- structured event log;
+- OpenTelemetry trace;
+- Langfuse trace;
+- Promptfoo case when used;
+- model-server metrics when used;
+- run-level aggregate metrics.
+
+Before the full Run 1 benchmark, execute a smoke subset and prove telemetry completeness/reconciliation.
+
+See `OBSERVABILITY.md` for the detailed span schema, event schema, privacy/content modes, dashboard responsibilities, reconciliation rules, and failure policy.
+
 ## Run layout
 
 Recommended durable layout once execution begins:
@@ -155,14 +185,25 @@ runs/
     run.json
     dataset_manifest.json
     split_manifest.json
+
+    observability.json
+    observability_reconciliation.json
+    events.schema.json
+    events.jsonl
+    events.jsonl.sha256
+
     llm_config.json
     llm_metrics.json
     llm_calibration.json
+
     classifier_config.json
     classifier_metrics.json
+
     comparison.json
     error_analysis.md
 ```
+
+Only commit `events.jsonl` when it is safe for this public repository. Otherwise keep it local and commit its digest/count/schema plus safe derived metrics.
 
 Private or large artifacts remain outside Git. `run.json` should record their local path description and digest when useful, without exposing sensitive locations or content.
 
@@ -172,13 +213,16 @@ The first run should do only this:
 
 1. prepare the labeled dataset locally;
 2. freeze train/calibration/test IDs;
-3. run one LLM prompt/model over calibration and test rows;
-4. fit one calibration transform on calibration rows;
-5. train one Potion/Model2Vec classifier on training rows;
-6. calibrate it only if needed;
-7. evaluate both on the same frozen test IDs;
-8. write metrics and a confusion/error analysis;
-9. choose one next change based on observed evidence.
+3. configure the observability content mode and correlation IDs;
+4. run a small telemetry smoke subset and reconcile sample/prediction/trace/event counts;
+5. run one LLM prompt/model over calibration and test rows;
+6. fit one calibration transform on calibration rows;
+7. train one Potion/Model2Vec classifier on training rows;
+8. calibrate it only if needed;
+9. evaluate both on the same frozen test IDs;
+10. write metrics and a confusion/error analysis;
+11. reconcile observability and deterministic result artifacts;
+12. choose one next change based on observed evidence.
 
 Do not expand the architecture during Run 1.
 
@@ -208,6 +252,7 @@ The first run is complete when the experiment has durable evidence for:
 - same-test comparison;
 - classification and calibration metrics;
 - reproducibility/config record;
+- correlated structured observability with reconciliation evidence;
 - error analysis and next hypothesis.
 
 No particular accuracy threshold is required for Run 1. The purpose is to establish a trustworthy baseline.
