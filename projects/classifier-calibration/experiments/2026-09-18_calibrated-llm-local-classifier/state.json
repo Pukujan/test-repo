@@ -1,0 +1,26 @@
+{
+  "schema_version": "lab.state.v1",
+  "experiment_id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+  "status": "completed",
+  "updated_at": "2026-09-18T18:36:23Z",
+  "current_focus": "Experiment concluded after Run 1 (potion-base-8M) and Run 2 (potion-base-32M) on identical frozen splits with documented LLM/Langfuse substitutes.",
+  "last_checkpoint": {
+    "id": "cp-0004",
+    "path": "checkpoints/0004-run-2-local-002.md",
+    "summary": "Completed Run 2 controlled iteration: potion-base-32M on frozen Run 1 IDs; same single Potion error; conclusion updated."
+  },
+  "next_action": "None \u2014 experiment completed. Optional follow-up (new experiment/dataset_version): real generative LLM logprobs and/or non-synthetic domain corpus.",
+  "blockers": [],
+  "important_findings": [
+    "Scope remains narrow: calibrated LLM classification, local classifier training/testing, result comparison, controlled iteration, and only the observability required to prove/debug those benchmark runs.",
+    "Triage, consensus/jury, routing, graph construction, RAG, and unrelated orchestration remain explicitly out of scope.",
+    "OpenTelemetry is the instrumentation/correlation contract; Langfuse is the primary human trace/debug UI; Promptfoo is an optional eval runner; Prometheus/Grafana are reserved for local model-server/runtime metrics.",
+    "Structured row/event artifacts and deterministic metric files remain the durable evidence; dashboards are secondary views and must reconcile with those artifacts.",
+    "Run 1 and Run 2 used documented LocalClosedSetScoreProvider (TF-IDF+LogReg logits) because no hosted LLM API keys or local generative LLM server were available.",
+    "Controlled change Run 2: potion-base-8M \u2192 potion-base-32M with identical frozen train/calibration/test digests; accuracy unchanged (0.99); same error sample syn-0176; slight log-loss improvement.",
+    "Langfuse was not configured (no credentials); inspectable OTel traces written to otel_traces.jsonl with content_mode=hashes_only for both runs.",
+    "The repository is public; private corpora, credentials, proprietary source text, model weights, raw sensitive predictions, and telemetry secrets must remain local and be represented here only by safe manifests, hashes, aggregate metrics, or sanitized fixtures.",
+    "The LLM calibration set and final test set must be disjoint; the final test set stays frozen during iteration.",
+    "Both the LLM and local classifier must be evaluated on the same test row IDs and label schema."
+  ]
+}

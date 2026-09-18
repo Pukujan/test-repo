@@ -1,0 +1,359 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+  "checks": [
+    {
+      "id": "DATA-001",
+      "description": "Freeze and record disjoint train, calibration, and test row IDs plus the label schema and dataset digest/manifest.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "dataset_manifest",
+          "path": "runs/run-20260918-local-001/dataset_manifest.json"
+        },
+        {
+          "label": "split_manifest",
+          "path": "runs/run-20260918-local-001/split_manifest.json"
+        },
+        {
+          "label": "fixture",
+          "path": "inputs/fixtures/synthetic_topics_v1.jsonl"
+        },
+        {
+          "label": "run002_split_manifest_reused",
+          "path": "runs/run-20260918-local-002/split_manifest.json"
+        },
+        {
+          "label": "run002_dataset_manifest",
+          "path": "runs/run-20260918-local-002/dataset_manifest.json"
+        }
+      ]
+    },
+    {
+      "id": "LLM-001",
+      "description": "Run the chosen LLM as a closed-set classifier on calibration and test rows and preserve raw class scores/log-probabilities or the strongest available score representation.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "llm_config",
+          "path": "runs/run-20260918-local-001/llm_config.json"
+        },
+        {
+          "label": "llm_predictions_test",
+          "path": "runs/run-20260918-local-001/llm_predictions_test.json"
+        },
+        {
+          "label": "llm_predictions_calibration",
+          "path": "runs/run-20260918-local-001/llm_predictions_calibration.json"
+        },
+        {
+          "label": "note",
+          "ref": "LocalClosedSetScoreProvider substitute documented in llm_config.json / run.json (no hosted LLM keys)."
+        },
+        {
+          "label": "run002_llm_config",
+          "path": "runs/run-20260918-local-002/llm_config.json"
+        },
+        {
+          "label": "run002_llm_predictions_test",
+          "path": "runs/run-20260918-local-002/llm_predictions_test.json"
+        }
+      ]
+    },
+    {
+      "id": "CAL-001",
+      "description": "Fit the LLM calibration transform using calibration rows only and record pre/post calibration metrics without fitting on the test set.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "llm_calibration",
+          "path": "runs/run-20260918-local-001/llm_calibration.json"
+        },
+        {
+          "label": "run002_llm_calibration",
+          "path": "runs/run-20260918-local-002/llm_calibration.json"
+        }
+      ]
+    },
+    {
+      "id": "CLS-001",
+      "description": "Train the first local Potion/Model2Vec classifier using training rows only and preserve the exact model/config/environment identifiers.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "classifier_config",
+          "path": "runs/run-20260918-local-001/classifier_config.json"
+        },
+        {
+          "label": "run_env",
+          "path": "runs/run-20260918-local-001/run.json"
+        },
+        {
+          "label": "run002_classifier_config_potion32M",
+          "path": "runs/run-20260918-local-002/classifier_config.json"
+        },
+        {
+          "label": "run002_run_env",
+          "path": "runs/run-20260918-local-002/run.json"
+        }
+      ]
+    },
+    {
+      "id": "CLS-002",
+      "description": "Calibrate the local classifier when required using the same calibration split and record the calibration method and parameters.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "classifier_config.calibration",
+          "path": "runs/run-20260918-local-001/classifier_config.json"
+        },
+        {
+          "label": "run002_classifier_calibration",
+          "path": "runs/run-20260918-local-002/classifier_config.json"
+        }
+      ]
+    },
+    {
+      "id": "EVAL-001",
+      "description": "Evaluate the calibrated LLM and local classifier on exactly the same frozen test row IDs.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "comparison",
+          "path": "runs/run-20260918-local-001/comparison.json"
+        },
+        {
+          "label": "split_manifest",
+          "path": "runs/run-20260918-local-001/split_manifest.json"
+        },
+        {
+          "label": "run002_comparison",
+          "path": "runs/run-20260918-local-002/comparison.json"
+        }
+      ]
+    },
+    {
+      "id": "MET-001",
+      "description": "Record accuracy, macro-F1, per-class metrics, confusion matrix, log loss, Brier score, and calibration error/curve where applicable.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "llm_metrics",
+          "path": "runs/run-20260918-local-001/llm_metrics.json"
+        },
+        {
+          "label": "classifier_metrics",
+          "path": "runs/run-20260918-local-001/classifier_metrics.json"
+        },
+        {
+          "label": "llm_calibration",
+          "path": "runs/run-20260918-local-001/llm_calibration.json"
+        },
+        {
+          "label": "run002_llm_metrics",
+          "path": "runs/run-20260918-local-002/llm_metrics.json"
+        },
+        {
+          "label": "run002_classifier_metrics",
+          "path": "runs/run-20260918-local-002/classifier_metrics.json"
+        }
+      ]
+    },
+    {
+      "id": "OBS-001",
+      "description": "Assign stable experiment/run/sample IDs and propagate trace correlation identifiers through the benchmark execution.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "events",
+          "path": "runs/run-20260918-local-001/events.jsonl"
+        },
+        {
+          "label": "otel_traces",
+          "path": "runs/run-20260918-local-001/otel_traces.jsonl"
+        },
+        {
+          "label": "smoke_predictions",
+          "path": "runs/run-20260918-local-001/smoke_predictions.json"
+        },
+        {
+          "label": "run002_events",
+          "path": "runs/run-20260918-local-002/events.jsonl"
+        },
+        {
+          "label": "run002_otel_traces",
+          "path": "runs/run-20260918-local-002/otel_traces.jsonl"
+        }
+      ]
+    },
+    {
+      "id": "OBS-002",
+      "description": "Produce structured per-sample events or a safe durable digest/manifest with model, prediction, score, timing, and correlation metadata.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "events",
+          "path": "runs/run-20260918-local-001/events.jsonl"
+        },
+        {
+          "label": "events_sha256",
+          "path": "runs/run-20260918-local-001/events.jsonl.sha256"
+        },
+        {
+          "label": "events_schema",
+          "path": "runs/run-20260918-local-001/events.schema.json"
+        },
+        {
+          "label": "run002_events",
+          "path": "runs/run-20260918-local-002/events.jsonl"
+        },
+        {
+          "label": "run002_events_sha256",
+          "path": "runs/run-20260918-local-002/events.jsonl.sha256"
+        }
+      ]
+    },
+    {
+      "id": "OBS-003",
+      "description": "Capture inspectable OpenTelemetry/Langfuse traces for the Run 1 smoke subset without violating the configured telemetry content mode.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "otel_file_exporter",
+          "path": "runs/run-20260918-local-001/otel_traces.jsonl"
+        },
+        {
+          "label": "observability_config",
+          "path": "runs/run-20260918-local-001/observability.json"
+        },
+        {
+          "label": "smoke_reconciliation",
+          "path": "runs/run-20260918-local-001/observability_reconciliation_smoke.json"
+        },
+        {
+          "label": "note",
+          "ref": "Langfuse not configured (no credentials); OTel JSONL file exporter used as inspectable traces; content_mode=hashes_only."
+        },
+        {
+          "label": "run002_otel_file",
+          "path": "runs/run-20260918-local-002/otel_traces.jsonl"
+        },
+        {
+          "label": "run002_note",
+          "ref": "Smoke not re-required (harness unchanged); OTel file + full reconciliation still produced. Langfuse still not configured."
+        }
+      ]
+    },
+    {
+      "id": "OBS-004",
+      "description": "Reconcile expected samples, completed predictions, unique sample IDs, traces, structured events, missing IDs, and duplicates in a machine-readable run artifact.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "smoke",
+          "path": "runs/run-20260918-local-001/observability_reconciliation_smoke.json"
+        },
+        {
+          "label": "full",
+          "path": "runs/run-20260918-local-001/observability_reconciliation.json"
+        },
+        {
+          "label": "run002_full_reconciliation",
+          "path": "runs/run-20260918-local-002/observability_reconciliation.json"
+        }
+      ]
+    },
+    {
+      "id": "OBS-005",
+      "description": "Verify dashboard/trace aggregates agree with deterministic row-level and run-level metric artifacts for the smoke subset and final run.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "dashboard_agreement_in_reconciliation",
+          "path": "runs/run-20260918-local-001/observability_reconciliation.json"
+        },
+        {
+          "label": "note",
+          "ref": "No Langfuse/Grafana dashboards; row-level accuracy matched aggregate metric files."
+        },
+        {
+          "label": "run002_dashboard_agreement",
+          "path": "runs/run-20260918-local-002/observability_reconciliation.json"
+        }
+      ]
+    },
+    {
+      "id": "OBS-006",
+      "description": "Record observability configuration, tool versions, sampling/content policy, and telemetry privacy boundary without committing secrets.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "observability",
+          "path": "runs/run-20260918-local-001/observability.json"
+        },
+        {
+          "label": "run",
+          "path": "runs/run-20260918-local-001/run.json"
+        },
+        {
+          "label": "run002_observability",
+          "path": "runs/run-20260918-local-002/observability.json"
+        }
+      ]
+    },
+    {
+      "id": "ITER-001",
+      "description": "Inspect disagreement/error slices and record one concrete next hypothesis or controlled change for the following run.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "error_analysis",
+          "path": "runs/run-20260918-local-001/error_analysis.md"
+        },
+        {
+          "label": "comparison",
+          "path": "runs/run-20260918-local-001/comparison.json"
+        },
+        {
+          "label": "run002_error_analysis",
+          "path": "runs/run-20260918-local-002/error_analysis.md"
+        },
+        {
+          "label": "run002_comparison",
+          "path": "runs/run-20260918-local-002/comparison.json"
+        }
+      ]
+    },
+    {
+      "id": "REP-001",
+      "description": "Record enough local environment, dependency, prompt/model, seed, split, and command/config information to reproduce the run.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "run",
+          "path": "runs/run-20260918-local-001/run.json"
+        },
+        {
+          "label": "llm_config",
+          "path": "runs/run-20260918-local-001/llm_config.json"
+        },
+        {
+          "label": "classifier_config",
+          "path": "runs/run-20260918-local-001/classifier_config.json"
+        },
+        {
+          "label": "pipeline_script",
+          "path": "scripts/run1_pipeline.py"
+        },
+        {
+          "label": "run002_run",
+          "path": "runs/run-20260918-local-002/run.json"
+        },
+        {
+          "label": "run002_pipeline_script",
+          "path": "scripts/run2_pipeline.py"
+        }
+      ]
+    }
+  ]
+}

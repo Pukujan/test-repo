@@ -1,6 +1,14 @@
 {
   "experiments": [
     {
+      "id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+      "path": "projects/classifier-calibration/experiments/2026-09-18_calibrated-llm-local-classifier",
+      "project": "classifier-calibration",
+      "question": "Can a calibrated LLM classifier and a locally trained lightweight classifier be evaluated reproducibly against the same domain-specific corpus split, with calibration quality, classification quality, and iteration history recorded durably?",
+      "status": "completed",
+      "updated_at": "2026-09-18T18:36:23Z"
+    },
+    {
       "id": "fossil-2026-09-14-shared-chat-completeness",
       "path": "projects/fossil/experiments/2026-09-14_shared-chat-completeness",
       "project": "fossil",

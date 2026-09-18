@@ -1,0 +1,7 @@
+{
+  "schema_version": "lab.project.v1",
+  "id": "classifier-calibration",
+  "name": "Classifier Calibration Bench",
+  "upstream_repository": "https://github.com/Pukujan/test-repo",
+  "purpose": "Local, reproducible experiments comparing calibrated LLM classification with lightweight trained classifiers on shared frozen dataset splits."
+}
