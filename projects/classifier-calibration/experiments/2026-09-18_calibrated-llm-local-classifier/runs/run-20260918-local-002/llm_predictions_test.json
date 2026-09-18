@@ -1,0 +1,2505 @@
+{
+  "rows": [
+    {
+      "sample_id": "syn-0001",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "f661988a0ec191c7d85b7109ef639492",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.272581676234276,
+        "politics": -1.302418570243639,
+        "sports": 3.1716569216069983,
+        "technology": -0.5966566751290847
+      },
+      "calibrated_probs": {
+        "health": 2.4993899196220706e-39,
+        "politics": 1.3761762084171206e-39,
+        "sports": 1.0,
+        "technology": 1.8571371476920925e-33
+      },
+      "latency_ms": 0.5223450007179054,
+      "input_sha256": "2e6322deafdac0de3da1ec692912a88da08082a963024e3afe495df0bb70d9c5",
+      "input_len": 61
+    },
+    {
+      "sample_id": "syn-0002",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "97241d2d898bc890278438f6e12be8b6",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.5058464629908699,
+        "politics": -1.5997484520079455,
+        "sports": 3.4485625241216353,
+        "technology": -1.3429676091228315
+      },
+      "calibrated_probs": {
+        "health": 4.492002136689022e-35,
+        "politics": 1.4155590892659359e-44,
+        "sports": 1.0,
+        "technology": 2.4060135297173075e-42
+      },
+      "latency_ms": 0.2743519999057753,
+      "input_sha256": "a82cff3462edeec927d59ca05cef085d538885c0028c27f93870058f9858d72d",
+      "input_len": 71
+    },
+    {
+      "sample_id": "syn-0004",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "20a7571c7428faa2b7bb7c300c4ef7f3",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9810650389666674,
+        "politics": -0.06130077283835338,
+        "sports": 1.8620591439966387,
+        "technology": -0.8196933321916215
+      },
+      "calibrated_probs": {
+        "health": 2.0180741500552418e-25,
+        "politics": 1.967469588370165e-17,
+        "sports": 1.0,
+        "technology": 5.088548933500619e-24
+      },
+      "latency_ms": 0.24832400049490388,
+      "input_sha256": "8ab957b5a2cc21c8266cf08d30aebffa402d3681572f368578a602a50d2799c6",
+      "input_len": 76
+    },
+    {
+      "sample_id": "syn-0012",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "2052bf7e9609a180004b1792f617dbc6",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8065888021408248,
+        "politics": 0.4533024606386147,
+        "sports": 1.5587813562298698,
+        "technology": -1.205495014727662
+      },
+      "calibrated_probs": {
+        "health": 2.8487599240176826e-21,
+        "politics": 2.4999557153702486e-10,
+        "sports": 0.9999999997500044,
+        "technology": 9.767884431979799e-25
+      },
+      "latency_ms": 0.23694699848419987,
+      "input_sha256": "12c2766fd0132309dc40cc0872f3020515ef69a2651f30b909cd9138a6505247",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0016",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "592f48258e590d746329af85fe740d2a",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.670888971647534,
+        "politics": -0.16391370391359905,
+        "sports": 2.1692485907792523,
+        "technology": -1.33444591521812
+      },
+      "calibrated_probs": {
+        "health": 2.142291555229398e-25,
+        "politics": 5.425125642238317e-21,
+        "sports": 1.0,
+        "technology": 3.6922933271231804e-31
+      },
+      "latency_ms": 0.2911689989559818,
+      "input_sha256": "ebd9359c6e0cf07bdf2a41f040c9fbcfe1670c91b1542d8b861b259f65221e46",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0020",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "69c552e4deaf9b763be848c726fc0a65",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.248553878916981,
+        "politics": -1.091109366563558,
+        "sports": 3.6846601788874835,
+        "technology": -1.3449969334069527
+      },
+      "calibrated_probs": {
+        "health": 1.4146439056709506e-43,
+        "politics": 3.297560645275084e-42,
+        "sports": 1.0,
+        "technology": 2.0556700348957781e-44
+      },
+      "latency_ms": 0.26416999935463537,
+      "input_sha256": "7110ec3962c2bdc6f9e390045397127ffbf80d3f853a8678924f5bc7adccb64a",
+      "input_len": 66
+    },
+    {
+      "sample_id": "syn-0025",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "45efec30d48f59afdb736bdd73a877bc",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9643545099283534,
+        "politics": -1.1179326144918165,
+        "sports": 2.868754771537282,
+        "technology": -0.7864676471171167
+      },
+      "calibrated_probs": {
+        "health": 5.082013455054328e-34,
+        "politics": 2.3554470372996677e-35,
+        "sports": 1.0,
+        "technology": 1.7829594618884223e-32
+      },
+      "latency_ms": 0.25881100009428337,
+      "input_sha256": "fc4f3f097796e1b4019f1e54d0d5f3e502742cb39375e9c7d118bfa931bdc6ae",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0028",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c06e3e23300b6289d7e0ee4c268389b1",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.3593201646709083,
+        "politics": -1.0946990300346633,
+        "sports": 3.8446143375690665,
+        "technology": -1.3905951428635013
+      },
+      "calibrated_probs": {
+        "health": 6.297950310536549e-46,
+        "politics": 1.2521870302056957e-43,
+        "sports": 1.0,
+        "technology": 3.3693662458729433e-46
+      },
+      "latency_ms": 0.23595600032422226,
+      "input_sha256": "1902646d44aca2b3e0c6127a1c4cc8f117b4d54ba2d948eda5bfb0bf52631eb4",
+      "input_len": 66
+    },
+    {
+      "sample_id": "syn-0029",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b82738c5c9004d32b7f536ab83353bd0",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9427326608689579,
+        "politics": -0.8723935891213411,
+        "sports": 3.0579908495229695,
+        "technology": -1.2428645995326764
+      },
+      "calibrated_probs": {
+        "health": 1.7789228611536383e-35,
+        "politics": 7.262974690532628e-35,
+        "sports": 1.0,
+        "technology": 4.3978885584152043e-38
+      },
+      "latency_ms": 0.34298799982934725,
+      "input_sha256": "883ab3dbfce7a2caaa845568ccf595b61459cab008c31df7f0ea366f83270307",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0035",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "7d62b65373125be2d1f0fd3a59697f3d",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.7487791321830561,
+        "politics": -1.245973884333219,
+        "sports": 4.153268150992377,
+        "technology": -1.1585151344761038
+      },
+      "calibrated_probs": {
+        "health": 5.438368850141465e-52,
+        "politics": 1.2670085685843035e-47,
+        "sports": 1.0,
+        "technology": 7.285118176067632e-47
+      },
+      "latency_ms": 0.2421629997115815,
+      "input_sha256": "3f16b448ccf39ffa50077f8b752860332b467bcebe0283981cd1e81f69c350f8",
+      "input_len": 66
+    },
+    {
+      "sample_id": "syn-0043",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "ede94dd1f3ebaac5a47afa718b482771",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9154400954102848,
+        "politics": -1.1360144727839125,
+        "sports": 3.414993620458354,
+        "technology": -1.3635390522641608
+      },
+      "calibrated_probs": {
+        "health": 2.4340565226041916e-38,
+        "politics": 2.9542412654168143e-40,
+        "sports": 1.0,
+        "technology": 3.1202728543023977e-42
+      },
+      "latency_ms": 0.2302209995832527,
+      "input_sha256": "aa8022a12fdf11359de8c64bde3e7e94c4543cb27460e386c19eb4bb6e3e0a15",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0046",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "aaa6dda4b6ef609626c1b9a67aa6adfe",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.987339708164959,
+        "politics": -0.7447406361888823,
+        "sports": 2.6692041169598375,
+        "technology": -0.9371237726060012
+      },
+      "calibrated_probs": {
+        "health": 1.7364563798615708e-32,
+        "politics": 2.2225556486319365e-30,
+        "sports": 1.0,
+        "technology": 4.740606990105592e-32
+      },
+      "latency_ms": 0.21587499941233546,
+      "input_sha256": "d59c1622ff2df746fe9eeaf9a752d1e613d86121773db168941bdc7769a6784c",
+      "input_len": 75
+    },
+    {
+      "sample_id": "syn-0048",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "4e728d94e81f7cb9dd5c4fe5dd08a51e",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9086954154734362,
+        "politics": -1.3579645955010515,
+        "sports": 3.599830082491086,
+        "technology": -1.3331700715166082
+      },
+      "calibrated_probs": {
+        "health": 6.909475707691583e-40,
+        "politics": 8.652519341542456e-44,
+        "sports": 1.0,
+        "technology": 1.420708823560649e-43
+      },
+      "latency_ms": 0.22441299915954005,
+      "input_sha256": "f75af02b840ee34455d8412e4fc1e54e29c02da7c21a9f42bc0ddda362ed1728",
+      "input_len": 68
+    },
+    {
+      "sample_id": "syn-0052",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "39d9dec58aef2492622097a720e87441",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.1587125603683395,
+        "politics": -0.8865000011619858,
+        "sports": 3.43098936327182,
+        "technology": -1.3857768017415024
+      },
+      "calibrated_probs": {
+        "health": 1.3625599505059957e-40,
+        "politics": 3.1532896621825486e-38,
+        "sports": 1.0,
+        "technology": 1.4524482857323073e-42
+      },
+      "latency_ms": 0.23347999922407325,
+      "input_sha256": "5262de36038c9c445bded369ea81b1f1dcdb5a0bac94455a4620d6c08ffab591",
+      "input_len": 65
+    },
+    {
+      "sample_id": "syn-0056",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "a21a20b7d7ca8f94048dd8ccadab638d",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2154459747144994,
+        "politics": -0.2637854143043441,
+        "sports": 2.549373759903163,
+        "technology": -1.0701423708843234
+      },
+      "calibrated_probs": {
+        "health": 1.991550291607508e-33,
+        "politics": 3.6745983739806902e-25,
+        "sports": 1.0,
+        "technology": 3.641517025450289e-32
+      },
+      "latency_ms": 0.23880499975348357,
+      "input_sha256": "42e3bde3d3ae1d331d9939e984f2ccb76390d670e93a02686a237a165e8c5d92",
+      "input_len": 76
+    },
+    {
+      "sample_id": "syn-0058",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "4ba1f91f0fb16c1594419aeaf29db9ce",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2507597679733782,
+        "politics": -1.4287910554911145,
+        "sports": 4.154971460791769,
+        "technology": -1.4754206373272793
+      },
+      "calibrated_probs": {
+        "health": 1.1127949187332361e-47,
+        "politics": 3.162678297278716e-49,
+        "sports": 1.0,
+        "technology": 1.2446166792132923e-49
+      },
+      "latency_ms": 0.3375249998498475,
+      "input_sha256": "89d6cb9447af8a4a743c08fb225446162c4201389cabb291ad4d87d80b8c8133",
+      "input_len": 65
+    },
+    {
+      "sample_id": "syn-0059",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "400fdf86f0b808d80adf68780f217208",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9469738894080496,
+        "politics": -0.062326078611708365,
+        "sports": 2.3401074761107545,
+        "technology": -1.3308075080909996
+      },
+      "calibrated_probs": {
+        "health": 2.810438121878078e-29,
+        "politics": 1.3574607492691213e-21,
+        "sports": 1.0,
+        "technology": 1.3026794931270575e-32
+      },
+      "latency_ms": 0.31439300073543563,
+      "input_sha256": "eac4a94463f27282ea54ebf3abded0b3f0c94739b1fff41d5b6ceadd401f66e8",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0062",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "2d2103a8c19a650bdf5d5e547fddf5ae",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9086857236363376,
+        "politics": -1.2334840232416893,
+        "sports": 3.381765461454054,
+        "technology": -1.2395957145760321
+      },
+      "calibrated_probs": {
+        "health": 5.415200096139534e-38,
+        "politics": 8.174332964036395e-41,
+        "sports": 1.0,
+        "technology": 7.233805832093722e-41
+      },
+      "latency_ms": 0.2570969991211314,
+      "input_sha256": "9887a91e8d10baf4a42e51bfbb700e0a2ca7d812861e4e66b7088546801fd478",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0071",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "0358915b31d6dd4d75f4d008c475fb77",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.3710057054358251,
+        "politics": -0.7882771062290442,
+        "sports": 3.2780192857649153,
+        "technology": -1.1187364741000507
+      },
+      "calibrated_probs": {
+        "health": 4.159891485601805e-41,
+        "politics": 4.792899289243016e-36,
+        "sports": 1.0,
+        "technology": 6.460478779155127e-39
+      },
+      "latency_ms": 0.2273780010000337,
+      "input_sha256": "3b128679739f79d948c61ff1d7da4aad95ff52ae74d4b270eeb7f3d6d0caa3cf",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0073",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "10803ae516d884e219d83581488ff633",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.5079582514687209,
+        "politics": -1.5176663752486066,
+        "sports": 3.245808545747632,
+        "technology": -1.2201839190303119
+      },
+      "calibrated_probs": {
+        "health": 2.4842532825587532e-33,
+        "politics": 4.216795527100507e-42,
+        "sports": 1.0,
+        "technology": 1.6176416730264142e-39
+      },
+      "latency_ms": 0.22786000045016408,
+      "input_sha256": "ef3b1785a255d89c6b6e18fe17a00bf8de02236270ecb85a27a2b380e8cb342a",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0074",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "e0846c7103cdbd5fb84fe5263b8f71df",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9154400954102848,
+        "politics": -1.1360144727839125,
+        "sports": 3.414993620458354,
+        "technology": -1.3635390522641608
+      },
+      "calibrated_probs": {
+        "health": 2.4340565226041916e-38,
+        "politics": 2.9542412654168143e-40,
+        "sports": 1.0,
+        "technology": 3.1202728543023977e-42
+      },
+      "latency_ms": 0.2127009993273532,
+      "input_sha256": "aa8022a12fdf11359de8c64bde3e7e94c4543cb27460e386c19eb4bb6e3e0a15",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0082",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "9830181a00e485c3b263c32b48b6cde0",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8098709326073626,
+        "politics": -1.0365546485073838,
+        "sports": 3.142685357343215,
+        "technology": -1.2962597762284735
+      },
+      "calibrated_probs": {
+        "health": 4.661570720271488e-35,
+        "politics": 5.007057032157261e-37,
+        "sports": 1.0,
+        "technology": 2.778513174556202e-39
+      },
+      "latency_ms": 0.2122169989888789,
+      "input_sha256": "e11d4c82d3638e8d238dc8313af40291143939f886b7e4136573d64d19bae00d",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0088",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c30166b0e01dd2202add1ac35ab12204",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.7229766478028412,
+        "politics": -1.6732084417955493,
+        "sports": 3.613389508487045,
+        "technology": -1.2172044188886642
+      },
+      "calibrated_probs": {
+        "health": 2.1617334175336233e-38,
+        "politics": 1.2055733610481736e-46,
+        "sports": 1.0,
+        "technology": 1.1015247520575887e-42
+      },
+      "latency_ms": 0.22703899958287366,
+      "input_sha256": "538e0062567074277195212d402fc0621f0064fda5713eca3ab456c6f701ac18",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0090",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1a5440ea3a43ce87cd832f5483edf309",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.299640444291028,
+        "politics": -1.0164052385103197,
+        "sports": 3.5253891244699855,
+        "technology": -1.2093434416686404
+      },
+      "calibrated_probs": {
+        "health": 1.2311916610947807e-42,
+        "politics": 3.5520200156680626e-40,
+        "sports": 1.0,
+        "technology": 7.492650321802692e-42
+      },
+      "latency_ms": 0.24603000019851606,
+      "input_sha256": "aea71e517b635ca358c81a27ceabb42875cb0576b2e6f47a4faf33a2b50c1292",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0093",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c81ba43f69b1cf5d16e407fa8c26bcfa",
+      "gold_label": "sports",
+      "predicted_label": "sports",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.302859627745087,
+        "politics": -1.0982878134573473,
+        "sports": 3.210517504049387,
+        "technology": -0.8093700628469582
+      },
+      "calibrated_probs": {
+        "health": 6.270531274763535e-40,
+        "politics": 3.751392797299947e-38,
+        "sports": 1.0,
+        "technology": 1.212551620903992e-35
+      },
+      "latency_ms": 0.24579499950050376,
+      "input_sha256": "a20e87387cb3fccf0ff74cff11d269ecf9837194efe957570d1c26844750b3ff",
+      "input_len": 59
+    },
+    {
+      "sample_id": "syn-0101",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b77c6dd88eb00feec6b8147adf97fde9",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.791661377733527,
+        "politics": -1.3655658159347848,
+        "sports": -0.7589075723675023,
+        "technology": 2.9161347660358077
+      },
+      "calibrated_probs": {
+        "health": 6.23005520189129e-33,
+        "politics": 6.450914439740188e-38,
+        "sports": 1.1994657001229753e-32,
+        "technology": 1.0
+      },
+      "latency_ms": 0.23271999998542015,
+      "input_sha256": "e8257f17a1f1b15d2c45c90108927285948903fc282350ea594f0c6c22199a81",
+      "input_len": 72
+    },
+    {
+      "sample_id": "syn-0102",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1330e1ccb1001c9aed96a5dc85bee370",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.648541787409309,
+        "politics": -1.4707189793983189,
+        "sports": -0.653952077814529,
+        "technology": 2.7732128446221482
+      },
+      "calibrated_probs": {
+        "health": 1.9011522489853764e-30,
+        "politics": 1.3730189936429143e-37,
+        "sports": 1.70617554281412e-30,
+        "technology": 1.0
+      },
+      "latency_ms": 0.2408580003248062,
+      "input_sha256": "873a28b300ff759350d37c19cde264b2b085373e4e22f35774037556e37908c5",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0112",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "e17940bab18cdda1105763b559a60f06",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.1242557216711009,
+        "politics": -0.7632968349132356,
+        "sports": -1.167771403407769,
+        "technology": 3.0553239599921014
+      },
+      "calibrated_probs": {
+        "health": 4.973156790136712e-37,
+        "politics": 6.790178729548492e-34,
+        "sports": 2.0828583826929886e-37,
+        "technology": 1.0
+      },
+      "latency_ms": 0.22640099996351637,
+      "input_sha256": "c4f95f1aa770a01664a56be346310ee18734146db07e13d44393b9f7b6171a4a",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0120",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "bea5b2944389b09c0a9e15f1127a813b",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2783722286626868,
+        "politics": -1.0554059110989358,
+        "sports": -1.1526756758656498,
+        "technology": 3.4864538156272715
+      },
+      "calibrated_probs": {
+        "health": 4.1043731201459926e-42,
+        "politics": 3.5473795828147768e-40,
+        "sports": 5.070294906618976e-41,
+        "technology": 1.0
+      },
+      "latency_ms": 0.21263300004648045,
+      "input_sha256": "9ef0aa6318ad927074a713b17ac738207e3a8f6edf097deb863d53f6b19d07d2",
+      "input_len": 62
+    },
+    {
+      "sample_id": "syn-0122",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "aef9a86f4d4fc0d9c3f937052efc5238",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.3866074891761457,
+        "politics": -1.2362295380266488,
+        "sports": -0.4309697751442254,
+        "technology": 3.0538068023470206
+      },
+      "calibrated_probs": {
+        "health": 2.698059460579197e-39,
+        "politics": 5.460316342691545e-38,
+        "sports": 5.390328520106321e-31,
+        "technology": 1.0
+      },
+      "latency_ms": 0.23105299987946637,
+      "input_sha256": "02e2e245736ff7b235d718ea64598fdef44466124a850bd742220badb2d07dbc",
+      "input_len": 60
+    },
+    {
+      "sample_id": "syn-0129",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b4b728f0345e0e52f01f9806faa59194",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.5991235845974594,
+        "politics": -1.2761604504595379,
+        "sports": -0.44160783781149715,
+        "technology": 3.316891872868493
+      },
+      "calibrated_probs": {
+        "health": 1.995410611421049e-43,
+        "politics": 1.2742493411660338e-40,
+        "sports": 2.2598848376723337e-33,
+        "technology": 1.0
+      },
+      "latency_ms": 0.21474800087162293,
+      "input_sha256": "07bf988fecab8d15e9c9d0aebbc52de8c1a05ea424ab353eca6d21ae63e9d5e1",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0133",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "3f2a7657815b9f3101641595aaea8b87",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.244228691370867,
+        "politics": -0.9282275145527388,
+        "sports": -1.1896391544204605,
+        "technology": 3.362095360344064
+      },
+      "calibrated_probs": {
+        "health": 9.771869300977548e-41,
+        "politics": 5.429114449490463e-38,
+        "sports": 2.911631055900835e-40,
+        "technology": 1.0
+      },
+      "latency_ms": 0.238673999774619,
+      "input_sha256": "9b73a231f1eae597788fba0399bfc92631482b5bd37c87bcab083156f3851720",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0138",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "352264ecc5ddbceb82b3ba6ba4fad9a7",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.6885017701063048,
+        "politics": -0.8146852070058851,
+        "sports": -1.1708845148906868,
+        "technology": 2.674071492002869
+      },
+      "calibrated_probs": {
+        "health": 6.2095445237149115e-30,
+        "politics": 4.977879029573244e-31,
+        "sports": 4.0099269489233506e-34,
+        "technology": 1.0
+      },
+      "latency_ms": 0.2710529988689814,
+      "input_sha256": "40353ba8801cb3305bf8539fda8269ea1d02ae946e267aadccdf7b4ed162c520",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0140",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "316253faf91bf5a028b10fe4b903cc88",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8478329188880905,
+        "politics": -1.2702797485527244,
+        "sports": -0.13373825252461324,
+        "technology": 2.2518509199654257
+      },
+      "calibrated_probs": {
+        "health": 1.192582034882908e-27,
+        "politics": 2.553652053570175e-31,
+        "sports": 1.9012346731022354e-21,
+        "technology": 1.0
+      },
+      "latency_ms": 0.2602619988465449,
+      "input_sha256": "01d86e4be934d003afbd696b2ae8348198cd045dab31a708339fa69ca3c56849",
+      "input_len": 72
+    },
+    {
+      "sample_id": "syn-0143",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "8b06a058b907ccf294dc5311c7d3344f",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.1173592937742587,
+        "politics": -1.3097908930626594,
+        "sports": -0.7650275565468462,
+        "technology": 3.1921777433837635
+      },
+      "calibrated_probs": {
+        "health": 3.696893197648347e-38,
+        "politics": 7.877660672578632e-40,
+        "sports": 4.247677046351425e-35,
+        "technology": 1.0
+      },
+      "latency_ms": 0.22235699907469098,
+      "input_sha256": "e29e3de9e786e9566a4faee2962e1a2b62238498046558abd27f95561f697fc1",
+      "input_len": 62
+    },
+    {
+      "sample_id": "syn-0147",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "5a6228fe26eb6577a2c5afceda1e1c05",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": 0.6808139697068042,
+        "politics": -0.8598817581865603,
+        "sports": -1.0146931354572628,
+        "technology": 1.1937609239370117
+      },
+      "calibrated_probs": {
+        "health": 3.5041617661052315e-05,
+        "politics": 1.4530183146015489e-18,
+        "sports": 6.570471724980062e-20,
+        "technology": 0.9999649583823389
+      },
+      "latency_ms": 0.2051680003205547,
+      "input_sha256": "ca60339710220349e2a933358005e207861721323a84c071ccad5ed40f837825",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0150",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "2e26c602692ac8ab1d28fcc555566ae7",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2852803916058766,
+        "politics": -1.5385052234356789,
+        "sports": -0.7557421792274318,
+        "technology": 3.5795277942689827
+      },
+      "calibrated_probs": {
+        "health": 5.556649291842921e-43,
+        "politics": 3.510185308886779e-45,
+        "sports": 2.2096498495196028e-38,
+        "technology": 1.0
+      },
+      "latency_ms": 0.23564600087411236,
+      "input_sha256": "0b18cc378623bb1501ba22abb83111a8fef6026dcf8b121416ddf884182e3f09",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0151",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "8f4bf70e0a82696c38349a1d860955b4",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8105346599609692,
+        "politics": -1.2085536852103786,
+        "sports": -0.3214482801489802,
+        "technology": 2.3405366253203264
+      },
+      "calibrated_probs": {
+        "health": 4.2671958341982365e-28,
+        "politics": 1.4893379199843768e-31,
+        "sports": 7.556016417934219e-24,
+        "technology": 1.0
+      },
+      "latency_ms": 0.21017099970777053,
+      "input_sha256": "b6f4340ac1ad30d14842fe00dde7f40acd89aa32d6509e093911e6f169c44f3d",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0154",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "323963e38c1c093ce0cae3403f68b290",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.12660178997999882,
+        "politics": -1.6047403146415065,
+        "sports": -0.7674079735706512,
+        "technology": 2.498750078192148
+      },
+      "calibrated_probs": {
+        "health": 1.5721117439528098e-23,
+        "politics": 2.2779034742725626e-36,
+        "sports": 4.27082348198782e-29,
+        "technology": 1.0
+      },
+      "latency_ms": 0.20948599922121502,
+      "input_sha256": "19767944d85d7c3620ed9c3beb02a07cc4552330f83694533499b85efba0ce80",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0159",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "5d24d7431f80138df32772b40023a813",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2397155107912408,
+        "politics": -1.0925924514883778,
+        "sports": -1.0939454801556858,
+        "technology": 3.426253442435298
+      },
+      "calibrated_probs": {
+        "health": 2.9642076081757124e-41,
+        "politics": 5.6208665436898975e-40,
+        "sports": 5.470802242573837e-40,
+        "technology": 1.0
+      },
+      "latency_ms": 0.21645299966621678,
+      "input_sha256": "6cf1b911434b92cfb6c324fc30d401e123d5817b2ef23400d43072ca47121512",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0162",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "38c912b0a2a477d7623c168bde5f66ff",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.6869148124081945,
+        "politics": -1.6402885135872927,
+        "sports": -0.5935968379387958,
+        "technology": 2.920800163934275
+      },
+      "calibrated_probs": {
+        "health": 4.6109017670828207e-32,
+        "politics": 2.4148330863440627e-40,
+        "sports": 2.9808182559321744e-31,
+        "technology": 1.0
+      },
+      "latency_ms": 0.2138130003004335,
+      "input_sha256": "62cfbd8d136adf19005704e3ef035a55fdbd06782b329d9724c5328c3782ad74",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0170",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c7520744f6fb5dd4fdd4a4c42056129e",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.1763592553352195,
+        "politics": -1.4969023093611669,
+        "sports": -0.36402360009046564,
+        "technology": 2.0372851647868426
+      },
+      "calibrated_probs": {
+        "health": 5.922824564196128e-20,
+        "politics": 2.0064929554524874e-31,
+        "sports": 1.3883439796390758e-21,
+        "technology": 1.0
+      },
+      "latency_ms": 0.21940999977232423,
+      "input_sha256": "8c83aad69da8c46ba5edca95de901c80e7c43555786f43ab9decccd1fd685728",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0172",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1fcff13ba9fe71d564e5396a2399a931",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.4387807442999734,
+        "politics": -1.6581684319265853,
+        "sports": -0.7352114680352341,
+        "technology": 3.8321606442617915
+      },
+      "calibrated_probs": {
+        "health": 1.6488639019607424e-46,
+        "politics": 2.049309567226276e-48,
+        "sports": 2.129658149868204e-40,
+        "technology": 1.0
+      },
+      "latency_ms": 0.2577180002845125,
+      "input_sha256": "d5550cf9db1e63e0bf31306b3992aea6586415126a44f666d3e511e49b551e65",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0175",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "726b43ac85cffc658b5607462a8006c7",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.5830454307545975,
+        "politics": -1.2879467656081527,
+        "sports": -0.37788803655405445,
+        "technology": 2.248880232916801
+      },
+      "calibrated_probs": {
+        "health": 2.524679316822649e-25,
+        "politics": 1.9033165408998658e-31,
+        "sports": 1.52820179902043e-23,
+        "technology": 1.0
+      },
+      "latency_ms": 0.3017590006493265,
+      "input_sha256": "c9ae4196c6138b8b1530717e5cf04932d2b7508f846ff8c0d76aa369b859b667",
+      "input_len": 63
+    },
+    {
+      "sample_id": "syn-0176",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "9ce1e322238fd378551836712de6c24c",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": 0.6800356007678017,
+        "politics": -1.442282294116993,
+        "sports": -0.9611039955119818,
+        "technology": 1.7233506888611692
+      },
+      "calibrated_probs": {
+        "health": 8.667229306321934e-10,
+        "politics": 3.1890496064779663e-28,
+        "sports": 4.820841720027107e-24,
+        "technology": 0.9999999991332771
+      },
+      "latency_ms": 0.28348300111247227,
+      "input_sha256": "09dedbb8d783c0a205f924763d0e58d6903e458cd7cafc7b2e0448b92d9c518a",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0180",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1e137b68b60dabf4328d0e184edc42f6",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.5474243241331476,
+        "politics": -0.7207880067801952,
+        "sports": -0.8220479696531726,
+        "technology": 2.0902603005665092
+      },
+      "calibrated_probs": {
+        "health": 1.2284640446540458e-23,
+        "politics": 3.833051330034622e-25,
+        "sports": 5.058383740756811e-26,
+        "technology": 1.0
+      },
+      "latency_ms": 0.38734800000383984,
+      "input_sha256": "2139feeffb4175ead9cf59a7384d713bb62d4467ab47d81bd6e261cbc67301e9",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0184",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "74cfdd212727c3530cfad3a42d712b58",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.7845850451883131,
+        "politics": -1.4623920210255155,
+        "sports": -0.8707834878955888,
+        "technology": 3.1177605541094087
+      },
+      "calibrated_probs": {
+        "health": 1.2724970813980784e-34,
+        "politics": 1.6493020807439766e-40,
+        "sports": 2.2695859516260676e-35,
+        "technology": 1.0
+      },
+      "latency_ms": 0.44515599984151777,
+      "input_sha256": "7d39d942e295abf0c089400303a0e0466edab4cbfa06e112046351b92af7cd37",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0188",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "2c15454c69a445ce7fd1bf667ce6a873",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9045944115742778,
+        "politics": -1.5091732852036506,
+        "sports": -0.850753645866923,
+        "technology": 3.2645213426448434
+      },
+      "calibrated_probs": {
+        "health": 6.130849716420066e-37,
+        "politics": 3.43728305174037e-42,
+        "sports": 1.7995984875546185e-36,
+        "technology": 1.0
+      },
+      "latency_ms": 0.4241719998390181,
+      "input_sha256": "63a55778e6c5b8e1f384f629b79ef48be42742f2e1bf3ce7dcadeb15eb510095",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0191",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "fcbc7dd046b65a3c41fe11c16a5a0a71",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8369984295117397,
+        "politics": -1.3101471765371477,
+        "sports": -0.06188985632604209,
+        "technology": 2.2090354623749224
+      },
+      "calibrated_probs": {
+        "health": 3.487271666755319e-27,
+        "politics": 2.7087441239301307e-31,
+        "sports": 1.8836200538058628e-20,
+        "technology": 1.0
+      },
+      "latency_ms": 0.5940049995842855,
+      "input_sha256": "872974cc638b0f8310e30c8dce1a2fd0a26751a0ea67a99bd2fd6aa658d57cb1",
+      "input_len": 60
+    },
+    {
+      "sample_id": "syn-0192",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1975a8c4549846577d29dbd6fd9b55da",
+      "gold_label": "technology",
+      "predicted_label": "technology",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9639938238936755,
+        "politics": -1.3963291705277556,
+        "sports": -0.9444768320968244,
+        "technology": 3.304799826518253
+      },
+      "calibrated_probs": {
+        "health": 8.350826579624174e-38,
+        "politics": 1.4672778360204664e-41,
+        "sports": 1.2338202723453825e-37,
+        "technology": 1.0
+      },
+      "latency_ms": 0.31507799940300174,
+      "input_sha256": "8fb39f758953d6a3b3d6705aa49cbc6e860de8cbdb65509f17099785fdd80988",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0200",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "a2aae704706028b6b3a5d06eeddb37da",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.5226832579228714,
+        "politics": 2.3193529675846203,
+        "sports": -0.7402070332331716,
+        "technology": -1.0564626764285865
+      },
+      "calibrated_probs": {
+        "health": 2.062466949681206e-25,
+        "politics": 1.0,
+        "sports": 2.660721946648351e-27,
+        "technology": 4.7647254126413756e-30
+      },
+      "latency_ms": 0.3172629985783715,
+      "input_sha256": "fc1134471dc3ff77da3940e89fe9ff293b6245fc71fdedab5de52961f2fd7fea",
+      "input_len": 75
+    },
+    {
+      "sample_id": "syn-0201",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "4caeecf15187223339db411be9f37840",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": 0.12256403690131207,
+        "politics": 2.1967005743844017,
+        "sports": -0.9516981825913591,
+        "technology": -1.3675664286943652
+      },
+      "calibrated_probs": {
+        "health": 9.644482760885596e-19,
+        "politics": 1.0,
+        "sports": 4.501485549090355e-28,
+        "technology": 1.0994365499358853e-31
+      },
+      "latency_ms": 0.27568599944061134,
+      "input_sha256": "a32598caf38a9e0f3cf1432b7d1e5d2680bacdab629da4fbc94949c2daecb489",
+      "input_len": 71
+    },
+    {
+      "sample_id": "syn-0205",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b46ad1dd36bf49288d714f2a0bc81c55",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.6875411910036724,
+        "politics": 2.2064618528136823,
+        "sports": -0.35460652330055553,
+        "technology": -1.1643141385094642
+      },
+      "calibrated_probs": {
+        "health": 7.294725417890528e-26,
+        "politics": 1.0,
+        "sports": 5.686469702044382e-23,
+        "technology": 5.2700137062610866e-30
+      },
+      "latency_ms": 0.30397900081879925,
+      "input_sha256": "960147372513f6160ad901340fe4aeb889ad9f0de25dd3c85bdb69f05d11976f",
+      "input_len": 72
+    },
+    {
+      "sample_id": "syn-0209",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "527c07a716b48f6d77dcdc1879666c51",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.906612352342716,
+        "politics": 2.6575794622812516,
+        "sports": -0.6313382491641112,
+        "technology": -1.1196288607744296
+      },
+      "calibrated_probs": {
+        "health": 1.1010910923557727e-31,
+        "politics": 1.0,
+        "sports": 2.709091849706604e-29,
+        "technology": 1.554480813194176e-33
+      },
+      "latency_ms": 0.27225600024394225,
+      "input_sha256": "90eeb1ee53547fa936e029547b2b5e5a9c911d8fdfeb4b23459835eb33da15dd",
+      "input_len": 63
+    },
+    {
+      "sample_id": "syn-0210",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "afdadc9aa260aaaea9e73927a37f8b24",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.067287820895198,
+        "politics": 3.1822508820178776,
+        "sports": -0.6270776259071551,
+        "technology": -1.4878854352155282
+      },
+      "calibrated_probs": {
+        "health": 1.2273708760402642e-37,
+        "politics": 1.0,
+        "sports": 8.176980932215395e-34,
+        "technology": 2.727164618208172e-41
+      },
+      "latency_ms": 0.2823830000124872,
+      "input_sha256": "e73e0520fcbdf62f52cd44488a8cfb3df5b7545aa98fe368dbb03bcaa901661a",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0213",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "814871844f841bc1e91c6d60a9eeb34c",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.186146351093228,
+        "politics": 3.0961781603954357,
+        "sports": -0.09031568564713617,
+        "technology": -1.8197161236550758
+      },
+      "calibrated_probs": {
+        "health": 6.370916291127991e-38,
+        "politics": 1.0,
+        "sports": 2.101193849553222e-28,
+        "technology": 2.000252290258816e-43
+      },
+      "latency_ms": 0.28327799918770324,
+      "input_sha256": "fb0e8e626bbc3e2f56d444accfb40a5854f811e4178f609d4439ce96844dea43",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0216",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c38e5076a1b87dbe0a999f4a2d2f9ced",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.368303738014865,
+        "politics": 3.030308701072576,
+        "sports": -1.061030450682495,
+        "technology": -0.6009745123752185
+      },
+      "calibrated_probs": {
+        "health": 6.224977606649781e-39,
+        "politics": 1.0,
+        "sports": 2.904555343549278e-36,
+        "technology": 2.8778937991213144e-32
+      },
+      "latency_ms": 0.22286100102064665,
+      "input_sha256": "2dfad6ed48b729bbd324919e2c33eb7a5545c4634b65f9efc61fb629c0d1c6e6",
+      "input_len": 63
+    },
+    {
+      "sample_id": "syn-0225",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "672193bee35f7692e3e49eeae4796c8e",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.1908381428980634,
+        "politics": 3.0642948610921774,
+        "sports": -0.4031419312240367,
+        "technology": -1.4703147869700826
+      },
+      "calibrated_probs": {
+        "health": 1.0974489619577001e-37,
+        "politics": 1.0,
+        "sports": 7.6247690727291575e-31,
+        "technology": 4.100917620377027e-40
+      },
+      "latency_ms": 0.21887499860895332,
+      "input_sha256": "5645916509c5656ecbe52c1e5163394135894bde32e4c909bf6b072e5b1bca9c",
+      "input_len": 72
+    },
+    {
+      "sample_id": "syn-0235",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "56b953a02262e515da4f204d7bce9658",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.0527879428263789,
+        "politics": 2.56675983480009,
+        "sports": -1.3856866162299575,
+        "technology": -0.12828527574375861
+      },
+      "calibrated_probs": {
+        "health": 3.639212904649472e-32,
+        "politics": 1.0,
+        "sports": 4.6718224144167334e-35,
+        "technology": 3.90063757670387e-24
+      },
+      "latency_ms": 0.23016299928713124,
+      "input_sha256": "7133942ba1e9ac582bba2a6daefdf4addc4f8c13df0bf936cb8a1eb57c6c6244",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0237",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "44af91fb8fe1471e1640466d86b1072b",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.3379565624444993,
+        "politics": 2.9890778179644895,
+        "sports": -0.9356797904446015,
+        "technology": -0.7154414650753935
+      },
+      "calibrated_probs": {
+        "health": 2.6052950339684095e-38,
+        "politics": 1.0,
+        "sports": 8.128090999757674e-35,
+        "technology": 6.652032240161301e-33
+      },
+      "latency_ms": 0.2182929983973736,
+      "input_sha256": "41d01198d9971b69521ffd6bc64af8b21b9ba39f510d69d8d68f281660c2b7a0",
+      "input_len": 62
+    },
+    {
+      "sample_id": "syn-0242",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "e0b55e3d7ad499423525182280b41ca2",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2589497423772278,
+        "politics": 3.3724815308588942,
+        "sports": -1.3176191060105937,
+        "technology": -0.7959126824710745
+      },
+      "calibrated_probs": {
+        "health": 5.914242044884062e-41,
+        "politics": 1.0,
+        "sports": 1.8293781042729396e-41,
+        "technology": 6.21996434351208e-37
+      },
+      "latency_ms": 0.26910100132226944,
+      "input_sha256": "e6adad62ff8aabd94bdd8f83e183602a15a523630351e6567c7256d6ce7881c1",
+      "input_len": 66
+    },
+    {
+      "sample_id": "syn-0247",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "67558358756665f61e17a02b14217668",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2318580007348747,
+        "politics": 3.6048351742873384,
+        "sports": -1.214930979422623,
+        "technology": -1.158046194129846
+      },
+      "calibrated_probs": {
+        "health": 9.750275083457644e-43,
+        "politics": 1.0,
+        "sports": 1.367864591597267e-42,
+        "technology": 4.2671516228598246e-42
+      },
+      "latency_ms": 0.384749999284395,
+      "input_sha256": "bc60686b83b903afa87b5d14276085945c77b79558cd63632c7fbd0d3d42dad8",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0248",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "dbbe614d53b92a1bca326b2cc2b5769a",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8481220364359049,
+        "politics": 2.8889081820725186,
+        "sports": -0.9158193234944353,
+        "technology": -1.1249668221421898
+      },
+      "calibrated_probs": {
+        "health": 3.471905916452588e-33,
+        "politics": 1.0,
+        "sports": 8.965133968594363e-34,
+        "technology": 1.3674916790386685e-35
+      },
+      "latency_ms": 0.3463280008872971,
+      "input_sha256": "861f8e2b0ae0bb0694e42eea2a87f8b8bea2d8f67aaf3ba42a7e9db0275c7cf2",
+      "input_len": 76
+    },
+    {
+      "sample_id": "syn-0249",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "316cd85f0c861a0d706a94307979ec8e",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.939620056090308,
+        "politics": 3.063571792669103,
+        "sports": -0.919819701605111,
+        "technology": -1.2041320349736897
+      },
+      "calibrated_probs": {
+        "health": 1.693235642131436e-35,
+        "politics": 1.0,
+        "sports": 2.515944725267534e-35,
+        "technology": 8.534843168012076e-38
+      },
+      "latency_ms": 0.3044720015168423,
+      "input_sha256": "0ec7ae61e77da4ec982f951249d5f260a902453998c04581d24b33c9724873de",
+      "input_len": 73
+    },
+    {
+      "sample_id": "syn-0252",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1d3307c8dee2d57b688825cd29d23326",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9162174299326705,
+        "politics": 3.022299961612033,
+        "sports": -1.020159615946017,
+        "technology": -1.0859229157333508
+      },
+      "calibrated_probs": {
+        "health": 6.172663460212751e-35,
+        "politics": 1.0,
+        "sports": 7.72044339231152e-36,
+        "technology": 2.0721895479375463e-36
+      },
+      "latency_ms": 0.28561600083776284,
+      "input_sha256": "d4712c352885e01c5083b0afe66598748bf75399455c8a2efd4f47ccdcfb2ab4",
+      "input_len": 68
+    },
+    {
+      "sample_id": "syn-0257",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "d49588f93a6f19d81c879d4e84694181",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.780007478317116,
+        "politics": 2.912185182250141,
+        "sports": -0.9376247059305833,
+        "technology": -1.1945529980024514
+      },
+      "calibrated_probs": {
+        "health": 8.511812098474512e-33,
+        "politics": 1.0,
+        "sports": 3.6389507994261756e-34,
+        "technology": 2.134643689809254e-36
+      },
+      "latency_ms": 0.2563289999670815,
+      "input_sha256": "d7bfd71914d75ba063469e47a0ff7ab2b3c1307c19dc294235591a9d837e2fa7",
+      "input_len": 68
+    },
+    {
+      "sample_id": "syn-0264",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "591f8beb5e70e91ba536cafa27061054",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9848853267997243,
+        "politics": 2.706428468749354,
+        "sports": -1.2623105613946137,
+        "technology": -0.4592325805550199
+      },
+      "calibrated_probs": {
+        "health": 8.662749425603419e-33,
+        "politics": 1.0,
+        "sports": 3.37264617680289e-35,
+        "technology": 3.18726001343001e-28
+      },
+      "latency_ms": 0.26797499958775006,
+      "input_sha256": "93cf5f1dc9b37444c1034d2403bf2df0290d26c99ada920ef294d608e0a31664",
+      "input_len": 58
+    },
+    {
+      "sample_id": "syn-0271",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "a7b816050984ef0b5c83f827005d3b8d",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.4268094292583628,
+        "politics": 3.7890867034865297,
+        "sports": -1.376037127318049,
+        "technology": -0.9862401469101211
+      },
+      "calibrated_probs": {
+        "health": 4.95794640041899e-46,
+        "politics": 1.0,
+        "sports": 1.3686879341488612e-45,
+        "technology": 3.326886553831193e-42
+      },
+      "latency_ms": 0.26016799893113784,
+      "input_sha256": "e15cf7516caea2e1b022097b3f895140447e124c1422c9d7d2112acccf5e9989",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0276",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b99870ba43a5f84c27e0270bb92f1e52",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.2372850769890773,
+        "politics": 2.9635733649932265,
+        "sports": -1.0093288666810405,
+        "technology": -0.7169594213231103
+      },
+      "calibrated_probs": {
+        "health": 3.24943001556163e-37,
+        "politics": 1.0,
+        "sports": 3.103199330213606e-35,
+        "technology": 1.074727616509936e-32
+      },
+      "latency_ms": 0.28086500060453545,
+      "input_sha256": "9cc750ca74b184e584b4b2b0a2795eedc698f837b871eed32cea6793b774a3c4",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0279",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "f11c5d5c4d847dba8f74d947da03342b",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.6286320121475434,
+        "politics": 2.7176978408539614,
+        "sports": -0.9815851844492831,
+        "technology": -1.1074806442571448
+      },
+      "calibrated_probs": {
+        "health": 8.593067124139617e-30,
+        "politics": 1.0,
+        "sports": 7.386452379085952e-33,
+        "technology": 5.9555494143977275e-34
+      },
+      "latency_ms": 0.268548999883933,
+      "input_sha256": "6140ce4f6cfdcbcbc1ee586bc746b87c8e657fbd45af34b2d61fa47ec247e2cd",
+      "input_len": 65
+    },
+    {
+      "sample_id": "syn-0282",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "40a3d37a736077fc75455f46a4494091",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8233635845561963,
+        "politics": 2.434936333061217,
+        "sports": -0.12169114933541493,
+        "technology": -1.4898815991696086
+      },
+      "calibrated_probs": {
+        "health": 4.997657709028954e-29,
+        "politics": 1.0,
+        "sports": 6.214638086027472e-23,
+        "technology": 8.118290562694424e-35
+      },
+      "latency_ms": 0.3205900011380436,
+      "input_sha256": "37e85dd09c0db29da1d28339277702b68f22184092bbb63256c5d11ba0b94ee0",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0283",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "afa335cee39a034db647949e39bb3c0e",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8172257675450156,
+        "politics": 2.302065648479767,
+        "sports": -0.39169199312214,
+        "technology": -1.0931478878126197
+      },
+      "calibrated_probs": {
+        "health": 8.057104778280801e-28,
+        "politics": 1.0,
+        "sports": 4.00238086307885e-24,
+        "technology": 3.232584797053497e-30
+      },
+      "latency_ms": 0.2752370000962401,
+      "input_sha256": "aa599aff542d39465978addd2bb5a3972443207727eb5b139c2293798a8860d2",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0294",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "9944e707ec0546b6c494c501442282ae",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -1.288025451440094,
+        "politics": 1.9598853896596802,
+        "sports": -0.07798018678816766,
+        "technology": -0.5938797514314218
+      },
+      "calibrated_probs": {
+        "health": 6.151837851587468e-29,
+        "politics": 1.0,
+        "sports": 1.9921613301933726e-18,
+        "technology": 6.580786828851233e-23
+      },
+      "latency_ms": 0.25632200049585663,
+      "input_sha256": "80959409cbd4001a6786f8f4d229f50bbb3597fc343a6c2c086e314a83987e8e",
+      "input_len": 59
+    },
+    {
+      "sample_id": "syn-0297",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "ba86764305e27d8bbe60e5b16419306a",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.9572935268850667,
+        "politics": 3.085572668017833,
+        "sports": -0.7860155487806134,
+        "technology": -1.3422635923521622
+      },
+      "calibrated_probs": {
+        "health": 7.65791267381635e-36,
+        "politics": 1.0,
+        "sports": 2.3540301713891e-34,
+        "technology": 3.469787730662461e-39
+      },
+      "latency_ms": 0.26603200058161747,
+      "input_sha256": "f5b7d2c12f2eb6d05c1b8e6bf91e40aa23ad0a3af06417c4a8e22fab2144a29d",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0298",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "1962ac463d1c225e58fc078f0cbbbf5b",
+      "gold_label": "politics",
+      "predicted_label": "politics",
+      "correct": true,
+      "raw_scores": {
+        "health": -0.8604336138504328,
+        "politics": 3.199198352646156,
+        "sports": -1.2722878540244953,
+        "technology": -1.0664768847712303
+      },
+      "calibrated_probs": {
+        "health": 5.476268935305669e-36,
+        "politics": 1.0,
+        "sports": 1.4493200180269934e-39,
+        "technology": 8.888237606868174e-38
+      },
+      "latency_ms": 0.2759439994406421,
+      "input_sha256": "89a1ff3528d143fcefc2750d55b80987b7870709600a83b47e2ad05aea54d11e",
+      "input_len": 62
+    },
+    {
+      "sample_id": "syn-0301",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "6fb804df5ffd6cee3f3f048110afbd6b",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.20648297164994,
+        "politics": -1.2749416402791813,
+        "sports": -0.586110671808196,
+        "technology": -1.3454306595625676
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.1880655404947735e-39,
+        "sports": 1.1427472133059004e-33,
+        "technology": 2.9012192959586172e-40
+      },
+      "latency_ms": 0.2696410010685213,
+      "input_sha256": "1d449a566922c54289da3bb2311da302525a1d61a2a3bea0439c03428fa5ad3f",
+      "input_len": 68
+    },
+    {
+      "sample_id": "syn-0304",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "64989cf8beb7a3de7086344535325aab",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.841810040703957,
+        "politics": -1.3158156905742426,
+        "sports": -0.12715078415261105,
+        "technology": -1.398843565977108
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 7.71474795044284e-37,
+        "sports": 1.6290482046052172e-26,
+        "technology": 1.4660567407133473e-37
+      },
+      "latency_ms": 0.2696249994187383,
+      "input_sha256": "2559eff9c849d4fbafbef41198a8820fb4a20540cfee95bf894ac3194081c0ed",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0309",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "0c56fb2d467a89c71550f9bcc063efc2",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.8913947402664775,
+        "politics": -1.5076569959895465,
+        "sports": -0.8659405523650371,
+        "technology": -1.5177971919119027
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.271839967894945e-47,
+        "sports": 4.767719284428047e-42,
+        "technology": 1.0383788793507559e-47
+      },
+      "latency_ms": 0.3008379990205867,
+      "input_sha256": "cacf8b190c8cae63d65ad8cc02273296e6d2551aba9697316b57b7ad64609f89",
+      "input_len": 72
+    },
+    {
+      "sample_id": "syn-0310",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "68c9029ef383e3526cb8576bdc19a71a",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.8851372445875936,
+        "politics": -0.5241087829787093,
+        "sports": -1.3640045040529232,
+        "technology": -0.997023957555967
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 2.4415479368223484e-30,
+        "sports": 1.2371538608974776e-37,
+        "technology": 1.9053564785617012e-34
+      },
+      "latency_ms": 0.28835999910370447,
+      "input_sha256": "94f902bb32594a31b7856f7802e80f3b4df67533c3f2f21c04cd3f2ae7a1bdee",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0313",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "63f4163d65e0cea91050029c8212088b",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.121642382123494,
+        "politics": -1.4840216021343697,
+        "sports": 0.6781442798442701,
+        "technology": -1.3157650598333988
+      },
+      "calibrated_probs": {
+        "health": 0.9999999999997102,
+        "politics": 4.803973032505438e-32,
+        "sports": 2.8969085853054446e-13,
+        "technology": 1.3901392899000235e-30
+      },
+      "latency_ms": 0.25538600129948463,
+      "input_sha256": "88a378aa3acc68dec6e7990819a13ed0c5fb747b452665c9f2807b759a73e206",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0315",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "813f47333ff43da63acd224f96da3882",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.0340181099145376,
+        "politics": -1.1202050955841227,
+        "sports": -0.5326204833730386,
+        "technology": -1.3811925309573796
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 8.258015717818104e-37,
+        "sports": 1.0485057098362474e-31,
+        "technology": 4.4665031496415054e-39
+      },
+      "latency_ms": 0.27015900013793726,
+      "input_sha256": "95a06f07ecf0b878a81bfc45e5883fd6842d08173b8e2ed71457f4b7de0518c5",
+      "input_len": 70
+    },
+    {
+      "sample_id": "syn-0319",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c5f7e07c98d1704ea9e4b2e07bb500cb",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.4134619980786174,
+        "politics": -1.1911628248295314,
+        "sports": -0.7210021530122508,
+        "technology": -1.5012970202368399
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.0109669626374969e-40,
+        "sports": 1.2260287971831281e-36,
+        "technology": 2.0461881688487606e-43
+      },
+      "latency_ms": 0.25652099975559395,
+      "input_sha256": "5e6fce327a207f8b60599a822cd93923eae01a83949d41543e796d201f7a2f04",
+      "input_len": 65
+    },
+    {
+      "sample_id": "syn-0321",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "ae6e601448a7dca316dc5cf95c2c6fc7",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.4472104563687713,
+        "politics": -1.193615969460139,
+        "sports": -0.9079009918507842,
+        "technology": -1.345693495057852
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 4.901103070340389e-41,
+        "sports": 1.485876107072357e-38,
+        "technology": 2.340804976390983e-42
+      },
+      "latency_ms": 0.29027799973846413,
+      "input_sha256": "3b9d87cbfce14bba8d0791c7f0016b2ea4a335a5e20d669a454ac36e07a4292c",
+      "input_len": 69
+    },
+    {
+      "sample_id": "syn-0322",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "9e44e4e4f8c922b1296f0eb5a70dc931",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.16751846700909,
+        "politics": -1.2094098389961367,
+        "sports": -1.2953555798428722,
+        "technology": -0.6627530481700843
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 9.604699468504311e-39,
+        "sports": 1.721743929612412e-39,
+        "technology": 5.3787868609335246e-34
+      },
+      "latency_ms": 0.2600550014904002,
+      "input_sha256": "7dbfdc561214ac3290ebd28247fb59ae80e598af2fa3e5175291ae34f8cdc447",
+      "input_len": 62
+    },
+    {
+      "sample_id": "syn-0324",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "455c5992df8db59bcb70f5d2f15953b2",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.8251680759405784,
+        "politics": -0.9010622948232003,
+        "sports": -1.007601903665929,
+        "technology": -0.9165038774514516
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 4.308977571257645e-33,
+        "sports": 5.116617466583339e-34,
+        "technology": 3.164101094760961e-33
+      },
+      "latency_ms": 0.2751669999270234,
+      "input_sha256": "32e44d60f75810b2df098152b1dac8abfda8fc4c0df0f8ff553e0fb538a2e405",
+      "input_len": 76
+    },
+    {
+      "sample_id": "syn-0328",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "7402ce900f187983c3f6996d9e146a97",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.9619098882319244,
+        "politics": -0.730222871275791,
+        "sports": -1.3638347973418976,
+        "technology": -0.8678522196142375
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 8.522015540490354e-33,
+        "sports": 2.673369929076368e-38,
+        "technology": 5.433866835322148e-34
+      },
+      "latency_ms": 0.30139999944367446,
+      "input_sha256": "876c66cdf4ae06520873e41e08faf90e2aff82b8f496e6d0ab0dd8e061817164",
+      "input_len": 78
+    },
+    {
+      "sample_id": "syn-0331",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "96e906285f03d30d65b5b26b9cd79261",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.3023632027892007,
+        "politics": -1.3536719185208426,
+        "sports": -0.8906206475121428,
+        "technology": -1.0580706367562243
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 3.615703297767946e-41,
+        "sports": 3.803689188123426e-37,
+        "technology": 1.335835238275473e-38
+      },
+      "latency_ms": 0.2662879996933043,
+      "input_sha256": "f19b057564ec1c373b4a4f4bd868f93552c641eec72e2aba291bfeb2ecd13c7d",
+      "input_len": 66
+    },
+    {
+      "sample_id": "syn-0335",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "c4be8df7a62c71b529b3b8b2a8aa60f2",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.0321532257375674,
+        "politics": -1.3726101376657351,
+        "sports": -0.537086932116462,
+        "technology": -1.1224561559553745
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 5.5044197404252304e-39,
+        "sports": 9.953455912234228e-32,
+        "technology": 8.194480410244486e-37
+      },
+      "latency_ms": 0.25161799931083806,
+      "input_sha256": "4932352e163725610fc87e0b458ab1488b5c554b74300ee3dd501c35fc908ee2",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0340",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "6772be18f694f31906658242cd9949db",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.6211814422161313,
+        "politics": -0.39606478766411585,
+        "sports": -0.8168615433445854,
+        "technology": -1.4082551112074346
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 6.2020067760362575e-27,
+        "sports": 1.3725812327258708e-30,
+        "technology": 1.0017487135396296e-35
+      },
+      "latency_ms": 0.265061999016325,
+      "input_sha256": "ca702e9a1cb6efac8b703e9e22ea8cb81226b4920a70f7a07a487c67bfe1e542",
+      "input_len": 67
+    },
+    {
+      "sample_id": "syn-0342",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "f9d1317bcee86231e1f92320fd65616a",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.122832042392698,
+        "politics": -0.9103843057829141,
+        "sports": -1.1945826320423887,
+        "technology": -1.0178651045673992
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 9.288122043986978e-36,
+        "sports": 3.1580035661373787e-38,
+        "technology": 1.0823346366053394e-36
+      },
+      "latency_ms": 0.31490599940298125,
+      "input_sha256": "5e23f823512653203a59c0089aef99e23c9628c9c05029ccba3b9f220815990a",
+      "input_len": 68
+    },
+    {
+      "sample_id": "syn-0356",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "18fa4d02202efd84f0482fa4259450be",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.6301337592446847,
+        "politics": -1.380839306051583,
+        "sports": -0.8788623386966207,
+        "technology": -1.3704321144964844
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 2.9870395677926506e-44,
+        "sports": 6.844748808136058e-40,
+        "technology": 3.6782114569925185e-44
+      },
+      "latency_ms": 0.281529000858427,
+      "input_sha256": "8efcc6c3dc4c4afddb7c79d79d3affe8023c740bf81d35fbe601171244709f97",
+      "input_len": 63
+    },
+    {
+      "sample_id": "syn-0361",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "e3274ff91b3a7de7fb83de324b4b950c",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.370101239532821,
+        "politics": -1.1049594825246498,
+        "sports": -1.5653819246635623,
+        "technology": -0.6997598323446126
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.349324619773372e-39,
+        "sports": 1.351879322074473e-43,
+        "technology": 4.463092494802938e-36
+      },
+      "latency_ms": 0.28351900073175784,
+      "input_sha256": "aebe083b8fb8bd6b847f83793cf88b992ce8ecb12f8507ace2c84845534967a5",
+      "input_len": 63
+    },
+    {
+      "sample_id": "syn-0363",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "3ba39dc8ac463a6b74abeb27134ada29",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.8099673744406624,
+        "politics": -0.457993475361767,
+        "sports": -0.9707494512654189,
+        "technology": -1.3812244478134785
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 4.119577875785623e-29,
+        "sports": 1.4491418514994096e-33,
+        "technology": 3.942487998424624e-37
+      },
+      "latency_ms": 0.26797300051839557,
+      "input_sha256": "e52734e177f8354907162d137b10bc0a4d2aeff8363fd8721a7cce1a908bff55",
+      "input_len": 64
+    },
+    {
+      "sample_id": "syn-0364",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "a486eb2dd01dea890b32e7d0e6fc3aed",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.3079055410349643,
+        "politics": -0.9966461052943415,
+        "sports": -1.2901068597503778,
+        "technology": -1.0211525759902496
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 4.084505250170005e-38,
+        "sports": 1.1539094560605872e-40,
+        "technology": 2.5019519150863996e-38
+      },
+      "latency_ms": 0.2731730000959942,
+      "input_sha256": "3e724e0b3a71c7b0a00d79c2a16268609305c9a31cf46ba4bf8db0ffd7eb1721",
+      "input_len": 76
+    },
+    {
+      "sample_id": "syn-0367",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "05f0ab12f5a2ebfa42b1946122e47a1c",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.1347324999985187,
+        "politics": -1.2383850010566937,
+        "sports": -0.5355540681449834,
+        "technology": -1.3607934307968472
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.036535096251785e-38,
+        "sports": 1.3191553071530856e-32,
+        "technology": 8.961029355857751e-40
+      },
+      "latency_ms": 0.2817639997374499,
+      "input_sha256": "424fa1b79a5b0335376d60b389248654b2fa6b388456fa37c265b1b8d8f0c9d3",
+      "input_len": 71
+    },
+    {
+      "sample_id": "syn-0372",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "0281c0a19032675c6ecaf83b439f3762",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.5344222659455773,
+        "politics": -0.3469272836351596,
+        "sports": -0.7881916692101973,
+        "technology": -1.3993033131002235
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 9.395411447673696e-26,
+        "sports": 1.3808358354903444e-29,
+        "technology": 6.793502725507595e-35
+      },
+      "latency_ms": 0.36274900048738346,
+      "input_sha256": "e84835b7eb69502aaf8ebe614c1fed91c16aa13964fc4ed797f86623c356f2a9",
+      "input_len": 65
+    },
+    {
+      "sample_id": "syn-0373",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "ea4d5165c2ca9a1acf870266a69927d2",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.514778828654059,
+        "politics": -1.4762898434845613,
+        "sports": -0.6676244608710495,
+        "technology": -1.3708645242984525
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 4.4476267929508326e-44,
+        "sports": 4.700094666292431e-37,
+        "technology": 3.663034637114699e-43
+      },
+      "latency_ms": 0.26071499996760394,
+      "input_sha256": "f8918222df1c5ff9aad42d4db2e6e87e39f556452d08f5083b0bfad0e760a7d0",
+      "input_len": 74
+    },
+    {
+      "sample_id": "syn-0380",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "b821733106c015a5114e154aafdfce34",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.627516079250544,
+        "politics": -1.2976042335000781,
+        "sports": -1.4547752447741107,
+        "technology": -0.8751366009763596
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.6632154448294343e-43,
+        "sports": 7.174282124021831e-45,
+        "technology": 7.770621242893605e-40
+      },
+      "latency_ms": 0.38062500061641913,
+      "input_sha256": "eff483d07c8979f45706e34a44fa43b8167b6762f699c13745484d100fde98de",
+      "input_len": 61
+    },
+    {
+      "sample_id": "syn-0387",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "37efc8e5b61afa4aa1d6724c9163bfcd",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 2.889936095673863,
+        "politics": -0.7713282242920869,
+        "sports": -1.1622901656454154,
+        "technology": -0.9563177057363675
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.5800185326421902e-32,
+        "sports": 6.350529030982411e-36,
+        "technology": 3.907184873924514e-34
+      },
+      "latency_ms": 0.38019599924155045,
+      "input_sha256": "cde44937ec0e997429540c7a51f5ebdeabc04a81359361bf75a48a2234d1adc0",
+      "input_len": 71
+    },
+    {
+      "sample_id": "syn-0394",
+      "split": "test",
+      "system": "llm",
+      "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+      "trace_id": "a035c4d4a973e7726a76e7ab4e6f3d88",
+      "gold_label": "health",
+      "predicted_label": "health",
+      "correct": true,
+      "raw_scores": {
+        "health": 3.032602941682253,
+        "politics": -1.2120524806658584,
+        "sports": -1.221459986557781,
+        "technology": -0.5990904744586161
+      },
+      "calibrated_probs": {
+        "health": 1.0,
+        "politics": 1.3532917986440525e-37,
+        "sports": 1.1211891644061428e-37,
+        "technology": 2.854379989551643e-32
+      },
+      "latency_ms": 0.38296999991871417,
+      "input_sha256": "a465172d7051e47715c187fcd378f10a14561599d4da7dd7d2cc6336b1ddca16",
+      "input_len": 68
+    }
+  ],
+  "note": "raw_scores + calibrated_probs; text omitted (hashes_only)"
+}

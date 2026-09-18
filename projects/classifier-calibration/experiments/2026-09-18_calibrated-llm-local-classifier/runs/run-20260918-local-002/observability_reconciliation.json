@@ -1,0 +1,28 @@
+{
+  "phase": "full",
+  "expected_sample_count": 312,
+  "completed_sample_count": 312,
+  "prediction_row_count": 312,
+  "root_traces_emitted": 312,
+  "backend_traces_found": 312,
+  "unique_composite_ids": 312,
+  "duplicate_composite_ids": [],
+  "missing_prediction_ids": [],
+  "missing_trace_ids": [],
+  "structured_event_count": 312,
+  "invalid_failed_inference_count": 0,
+  "aggregates_regenerable_from_rows": true,
+  "smoke_reconciled": true,
+  "langfuse_configured": false,
+  "otel_file": "otel_traces.jsonl",
+  "content_mode": "hashes_only",
+  "dashboard_agreement": {
+    "note": "No Langfuse/Grafana dashboards configured; agreement checked between row-level predictions and aggregate metric files",
+    "llm_accuracy_from_rows": 1.0,
+    "llm_accuracy_from_metrics_file": 1.0,
+    "potion_accuracy_from_rows": 0.99,
+    "potion_accuracy_from_metrics_file": 0.99,
+    "rows_match_metrics": true
+  },
+  "reconciled": true
+}

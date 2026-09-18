@@ -1,0 +1,19 @@
+{
+  "schema_version": "classifier-bench.event.v1",
+  "required_fields": [
+    "schema_version",
+    "timestamp",
+    "level",
+    "event",
+    "experiment_id",
+    "run_id",
+    "sample_id",
+    "trace_id",
+    "system",
+    "model_id",
+    "predicted_label",
+    "gold_label",
+    "correct",
+    "latency_ms"
+  ]
+}

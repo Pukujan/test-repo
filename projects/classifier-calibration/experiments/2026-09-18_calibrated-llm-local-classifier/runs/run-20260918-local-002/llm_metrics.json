@@ -1,0 +1,73 @@
+{
+  "split": "test",
+  "n": 100,
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "health": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25.0
+      },
+      "politics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25.0
+      },
+      "sports": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25.0
+      },
+      "technology": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "health",
+        "politics",
+        "sports",
+        "technology"
+      ],
+      "matrix": [
+        [
+          25,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          25,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          25
+        ]
+      ]
+    },
+    "log_loss": 3.504334866250995e-07,
+    "brier_score": 2.4558299382376676e-11,
+    "ece": 3.50427346806903e-07
+  },
+  "invalid_output_count": 0,
+  "temperature_applied": 0.05
+}

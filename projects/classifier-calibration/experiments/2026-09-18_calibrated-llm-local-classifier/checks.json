@@ -18,6 +18,14 @@
         {
           "label": "fixture",
           "path": "inputs/fixtures/synthetic_topics_v1.jsonl"
+        },
+        {
+          "label": "run002_split_manifest_reused",
+          "path": "runs/run-20260918-local-002/split_manifest.json"
+        },
+        {
+          "label": "run002_dataset_manifest",
+          "path": "runs/run-20260918-local-002/dataset_manifest.json"
         }
       ]
     },
@@ -41,6 +49,14 @@
         {
           "label": "note",
           "ref": "LocalClosedSetScoreProvider substitute documented in llm_config.json / run.json (no hosted LLM keys)."
+        },
+        {
+          "label": "run002_llm_config",
+          "path": "runs/run-20260918-local-002/llm_config.json"
+        },
+        {
+          "label": "run002_llm_predictions_test",
+          "path": "runs/run-20260918-local-002/llm_predictions_test.json"
         }
       ]
     },
@@ -52,6 +68,10 @@
         {
           "label": "llm_calibration",
           "path": "runs/run-20260918-local-001/llm_calibration.json"
+        },
+        {
+          "label": "run002_llm_calibration",
+          "path": "runs/run-20260918-local-002/llm_calibration.json"
         }
       ]
     },
@@ -67,6 +87,14 @@
         {
           "label": "run_env",
           "path": "runs/run-20260918-local-001/run.json"
+        },
+        {
+          "label": "run002_classifier_config_potion32M",
+          "path": "runs/run-20260918-local-002/classifier_config.json"
+        },
+        {
+          "label": "run002_run_env",
+          "path": "runs/run-20260918-local-002/run.json"
         }
       ]
     },
@@ -78,6 +106,10 @@
         {
           "label": "classifier_config.calibration",
           "path": "runs/run-20260918-local-001/classifier_config.json"
+        },
+        {
+          "label": "run002_classifier_calibration",
+          "path": "runs/run-20260918-local-002/classifier_config.json"
         }
       ]
     },
@@ -93,6 +125,10 @@
         {
           "label": "split_manifest",
           "path": "runs/run-20260918-local-001/split_manifest.json"
+        },
+        {
+          "label": "run002_comparison",
+          "path": "runs/run-20260918-local-002/comparison.json"
         }
       ]
     },
@@ -112,6 +148,14 @@
         {
           "label": "llm_calibration",
           "path": "runs/run-20260918-local-001/llm_calibration.json"
+        },
+        {
+          "label": "run002_llm_metrics",
+          "path": "runs/run-20260918-local-002/llm_metrics.json"
+        },
+        {
+          "label": "run002_classifier_metrics",
+          "path": "runs/run-20260918-local-002/classifier_metrics.json"
         }
       ]
     },
@@ -131,6 +175,14 @@
         {
           "label": "smoke_predictions",
           "path": "runs/run-20260918-local-001/smoke_predictions.json"
+        },
+        {
+          "label": "run002_events",
+          "path": "runs/run-20260918-local-002/events.jsonl"
+        },
+        {
+          "label": "run002_otel_traces",
+          "path": "runs/run-20260918-local-002/otel_traces.jsonl"
         }
       ]
     },
@@ -150,6 +202,14 @@
         {
           "label": "events_schema",
           "path": "runs/run-20260918-local-001/events.schema.json"
+        },
+        {
+          "label": "run002_events",
+          "path": "runs/run-20260918-local-002/events.jsonl"
+        },
+        {
+          "label": "run002_events_sha256",
+          "path": "runs/run-20260918-local-002/events.jsonl.sha256"
         }
       ]
     },
@@ -173,6 +233,14 @@
         {
           "label": "note",
           "ref": "Langfuse not configured (no credentials); OTel JSONL file exporter used as inspectable traces; content_mode=hashes_only."
+        },
+        {
+          "label": "run002_otel_file",
+          "path": "runs/run-20260918-local-002/otel_traces.jsonl"
+        },
+        {
+          "label": "run002_note",
+          "ref": "Smoke not re-required (harness unchanged); OTel file + full reconciliation still produced. Langfuse still not configured."
         }
       ]
     },
@@ -188,6 +256,10 @@
         {
           "label": "full",
           "path": "runs/run-20260918-local-001/observability_reconciliation.json"
+        },
+        {
+          "label": "run002_full_reconciliation",
+          "path": "runs/run-20260918-local-002/observability_reconciliation.json"
         }
       ]
     },
@@ -203,6 +275,10 @@
         {
           "label": "note",
           "ref": "No Langfuse/Grafana dashboards; row-level accuracy matched aggregate metric files."
+        },
+        {
+          "label": "run002_dashboard_agreement",
+          "path": "runs/run-20260918-local-002/observability_reconciliation.json"
         }
       ]
     },
@@ -218,6 +294,10 @@
         {
           "label": "run",
           "path": "runs/run-20260918-local-001/run.json"
+        },
+        {
+          "label": "run002_observability",
+          "path": "runs/run-20260918-local-002/observability.json"
         }
       ]
     },
@@ -233,6 +313,14 @@
         {
           "label": "comparison",
           "path": "runs/run-20260918-local-001/comparison.json"
+        },
+        {
+          "label": "run002_error_analysis",
+          "path": "runs/run-20260918-local-002/error_analysis.md"
+        },
+        {
+          "label": "run002_comparison",
+          "path": "runs/run-20260918-local-002/comparison.json"
         }
       ]
     },
@@ -256,6 +344,14 @@
         {
           "label": "pipeline_script",
           "path": "scripts/run1_pipeline.py"
+        },
+        {
+          "label": "run002_run",
+          "path": "runs/run-20260918-local-002/run.json"
+        },
+        {
+          "label": "run002_pipeline_script",
+          "path": "scripts/run2_pipeline.py"
         }
       ]
     }

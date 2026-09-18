@@ -1,0 +1,43 @@
+{
+  "run_id": "run-20260918-local-002",
+  "experiment_id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+  "started_intent": "Run 2 controlled: potion-base-32M on frozen Run 1 splits vs same LLM-substitute",
+  "created_at": "2026-09-18T18:35:40Z",
+  "status": "completed",
+  "dataset_version": "synthetic-topics-v1",
+  "seed": 20260918,
+  "content_mode": "hashes_only",
+  "llm_path": {
+    "kind": "local_closed_set_score_provider",
+    "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+    "reason": "No hosted LLM API keys; no Ollama/vLLM server. Substitute documented and emits logits for temperature scaling."
+  },
+  "classifier_path": {
+    "kind": "model2vec_potion",
+    "base_model": "minishlab/potion-base-32M"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sklearn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "model2vec": "0.9.0",
+    "opentelemetry_api": "present",
+    "platform": "linux"
+  },
+  "commands": [
+    "python3 scripts/run2_pipeline.py"
+  ],
+  "artifacts": {
+    "dataset_manifest": "dataset_manifest.json",
+    "split_manifest": "split_manifest.json",
+    "events": "events.jsonl",
+    "events_sha256": "6f499e2f5c4800f1e0c2c0617013f34ec62f30733e7b94ef05dcc3209184c725",
+    "otel_traces": "otel_traces.jsonl"
+  },
+  "next_hypothesis": "Potion potion-base-32M still errs more than the score provider on the frozen test set. Optional follow-up: try a different Model2Vec training recipe (more epochs / lower early-stopping patience) or a denser embedding, keeping the same frozen IDs.",
+  "local_only_paths": {
+    "corpus_copy": "local/run-20260918-local-002/corpus.jsonl",
+    "note": "Fixture is also committed under inputs/fixtures/ (public-safe synthetic)."
+  }
+}
