@@ -1,0 +1,108 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "verification-harness-2026-09-18-real-data-abcd-verification",
+  "checks": [
+    {
+      "id": "DATA-001",
+      "description": "Pin real dataset upstreams at exact revisions with per-file SHA-256 digests and acquisition instructions (no redistributed gold bytes committed).",
+      "status": "pass",
+      "evidence": [
+        {"label": "pinned revisions, digests, acquisition", "path": "inputs/dataset-lock.json"}
+      ]
+    },
+    {
+      "id": "SEED-001",
+      "description": "Deterministically freeze the 50 FinQA + 50 LegalBench sample with seed 20260918 before any inference; record selected IDs and visible digests.",
+      "status": "pass",
+      "evidence": [
+        {"label": "frozen sample manifest (seed 20260918)", "path": "inputs/sample-manifest.json"}
+      ]
+    },
+    {
+      "id": "LEAK-001",
+      "description": "Model-visible packets and exported prompt files never expose gold keys or gold values; deterministic guard rejects gold keys.",
+      "status": "pass",
+      "evidence": [
+        {"label": "leak-safety test suite", "path": "../../tests/test_leak_safety.py"},
+        {"label": "101 exported packets scanned, 0 gold-token hits", "path": "runs/run-20260918-mock-001/leak_export_proof.txt"},
+        {"label": "test run output", "path": "runs/run-20260918-mock-001/mechanics_tests.txt"}
+      ]
+    },
+    {
+      "id": "GOLD-SEP-001",
+      "description": "B/C accept/reject decisions are made without consulting gold (a correct-but-unsupported legal answer is rejected on evidence grounding); gold is read only in scoring helpers.",
+      "status": "pass",
+      "evidence": [
+        {"label": "authority-separation test", "path": "../../tests/test_mechanics.py"},
+        {"label": "test run output", "path": "runs/run-20260918-mock-001/mechanics_tests.txt"}
+      ]
+    },
+    {
+      "id": "ARMS-001",
+      "description": "A/B/C reuse the SAME saved response per item; D1 passes the proposal through the same B/C authority instead of minting its own PASS.",
+      "status": "pass",
+      "evidence": [
+        {"label": "per-item arm records (one response, four arms)", "path": "runs/run-20260918-mock-001/records.json"}
+      ]
+    },
+    {
+      "id": "EXEC-001",
+      "description": "FinQA reasoning-program DSL executes deterministically with machine-readable failure codes and never crashes on malformed programs.",
+      "status": "pass",
+      "evidence": [
+        {"label": "executor tests", "path": "../../tests/test_mechanics.py"},
+        {"label": "test run output", "path": "runs/run-20260918-mock-001/mechanics_tests.txt"}
+      ]
+    },
+    {
+      "id": "CAP-001",
+      "description": "Missing optional backends are typed unavailable and never substituted; metrics record z3/symai status.",
+      "status": "pass",
+      "evidence": [
+        {"label": "capabilities field shows z3=unavailable, symai=unavailable", "path": "runs/run-20260918-mock-001/records.json"},
+        {"label": "D2-unavailable test", "path": "../../tests/test_mechanics.py"}
+      ]
+    },
+    {
+      "id": "NEG-001",
+      "description": "The benchmark can report negative/neutral layer value: mock run shows B/C raise accepted-accuracy (0.46->0.60) while cutting coverage (0.87->0.43) with negative A->B selective marginal (-0.14); no rigged-win structure.",
+      "status": "pass",
+      "evidence": [
+        {"label": "aggregate metrics with marginal gains, false accept/reject rates", "path": "runs/run-20260918-mock-001/metrics.json"}
+      ]
+    },
+    {
+      "id": "MOCK-001",
+      "description": "Deterministic mock provider validates full A/B/C/D1 mechanics without credentials and is byte-stable across runs.",
+      "status": "pass",
+      "evidence": [
+        {"label": "mock determinism + shape tests", "path": "../../tests/test_mechanics.py"},
+        {"label": "mock run record", "path": "runs/run-20260918-mock-001/run.json"}
+      ]
+    },
+    {
+      "id": "D1-001",
+      "description": "Distinct NSAI-formatted D1 prompt export and separately-ingested D1 responses exist and are labeled a translation/orchestration treatment.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LUNA-001",
+      "description": "Real Luna responses exported, executed by the owner locally, ingested, and scored through A/B/C/D1 (primary real-data benchmark result).",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "SYMAI-001",
+      "description": "Optional SymbolicAI/SyMAI D2 adapter with pinned version and engine identity; unavailable until symai is installed (never a silent fallback).",
+      "status": "blocked",
+      "evidence": []
+    },
+    {
+      "id": "LAB-001",
+      "description": "python tools/lab.py sync and validate pass for this experiment.",
+      "status": "pending",
+      "evidence": []
+    }
+  ]
+}

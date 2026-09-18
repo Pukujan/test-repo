@@ -1,0 +1,10 @@
+# Raw source bytes and gold/scoring material for real-data benchmark.
+# These are pinned by digest in inputs/dataset-lock.json but must NOT be
+# committed to this public repository (license + size + gold-separation).
+local_data/
+gold_index/
+runs/**/gold/
+*.raw.json
+*.raw.tsv
+__pycache__/
+*.pyc

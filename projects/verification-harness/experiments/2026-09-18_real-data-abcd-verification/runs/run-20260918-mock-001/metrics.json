@@ -1,0 +1,90 @@
+{
+  "aggregate": {
+    "A": {
+      "abstained_rate": 0.13,
+      "accepted_accuracy": 0.45977011494252873,
+      "coverage": 0.87,
+      "false_accept_rate": 0.5402298850574713,
+      "false_reject_rate": 0.0,
+      "n": 100,
+      "raw_accuracy": 0.4,
+      "rejected_rate": 0.0,
+      "selective_accuracy": 0.4
+    },
+    "B": {
+      "abstained_rate": 0.13,
+      "accepted_accuracy": 0.6046511627906976,
+      "coverage": 0.43,
+      "false_accept_rate": 0.3953488372093023,
+      "false_reject_rate": 0.16091954022988506,
+      "n": 100,
+      "raw_accuracy": 0.26,
+      "rejected_rate": 0.44,
+      "selective_accuracy": 0.26
+    },
+    "C": {
+      "abstained_rate": 0.13,
+      "accepted_accuracy": 0.6046511627906976,
+      "coverage": 0.43,
+      "false_accept_rate": 0.3953488372093023,
+      "false_reject_rate": 0.16091954022988506,
+      "n": 100,
+      "raw_accuracy": 0.26,
+      "rejected_rate": 0.44,
+      "selective_accuracy": 0.26
+    },
+    "D1": {
+      "abstained_rate": 0.13,
+      "accepted_accuracy": 0.6046511627906976,
+      "coverage": 0.43,
+      "false_accept_rate": 0.3953488372093023,
+      "false_reject_rate": 0.16091954022988506,
+      "n": 100,
+      "raw_accuracy": 0.26,
+      "rejected_rate": 0.44,
+      "selective_accuracy": 0.26
+    },
+    "_marginal": {
+      "A_to_B": -0.14,
+      "B_to_C": 0.0,
+      "C_to_D1": 0.0
+    },
+    "_unique_catches": {
+      "B_caught": 17,
+      "C_caught_beyond_B": 17,
+      "D1_caught_beyond_C": 0
+    }
+  },
+  "per_task": {
+    "A": {
+      "finqa": {
+        "accepted_accuracy": 0.45977011494252873,
+        "coverage": 0.87,
+        "n": 100
+      }
+    },
+    "B": {
+      "finqa": {
+        "accepted_accuracy": 0.6046511627906976,
+        "coverage": 0.43,
+        "n": 100
+      }
+    },
+    "C": {
+      "finqa": {
+        "accepted_accuracy": 0.6046511627906976,
+        "coverage": 0.43,
+        "n": 100
+      }
+    },
+    "D1": {
+      "finqa": {
+        "accepted_accuracy": 0.0,
+        "coverage": 0.0,
+        "n": 100
+      }
+    }
+  },
+  "run_id": "run-20260918-mock-001",
+  "schema_version": "vh.metrics.v1"
+}

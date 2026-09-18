@@ -1,0 +1,7 @@
+{
+  "schema_version": "lab.project.v1",
+  "id": "verification-harness",
+  "name": "Verification Harness",
+  "upstream_repository": "https://github.com/Pukujan/test-repo",
+  "purpose": "Measure whether layered deterministic/independent verification improves reliability of GenAI answers on real legal and financial benchmarks (A/B/C/D)."
+}

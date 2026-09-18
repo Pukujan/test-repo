@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-09-18T12:00:00Z",
+  "datasets": {
+    "finqa": {
+      "acquisition": "git archive at the pinned revision; raw bytes to local_data/finqa_test.json",
+      "completeness": "complete",
+      "fidelity": "verbatim",
+      "file": "dataset/test.json",
+      "sha256": "831dbfb2e785dbc227f895ce3f24046433467aec67b09db2bd6ac7692a8a30dc",
+      "split": "public test",
+      "upstream_repository": "https://github.com/czyssrs/FinQA",
+      "upstream_revision": "0f16e2867befa6840783e58be38c9efb9229d742"
+    },
+    "legalbench": {
+      "acquisition": "hf resolve at the pinned revision per task test.tsv; raw bytes to local_data/legal/",
+      "tasks": {
+        "contract_nli_confidentiality_of_agreement": {
+          "completeness": "complete",
+          "fidelity": "verbatim",
+          "file": "data/contract_nli_confidentiality_of_agreement/test.tsv",
+          "labels": "Yes/No (binary) or MC (rule_qa)",
+          "sha256": "d0179f33614bffd5c70ca473b71ccc03cb2e4f6bf45df3435cfe0e5daac67857",
+          "split": "test"
+        },
+        "definition_classification": {
+          "completeness": "complete",
+          "fidelity": "verbatim",
+          "file": "data/definition_classification/test.tsv",
+          "labels": "Yes/No (binary) or MC (rule_qa)",
+          "sha256": "2508d4943b2b0d67b8ab5cefa732a4802c3201820e448a73697deb8fdbbde832",
+          "split": "test"
+        },
+        "hearsay": {
+          "completeness": "complete",
+          "fidelity": "verbatim",
+          "file": "data/hearsay/test.tsv",
+          "labels": "Yes/No (binary) or MC (rule_qa)",
+          "sha256": "f6ce5ed63ba93768eafa611610312a42a1b4d70ae57addf2e04bf87cf2bd4be9",
+          "split": "test"
+        },
+        "international_citizenship_questions": {
+          "completeness": "complete",
+          "fidelity": "verbatim",
+          "file": "data/international_citizenship_questions/test.tsv",
+          "labels": "Yes/No (binary) or MC (rule_qa)",
+          "sha256": "2aea86c9b0948cb919823aaa13d8e66f8da2cf9a185f56374944b67085104390",
+          "split": "test"
+        },
+        "overruling": {
+          "completeness": "complete",
+          "fidelity": "verbatim",
+          "file": "data/overruling/test.tsv",
+          "labels": "Yes/No (binary) or MC (rule_qa)",
+          "sha256": "49dfa6ee1221f4a810df0334629859d4ad5d44b8f6b182f037b6c83a3e9e8661",
+          "split": "test"
+        }
+      },
+      "upstream_repository": "https://huggingface.co/datasets/nguha/legalbench",
+      "upstream_revision": "daec8237410aa23e3faf4bc41ad8b3a7e1696826"
+    }
+  },
+  "note": "Raw bytes are pinned by digest here but are NOT committed (public repo, license, and gold-separation). Re-download from pinned revisions, verify digests, then regenerate the sample.",
+  "schema_version": "vh.dataset-lock.v1"
+}

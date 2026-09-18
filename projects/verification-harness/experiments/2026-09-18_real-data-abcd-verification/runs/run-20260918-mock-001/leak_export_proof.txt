@@ -1,0 +1,5 @@
+cmd: export 100 model-visible packets to a temp dir, scan each for gold-bearing tokens
+packets_scanned: 101
+gold_token_hits: 0
+tokens_checked: "answer", exe_ans, gold_inds, "program":, model_input, gold_table, gold_text, "label":, "steps":
+RESULT: PASS
