@@ -1,0 +1,8 @@
+{
+  "z3": "unavailable",
+  "symai": "unavailable",
+  "luna": "unavailable",
+  "provider_used": "LocalExtractiveScoreProvider",
+  "d1_provider_used": "LocalNSAITranslator",
+  "note": "Missing optional backends recorded unavailable. No silent fallback to another arm."
+}

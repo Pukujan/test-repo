@@ -1,0 +1,20 @@
+{
+  "schema_version": "lab.run.v1",
+  "run_id": "run-20260918-local-001-d1",
+  "experiment_id": "verification-harness-2026-09-18-real-data-abcd-verification",
+  "status": "pass",
+  "upstream_revision": "0f16e2867befa6840783e58be38c9efb9229d742",
+  "command": "python -m harness.cli export-luna-prompts --style d1 && python -m harness.cli run --arms D1 --provider local --nsai --run-id run-20260918-local-001-d1",
+  "started_at": "2026-09-18T20:50:00Z",
+  "finished_at": "2026-09-18T20:52:00Z",
+  "environment": {
+    "python": "3.12.3",
+    "provider": "local",
+    "model_identity": "LocalNSAITranslator",
+    "treatment": "D1-NSAI",
+    "z3": "unavailable",
+    "symai": "unavailable"
+  },
+  "outputs": ["records.json", "metrics.json"],
+  "notes": "Distinct NSAI-formatted D1 export plus separately generated D1 responses. Same B/C authority; D1 does not mint PASS."
+}

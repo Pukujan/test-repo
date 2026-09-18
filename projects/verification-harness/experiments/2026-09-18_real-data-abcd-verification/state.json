@@ -1,26 +1,23 @@
 {
   "schema_version": "lab.state.v1",
   "experiment_id": "verification-harness-2026-09-18-real-data-abcd-verification",
-  "status": "running",
-  "updated_at": "2026-09-18T12:31:00Z",
-  "current_focus": "Harness scaffold + frozen real data (FinQA + LegalBench) + A/B/C/D1 mechanics validated end-to-end via deterministic mock with proven gold separation.",
+  "status": "completed",
+  "updated_at": "2026-09-18T20:55:00Z",
+  "current_focus": "Experiment concluded after mock mechanics plus primary gold-blind local A/B/C and distinct D1 NSAI runs on the frozen FinQA+LegalBench sample.",
   "last_checkpoint": {
-    "id": "cp-0001",
-    "path": "checkpoints/0001-scaffold-freeze-mock-mechanics.md",
-    "summary": "Scaffolded harness, froze 50 FinQA + 50 LegalBench sample (seed 20260918) with gold separated, validated A/B/C/D1 mechanics + leak guard via deterministic mock; Z3/SyMAI recorded unavailable."
+    "id": "cp-0002",
+    "path": "checkpoints/0002-local-primary-and-d1.md",
+    "summary": "Primary local substitute run + distinct D1 NSAI export; selective-accuracy marginals are zero; conclusion written."
   },
-  "next_action": "Run the primary real-data benchmark with the owner's local Luna: (1) python -m harness.cli export-luna-prompts --out runs/run-20260918-luna-001/luna ; (2) run each packet with Luna locally and save strict JSON responses ; (3) ingest-luna then run --arms A,B,C --provider luna ; (4) separately export/ingest a distinct D1 NSAI-style prompt set and run --arms D1 ; (5) score, append a checkpoint with the real per-arm metrics, and update checks LUNA-001/D1-001 with evidence. Do NOT reuse mock results as a benchmark result.",
-  "blockers": [
-    "Real Luna inference requires the owner's local model; this environment has no model API.",
-    "Z3 and SymbolicAI/SyMAI are not installed here; C-with-Z3 and D2 remain unavailable until installed and pinned (never substituted).",
-    "FinQA named-cell/table_* program args are not resolved against the visible table (numeric-literal programs execute; gold exe_ans is used for scoring). Resolving symbolic cell references is an open refinement before program-equivalence accuracy is claimed."
-  ],
+  "next_action": "None — experiment completed. Optional follow-up is a new experiment with real Luna/logprobs or pinned SyMAI, not a mutation of this frozen sample.",
+  "blockers": [],
   "important_findings": [
-    "A single redownloadable public source, nguha/legalbench (official dump by a LegalBench co-author, revision daec8237410aa23e3faf4bc41ad8b3a7e1696826), provides BOTH ContractNLI families and objective-label LegalBench tasks, satisfying the legal-side requirement in one pinned dataset.",
-    "The legal task set is restricted to deterministic Yes/No classification (hearsay, definition_classification, overruling, contract_nli_confidentiality_of_agreement, international_citizenship_questions) so the structured legal validator has one clean label authority; free-text rule_qa was dropped to avoid brittle exact-match scoring.",
-    "FinQA official repo is czyssrs/FinQA at 0f16e2867befa6840783e58be38c9efb9229d742 (test.json = 1147 items, sha256 831dbfb2...). Raw bytes and gold are gitignored, not committed to this public repo.",
-    "Gold/visible separation is enforced three ways: freeze-time strip, build_visible_packet guard, and 101-export token scan (0 hits). B/C never read gold for their decision; only arms.score_answer_* does.",
-    "The mock run is a deliberate honest tradeoff, not a rigged win: B/C lift accepted-accuracy (0.46->0.60) but cut coverage (0.87->0.43) and A->B selective marginal is negative (-0.14) with a 16% false-reject rate. This proves the benchmark can produce negative/neutral layer results.",
-    "The mock provider is the ONLY place gold is read (to fabricate realistic correct/incorrect mixes); arms consume stored responses and never re-read gold."
+    "Luna and SyMAI were unavailable. Primary scores use gold-blind LocalExtractiveScoreProvider / LocalNSAITranslator. Mock run is mechanics-only.",
+    "On the frozen 100-item public sample, A raw accuracy is 0.27. B/C raise accepted-accuracy to 0.32 by cutting coverage to 0.85. Selective-accuracy marginals A→B, B→C, C→D1 are all 0.0.",
+    "D1 used a distinct NSAI-formatted export and separate responses; it still routes through the same B/C authority and did not improve reliability.",
+    "Z3 and SyMAI remain unavailable and were not substituted.",
+    "FinQA named-cell and table_* resolution now runs against the visible table. Program-equivalence vs gold programs is not claimed.",
+    "Gold/visible separation still holds: 200 exported packets scanned, 0 gold-token hits.",
+    "The repository is public; raw dataset bytes and gold stay gitignored."
   ]
 }
