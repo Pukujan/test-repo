@@ -1,0 +1,17 @@
+{
+  "schema_version": "lab.run.v1",
+  "run_id": "run-20260918-grok-001",
+  "experiment_id": "verification-harness-2026-09-18-real-data-abcd-verification",
+  "status": "pass",
+  "upstream_revision": "0f16e2867befa6840783e58be38c9efb9229d742",
+  "command": "python -m harness.cli run --arms A,B,C --provider grok --run-id run-20260918-grok-001",
+  "environment": {
+    "provider": "grok",
+    "model_identity": "grok-4.6",
+    "z3": "unavailable",
+    "symai": "unavailable",
+    "luna": "unavailable"
+  },
+  "outputs": ["metrics.json", "combined_metrics.json"],
+  "notes": "Primary generative-model run. Replaces Luna. Not mock."
+}
