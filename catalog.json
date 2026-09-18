@@ -6,7 +6,7 @@
       "project": "classifier-calibration",
       "question": "Can a calibrated LLM classifier and a locally trained lightweight classifier be evaluated reproducibly against the same domain-specific corpus split, with calibration quality, classification quality, and iteration history recorded durably?",
       "status": "completed",
-      "updated_at": "2026-09-18T17:43:44Z"
+      "updated_at": "2026-09-18T18:36:23Z"
     },
     {
       "id": "fossil-2026-09-14-shared-chat-completeness",

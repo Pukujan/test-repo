@@ -1,0 +1,28 @@
+{
+  "method": "temperature_scaling",
+  "fitted_on": "calibration_split_only",
+  "temperature": 0.05,
+  "optimization_objective": "minimize_nll_line_search_T_in_[0.05,5.0]",
+  "calibration_set_size": 100,
+  "calibration_label_distribution": {
+    "health": 25,
+    "politics": 25,
+    "sports": 25,
+    "technology": 25
+  },
+  "pre": {
+    "log_loss": 0.08203286100444732,
+    "brier_score": 0.020392375811831,
+    "ece": 0.07221672317692529,
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "post": {
+    "log_loss": 1.9231251329223765e-06,
+    "brier_score": 5.468427389242507e-10,
+    "ece": 1.92298840606675e-06,
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "note": "Accuracy/macro-F1 should be unchanged under pure temperature scaling (argmax invariant)."
+}

@@ -1,0 +1,40 @@
+{
+  "system": "potion",
+  "package": "model2vec",
+  "package_version": "0.9.0",
+  "base_model": "minishlab/potion-base-32M",
+  "head": "StaticModelForClassification",
+  "seed": 20260918,
+  "hyperparameters": {
+    "max_epochs": 5,
+    "min_epochs": 1,
+    "early_stopping_patience": 2,
+    "test_size": 0.1,
+    "batch_size": 32,
+    "device": "cpu"
+  },
+  "label_mapping": [
+    "health",
+    "politics",
+    "sports",
+    "technology"
+  ],
+  "train_split": "train_only",
+  "classifier_revision": "potion-base-32M+train_seed20260918",
+  "calibration": {
+    "applied": true,
+    "method": "temperature_scaling_on_log_probs",
+    "temperature": 0.15000000000000002,
+    "fitted_on": "calibration_split_only",
+    "pre_calibration_metrics": {
+      "log_loss": 0.5394912362098694,
+      "brier_score": 0.23946216703738968,
+      "ece": 0.3952149003744126
+    },
+    "post_calibration_metrics": {
+      "log_loss": 0.03539687767624855,
+      "brier_score": 0.01813567654632301,
+      "ece": 0.009865256547927855
+    }
+  }
+}

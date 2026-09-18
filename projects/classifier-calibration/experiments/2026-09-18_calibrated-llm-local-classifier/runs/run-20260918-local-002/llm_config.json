@@ -1,0 +1,17 @@
+{
+  "system": "llm",
+  "provider_kind": "local_closed_set_score_provider",
+  "substitute_for": "hosted_or_local_generative_LLM",
+  "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+  "prompt_version": "closed-set-label-ids-v1",
+  "scoring": "sklearn LogisticRegression.decision_function over TF-IDF(1-2gram) features; multinomial; C=50",
+  "fit_split": "train_only",
+  "label_ids": [
+    "health",
+    "politics",
+    "sports",
+    "technology"
+  ],
+  "seed": 20260918,
+  "documentation": "No hosted LLM API keys and no local generative LLM server were available. This Run 2 keeps the documented LocalClosedSetScoreProvider that emits per-class logits suitable for temperature scaling, then the same calibration + comparison pipeline as a real LLM path would."
+}

@@ -1,0 +1,22 @@
+{
+  "otel": {
+    "sdk": "opentelemetry-sdk (Python)",
+    "exporter": "FileSpanExporter -> otel_traces.jsonl",
+    "sampling": "always_on (full local capture)"
+  },
+  "langfuse": {
+    "configured": false,
+    "reason": "No Langfuse credentials in environment; using OTel file exporter as inspectable traces"
+  },
+  "promptfoo": {
+    "used": false
+  },
+  "prometheus_grafana": {
+    "used": false,
+    "reason": "No long-lived model server in Run 2"
+  },
+  "telemetry_content_mode": "hashes_only",
+  "event_schema_version": "classifier-bench.event.v1",
+  "expected_trace_cardinality_per_system": "1 root trace per evaluated sample",
+  "privacy_boundary": "hashes_only: raw text never written to events/traces; input_sha256 + input_len only"
+}
