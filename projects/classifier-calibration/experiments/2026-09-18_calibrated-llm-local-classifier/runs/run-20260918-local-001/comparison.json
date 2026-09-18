@@ -1,0 +1,37 @@
+{
+  "test_ids_digest": "18f5763044c10f349be086b5ebcef7d7f7728d35b42b496fce67e17e71dcb124",
+  "n_test": 100,
+  "llm": {
+    "model_id": "local-closed-set-score-provider/tfidf-logreg-v1",
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "log_loss": 3.504334866250995e-07,
+    "brier_score": 2.4558299382376676e-11,
+    "ece": 3.50427346806903e-07
+  },
+  "potion": {
+    "model_id": "minishlab/potion-base-8M",
+    "accuracy": 0.99,
+    "macro_f1": 0.9899959983993598,
+    "log_loss": 0.054464440792798996,
+    "brier_score": 0.019826884918224028,
+    "ece": 0.00982553720474244
+  },
+  "disagreement_count": 1,
+  "disagreement_sample_ids": [
+    "syn-0176"
+  ],
+  "error_slices": {
+    "both_wrong": [],
+    "llm_only_wrong": [],
+    "classifier_only_wrong": [
+      "syn-0176"
+    ],
+    "counts": {
+      "both_wrong": 0,
+      "llm_only_wrong": 0,
+      "classifier_only_wrong": 1
+    }
+  },
+  "same_frozen_test_ids": true
+}
