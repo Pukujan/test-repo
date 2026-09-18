@@ -4,4 +4,5 @@
 
 | Project | Experiment | Status | Question |
 |---|---|---|---|
+| `classifier-calibration` | [`classifier-calibration-2026-09-18-calibrated-llm-local-classifier`](projects/classifier-calibration/experiments/2026-09-18_calibrated-llm-local-classifier/README.md) | `ready` | Can a calibrated LLM classifier and a locally trained lightweight classifier be evaluated reproducibly against the same domain-specific corpus split, with calibration quality, classification quality, and iteration history recorded durably? |
 | `fossil` | [`fossil-2026-09-14-shared-chat-completeness`](projects/fossil/experiments/2026-09-14_shared-chat-completeness/README.md) | `completed` | Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning? |

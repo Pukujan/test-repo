@@ -1,0 +1,21 @@
+{
+  "schema_version": "lab.state.v1",
+  "experiment_id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+  "status": "ready",
+  "updated_at": "2026-09-18T14:24:58Z",
+  "current_focus": "Prepare the first local baseline run: freeze a labeled train/calibration/test split, evaluate a closed-set LLM with calibratable class scores, train a Potion/Model2Vec classifier, and compare both on the identical untouched test IDs.",
+  "last_checkpoint": {
+    "id": "cp-0001",
+    "path": "checkpoints/0001-initial-plan.md",
+    "summary": "Created the isolated classifier-calibration experiment, fixed scope to LLM calibration plus local classifier training/evaluation, and recorded the first-run contract."
+  },
+  "next_action": "Locally clone Pukujan/test-repo, read this experiment HANDOFF.md and PLAN.md, place only a safe dataset manifest or local-only dataset path/hash into the run inputs, freeze train/calibration/test IDs, then execute the first LLM and Potion/Model2Vec baseline without changing the test split.",
+  "blockers": [],
+  "important_findings": [
+    "Scope is intentionally narrow: calibrated LLM classification, local classifier training/testing, result comparison, and iteration only.",
+    "Triage, consensus/jury, routing, graph construction, and orchestration are explicitly out of scope for this experiment.",
+    "The repository is public; private corpora, credentials, proprietary source text, model weights, and sensitive raw predictions must remain local and be represented here only by safe manifests, hashes, aggregate metrics, or sanitized fixtures.",
+    "The LLM calibration set and the final test set must be disjoint; the test set stays frozen during iteration.",
+    "Both the LLM and local classifier must be evaluated on the same test row IDs and label schema."
+  ]
+}

@@ -1,0 +1,18 @@
+# Local/private experiment material
+.venv/
+__pycache__/
+.cache/
+local/
+private/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Large local datasets / raw exports
+*.parquet
+*.arrow
+*.feather
+
+# Keep small JSON/CSV manifests/results only when they are safe for this public repo.

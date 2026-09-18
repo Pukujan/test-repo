@@ -1,0 +1,20 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
+  "project": "classifier-calibration",
+  "title": "Calibrated LLM versus local lightweight classifier",
+  "created_at": "2026-09-18T14:24:58Z",
+  "question": "Can a calibrated LLM classifier and a locally trained lightweight classifier be evaluated reproducibly against the same domain-specific corpus split, with calibration quality, classification quality, and iteration history recorded durably?",
+  "upstream": [
+    {
+      "kind": "issue",
+      "repository": "https://github.com/Pukujan/test-repo",
+      "number": 3,
+      "url": "https://github.com/Pukujan/test-repo/issues/3"
+    }
+  ],
+  "source_refs": [
+    "PLAN.md",
+    "inputs/README.md"
+  ]
+}
