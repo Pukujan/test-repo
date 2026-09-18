@@ -1,0 +1,618 @@
+{
+  "counts": {
+    "finqa": 50,
+    "legal": 50,
+    "legal_by_task": {
+      "contract_nli_confidentiality_of_agreement": 10,
+      "definition_classification": 10,
+      "hearsay": 10,
+      "international_citizenship_questions": 10,
+      "overruling": 10
+    }
+  },
+  "items": [
+    {
+      "dataset": "finqa",
+      "item_id": "HUM/2017/page_118.pdf-2",
+      "task": null,
+      "visible_digest": "5a0c5b9061c5340ae395064b1fcab39908736cbcf2dddddafe6ae2e5ea72c4b5"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "GS/2018/page_69.pdf-2",
+      "task": null,
+      "visible_digest": "c13562f1e1c56d949be14cb41696d40ddc20305ff9c029db9d801591e2751073"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "C/2015/page_96.pdf-3",
+      "task": null,
+      "visible_digest": "c2baaabd658f32b84262abcd324e9d40493b85ebd888ffc8e7fbe6f9c52847bb"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AWK/2012/page_117.pdf-3",
+      "task": null,
+      "visible_digest": "b20457f7663480459e5a14a2cd6ae0d27173d1df8ebf54c8925292e86b219a55"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "HOLX/2007/page_93.pdf-1",
+      "task": null,
+      "visible_digest": "991dbf64de2c9975c353915381f60b0065d6524530dcaa1b1eea0732f94a8db0"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "UNP/2015/page_56.pdf-2",
+      "task": null,
+      "visible_digest": "47d630fe1af57eb0e19ea995d395fddde2a3e4ce205320f278a8431b48d6444f"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "SNA/2013/page_83.pdf-3",
+      "task": null,
+      "visible_digest": "d38a90bb55c2832eb44d6bc60e8cd12b1151097a3624f3421bcd6b9c41fad47e"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "TFX/2017/page_78.pdf-2",
+      "task": null,
+      "visible_digest": "691b92dcf57c9118d13a5a7debf999e0f66fb60a12e09070fd501d42397bf3a0"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AES/2002/page_128.pdf-3",
+      "task": null,
+      "visible_digest": "91c5d256cd26c360d6bb3fb79a0371157cb08bc4794184675c272aa965d5fbea"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "DISH/2010/page_117.pdf-2",
+      "task": null,
+      "visible_digest": "af0b6a80abe47e28549067d9b1757fe54aeb7b24a7069ef5eb03fb01762a38df"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AAL/2013/page_18.pdf-2",
+      "task": null,
+      "visible_digest": "f3d7ccd601d56f461071fd782394f126ae4616b47e2a9fe5ef0af313bccf2218"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "LMT/2016/page_49.pdf-2",
+      "task": null,
+      "visible_digest": "ecf8a091e30d146749ae0d4f11f7dd01aa6fd2115e4a0730b70bc27afdd8c098"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "BKR/2017/page_56.pdf-3",
+      "task": null,
+      "visible_digest": "cd0d3ea64b68dd90504acf3d3007b5ae12d77ca7920ed00d556089b53201d3d5"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "UPS/2007/page_98.pdf-1",
+      "task": null,
+      "visible_digest": "d069d0c7f34b2102748669747849c5ed6cc4d2c2180ec19c3a913e7b6cb3680e"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "CB/2010/page_83.pdf-1",
+      "task": null,
+      "visible_digest": "43812d9c3709116f120427af20275c5cc9a4106221980890e2d3514625bcccf5"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "PPG/2008/page_52.pdf-1",
+      "task": null,
+      "visible_digest": "54fd26dc385e1bc50b557a5d3f25ef32c7d08eaa768c740ea7fa80f92746616b"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "FIS/2016/page_31.pdf-1",
+      "task": null,
+      "visible_digest": "02dc3557ebc07beea5a6a4cf8d5acb6ada5e9a1ec9ed6052ca028f8b86f3cd96"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "DRE/2005/page_30.pdf-2",
+      "task": null,
+      "visible_digest": "47947ef4c0420968928d99d486c9896031d002859d396bbf20c6334c9edb3603"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AMT/2006/page_113.pdf-3",
+      "task": null,
+      "visible_digest": "c75e2f51591aaf2ef810f70034cd8e09f48abeb251b13f4bde6fd9d2c09938aa"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AMT/2012/page_50.pdf-2",
+      "task": null,
+      "visible_digest": "e8a8e6ccbd270e2031dca7d9eb2e5d7a7294b59e4fa0ab1803388bb26fc6ff5a"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "C/2008/page_44.pdf-1",
+      "task": null,
+      "visible_digest": "9a1707639ea6a4e3502f926d486f1b60f780c39b1eb9d08a6cd372356271b1fd"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AES/2002/page_128.pdf-2",
+      "task": null,
+      "visible_digest": "765f5aec78158e232f0c71174afb2e163e41d88f31c579357c6b229bbe5ce6dc"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "ETR/2011/page_17.pdf-3",
+      "task": null,
+      "visible_digest": "4782d70d81afbcbf7d4916808fd239ad873b32a0961ccf88c6467335395dde8e"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "C/2008/page_44.pdf-2",
+      "task": null,
+      "visible_digest": "329504e4a55a2426bd4ae4a99d03442bca25d45c18a443a05dc660ac042e51d4"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "SNA/2012/page_110.pdf-2",
+      "task": null,
+      "visible_digest": "4ee1838a59e2350973ba1e0adaf8ad326ad1aca69f10be4e301116ecb008076e"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "APD/2018/page_30.pdf-2",
+      "task": null,
+      "visible_digest": "1b608783c88c5c222fb4973119ba70c53b1690220c396c974c896b0b387da729"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AAPL/2006/page_131.pdf-2",
+      "task": null,
+      "visible_digest": "0ef0834f3a79a6be9856705a62cd756ebdc60b77850508722b5cb327f26a9134"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "UNP/2009/page_42.pdf-1",
+      "task": null,
+      "visible_digest": "a338b8ab795eb50d95e356f86d6d8dd010c81342b13022fafcaf181bd98a9fef"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "C/2009/page_63.pdf-4",
+      "task": null,
+      "visible_digest": "511d75d497ce733a22ac524bf3963f2ec8273efad7b174c9e8d8ba6fa8011471"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "TFX/2017/page_78.pdf-1",
+      "task": null,
+      "visible_digest": "41757eb6d2f5de79f3b5ceaf2c00a0cdb10bd8a73b5a13e6f0c91e5c6b91fb40"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "C/2008/page_65.pdf-3",
+      "task": null,
+      "visible_digest": "c0ee2a07aaa52fa7302e0b07a94561822eb8074c0a4d9119a88038d533e78948"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "UNP/2016/page_52.pdf-4",
+      "task": null,
+      "visible_digest": "accf8a9268af96859b3bd2348036ca531fc6b67fa82e586ca3e5ef54567fbcfd"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "FIS/2012/page_48.pdf-3",
+      "task": null,
+      "visible_digest": "7dce0bf14968de2e79c6456258aeeee606e2c8cb0154762f7008fd2a649eae16"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "PNC/2012/page_174.pdf-5",
+      "task": null,
+      "visible_digest": "38594750067d9e364239a7e247843fe98e5968930e12b82e0ec99b7240606e7b"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "GS/2017/page_179.pdf-4",
+      "task": null,
+      "visible_digest": "2ce2e0acaa4e48a964adbbfa8081b9f30dabc71ec7517730b399c49837ee7a38"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "VRTX/2006/page_111.pdf-1",
+      "task": null,
+      "visible_digest": "14c70aec78498b401202ab900fcd5a149673814a94a8ee75b5c617e893890b00"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "GIS/2017/page_31.pdf-2",
+      "task": null,
+      "visible_digest": "f072932fe7493f99885b366941af1a5a6867c797d082badf23832e974b39100c"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "FIS/2017/page_64.pdf-1",
+      "task": null,
+      "visible_digest": "8ff680f0ea58f06822fe5e477162ccec2dd7694bda1efee37599db1a87be384b"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AWK/2018/page_146.pdf-2",
+      "task": null,
+      "visible_digest": "c77b5d8f871986808fa697ad65bf5e7193ee14b276915f6dd5d4175c9f8b72e4"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "IPG/2008/page_72.pdf-2",
+      "task": null,
+      "visible_digest": "7d4bf0d5763eec554a375d7c788b269fa56c3593d9df15e86ab433252e16103c"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "NCLH/2018/page_97.pdf-2",
+      "task": null,
+      "visible_digest": "7f9e58028fd2441a1a01230c18e57ed34285ef7bfb2b1cf8d507e252ae847457"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "HOLX/2007/page_126.pdf-1",
+      "task": null,
+      "visible_digest": "a8084e0af51b801ba9cd8dcaf0c3a64d88cf142ab59fff628cec968a4804e80e"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "FIS/2016/page_9.pdf-2",
+      "task": null,
+      "visible_digest": "8461551ad8194f05f1670df818f085fbb74bc13f685db223ec537fb0a8ee3e54"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "GS/2017/page_86.pdf-3",
+      "task": null,
+      "visible_digest": "8d7424266f4a26dee270f35aa98f5ef45450d87b0378a10309589d177384d4d0"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "MSI/2014/page_76.pdf-1",
+      "task": null,
+      "visible_digest": "b4620d46e6130b5d5996fa1435f429343baa8a681f008121b593cc92df5a8095"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "BLL/2012/page_31.pdf-1",
+      "task": null,
+      "visible_digest": "cd16d13fae00595444ca528e4c87783483f42b9d5054bb3b5a108416d66400c8"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AMT/2012/page_118.pdf-1",
+      "task": null,
+      "visible_digest": "72e3e1a98ea93e61f58ce048f4eb8777e6b28c90512c491f33aed58f6e20f79a"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "ALLE/2015/page_24.pdf-1",
+      "task": null,
+      "visible_digest": "1e6bafb7915db1fd9a5a8d5abf90fa36918aa293e79538879f2360a59f2b4ff1"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "AMT/2006/page_104.pdf-2",
+      "task": null,
+      "visible_digest": "af927f2b6b237a0d96d6056559da32ca0ca09c4a934a84e3c4fe6852c0dde22b"
+    },
+    {
+      "dataset": "finqa",
+      "item_id": "IP/2009/page_84.pdf-1",
+      "task": null,
+      "visible_digest": "f2e79e520ef0eb0adc1780f4d13d012d4b8c46fc926e0d6c40a0920a9163f574"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#27",
+      "task": "hearsay",
+      "visible_digest": "726f50ee7ca2f288b8e832894705c9ddb056fad19f34f0e01d027f5eb80ae190"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#28",
+      "task": "hearsay",
+      "visible_digest": "77c63831057d42ffbba2872c08bd071693d7f8a68a14e1afec1d3c6745012685"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#9",
+      "task": "hearsay",
+      "visible_digest": "8bc2670d79f6e81d3b4aa1122234696e46bd1e824d6e83be74d7dc77f37543dc"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#4",
+      "task": "hearsay",
+      "visible_digest": "d06a451fb67fd95588d2c6ecbe18f281d5b61cb96909b03b4a4b8567db41817c"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#87",
+      "task": "hearsay",
+      "visible_digest": "9e94b30bf53dab88541098273e64ac99aae2be10fba65b63c4d6dfc5ad952a9e"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#53",
+      "task": "hearsay",
+      "visible_digest": "06fbebbb40741ffd70768e2ba6bca9b7de4188421ac76e4f7cde487092746a6c"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#81",
+      "task": "hearsay",
+      "visible_digest": "89e5e75b2a7c418bb39346c3b67649b9bb10ae71633efc91129a234ce94b07d5"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#49",
+      "task": "hearsay",
+      "visible_digest": "568d5ebb72b06f8ad18ed7e9df30db76bc926cce6decac985ede23927a68e034"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#88",
+      "task": "hearsay",
+      "visible_digest": "5713382a4644f36b1232b5140bb04d40b36612642ece5dbabc84398919db7f69"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "hearsay#50",
+      "task": "hearsay",
+      "visible_digest": "4a7ec25f721a4888f2d6359baea8cbbca8b91de05f6506c01554ec0f7f33709e"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#1115",
+      "task": "definition_classification",
+      "visible_digest": "0d2550b617853fb43fcbcd4c5ee28798d85bca509a59369f0fdb2d9204f9a2a6"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#1153",
+      "task": "definition_classification",
+      "visible_digest": "81b0056ee3fd55957097949d753f19c42ede0d87f9d698e0c6585051d77da564"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#677",
+      "task": "definition_classification",
+      "visible_digest": "8ba774bd9ff80486c5225232203fb4e80da3cfc0701433546d0e0e0bc6d80abf"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#544",
+      "task": "definition_classification",
+      "visible_digest": "6b3cb9754ed8a04c27e1124e81538759923460dd33d13f52813e3be64cad62de"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#213",
+      "task": "definition_classification",
+      "visible_digest": "4552d36ecaf6811fa40b581445fe9a7aa65ebc6a3c921dba1b5e3baed4daccc4"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#1256",
+      "task": "definition_classification",
+      "visible_digest": "9fff432dea498767bbdd32937808d6d6f3608663aa24277b3585afc77ffae17b"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#989",
+      "task": "definition_classification",
+      "visible_digest": "508384d65f1dce5174e023b1e7d520de64db83e228ab990daefd538d6c768d43"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#744",
+      "task": "definition_classification",
+      "visible_digest": "4aceddc88b7f4c077f09e3a2f0da58019df4e651f4133bfadd8bb37542750bbb"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#704",
+      "task": "definition_classification",
+      "visible_digest": "1f8659f1464dae8716428f198c5f97e3fe66e91f6e986f6fa5105e725b4a6cf7"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "definition_classification#812",
+      "task": "definition_classification",
+      "visible_digest": "238dbe5a0f73c8694b1af4c4e372b03be4c874684dd12d302c142afc922f9d9f"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#739",
+      "task": "overruling",
+      "visible_digest": "bd635233feb5a3be2e849882eff2ac3e08571a264bd18cfbf2a1fa51eea8e652"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#490",
+      "task": "overruling",
+      "visible_digest": "7ea81ff303d1bbf4c44afb08dbbb02aecde1313574c1763561d6725d23ed4971"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#298",
+      "task": "overruling",
+      "visible_digest": "164097473b0d5ff32f8af28d148b4b02ecd80f60bf4566ef3536ce54bb00e15a"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#601",
+      "task": "overruling",
+      "visible_digest": "bc2436cbb4a01389a90ac4f9277db1e021597ca043a503d80dc36c871aebf4d1"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#54",
+      "task": "overruling",
+      "visible_digest": "0a1a76bb748f18aa3177793bef9bc34115ac9545c6ffaa017978455d0275d7be"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#1204",
+      "task": "overruling",
+      "visible_digest": "fc7b534b73206ecc349c0e856980c51ebf9fabf30fabe41899e607a0e4913aed"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#1030",
+      "task": "overruling",
+      "visible_digest": "ba03d5800823c096d4d825b64dab4ea0fe64f2e66653ab448562b1bfbb225833"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#1097",
+      "task": "overruling",
+      "visible_digest": "7f7ba52202ed176800a9168b0077c4dc7706debad1fc8ce49b407a38d13d0f25"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#1500",
+      "task": "overruling",
+      "visible_digest": "67dbddc46a6eb6825ceda1669d80ee12f8786735688b428b38bdb315a8648d07"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "overruling#764",
+      "task": "overruling",
+      "visible_digest": "fb851902b3f8599a9faa5956d235f73ecebde20c0438e9605c2a19b3c58826bd"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#66",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "9a354357808ef99952431e0986667450dc1f4e734c9fb50b751932d346538b13"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#70",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "2369956d2608442708eaa4db1e383270314040917d27117ba8a4496e6b9a5cdd"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#38",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "bd0f826766b71ca4b1f551bdf7b55c62dbd61dc1ef122132f9f03e9cc210eafc"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#25",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "5198e1b6a6554264ba5e9d35ff7517422562860dc355d751eadc969125935b56"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#2",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "d305d253b105993e95ee705c494197cdc33ce5b3bc03d6fcf7acc71275ba71e3"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#51",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "6036a7546d3a910ce8d91856e78a8c71da974f9b8d89eba87660ca300d0f3558"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#1",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "aa7dc62382bd7959128d4a6b8b3eb74c85b7509568b2e628a9cb5b5544a80ba7"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#9",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "2a1a485136a3063e264dda5e2065e7d9a9e7064acfb96181d054007e6929ca08"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#32",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "815a265f053bd73907b9a9494f177204e9987ad87961ce98458e04ed31fec9a6"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "contract_nli_confidentiality_of_agreement#53",
+      "task": "contract_nli_confidentiality_of_agreement",
+      "visible_digest": "222146f561850c57788f1d4e3d316c8182a81c4aa7ba87c1b9c7050f41e99a3f"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#252",
+      "task": "international_citizenship_questions",
+      "visible_digest": "9ab4719ad0b8338750aeeb4ea4a3f18826ffaef95b9fc4ec5c6796418f28df2d"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#3448",
+      "task": "international_citizenship_questions",
+      "visible_digest": "c9f1708bd881b3c8fe3eb55e42f1f56979dea27f42c37b997e3e536b0a9ec854"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#3275",
+      "task": "international_citizenship_questions",
+      "visible_digest": "28a85016100449843dcb3e3b0ea41d25c263469ca21217eb1be932193dda2e3a"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#2103",
+      "task": "international_citizenship_questions",
+      "visible_digest": "66bbf11435f3fe6a1e32d84b24c18d9fd5acf12963639dfdf2f324d3323ee46d"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#7326",
+      "task": "international_citizenship_questions",
+      "visible_digest": "9d9fc268c4527c45f498c7e2df58f317beab8b855363b51669094774a8a6e487"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#4224",
+      "task": "international_citizenship_questions",
+      "visible_digest": "c5c63d5abab6e762a3b34f13363123871e3f35a2ee1f76ebbadd60b7fd4149bb"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#6567",
+      "task": "international_citizenship_questions",
+      "visible_digest": "e1dae89930b530731216ce226a56b6c0ef967a731008bef5c6b2035d207d72a5"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#1522",
+      "task": "international_citizenship_questions",
+      "visible_digest": "760ad625534249a3d76667ceca30f3ba0b47f8d77b774e7752345cefccde1ad4"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#5002",
+      "task": "international_citizenship_questions",
+      "visible_digest": "f72e43f7fc2329b05bb33f4117081d27799fa488594df09795ab549b464d58b5"
+    },
+    {
+      "dataset": "legalbench",
+      "item_id": "international_citizenship_questions#738",
+      "task": "international_citizenship_questions",
+      "visible_digest": "656b1c880a771c2413434b8ea90841e2efd1043f38f13bbcc92ec064d329545f"
+    }
+  ],
+  "sample_seed": 20260918,
+  "schema_version": "vh.sample-manifest.v1",
+  "selection_method": "rank items by sha256(f'{seed}:{item_id}') and take top N (version-stable)"
+}

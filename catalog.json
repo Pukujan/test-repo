@@ -15,6 +15,14 @@
       "question": "Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning?",
       "status": "completed",
       "updated_at": "2026-09-14T20:31:01Z"
+    },
+    {
+      "id": "verification-harness-2026-09-18-real-data-abcd-verification",
+      "path": "projects/verification-harness/experiments/2026-09-18_real-data-abcd-verification",
+      "project": "verification-harness",
+      "question": "On real legal and financial benchmark examples, how much does each verification layer (deterministic validation, independent verification, neuro-symbolic translation) improve reliability beyond the model alone, measured against withheld gold, and can the experiment honestly report that a layer adds no value or hurts?",
+      "status": "completed",
+      "updated_at": "2026-09-18T20:55:00Z"
     }
   ],
   "schema_version": "lab.catalog.v1"

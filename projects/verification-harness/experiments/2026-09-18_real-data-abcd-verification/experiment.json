@@ -1,0 +1,31 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "verification-harness-2026-09-18-real-data-abcd-verification",
+  "project": "verification-harness",
+  "title": "Benchmark layered verification on real legal + financial datasets (A/B/C/D)",
+  "created_at": "2026-09-18T12:00:00Z",
+  "question": "On real legal and financial benchmark examples, how much does each verification layer (deterministic validation, independent verification, neuro-symbolic translation) improve reliability beyond the model alone, measured against withheld gold, and can the experiment honestly report that a layer adds no value or hurts?",
+  "upstream": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/czyssrs/FinQA",
+      "revision": "0f16e2867befa6840783e58be38c9efb9229d742"
+    },
+    {
+      "kind": "dataset",
+      "repository": "https://huggingface.co/datasets/nguha/legalbench",
+      "revision": "daec8237410aa23e3faf4bc41ad8b3a7e1696826",
+      "note": "Official LegalBench dump by a paper co-author; contains LegalBench objective-label tasks and ContractNLI families."
+    },
+    {
+      "kind": "issue",
+      "repository": "https://github.com/Pukujan/test-repo",
+      "number": 1,
+      "url": "https://github.com/Pukujan/test-repo/issues/1"
+    }
+  ],
+  "source_refs": [
+    "inputs/dataset-lock.json",
+    "inputs/sample-manifest.json"
+  ]
+}

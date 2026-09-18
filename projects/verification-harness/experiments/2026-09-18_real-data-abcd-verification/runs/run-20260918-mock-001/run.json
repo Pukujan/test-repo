@@ -1,0 +1,19 @@
+{
+  "schema_version": "lab.run.v1",
+  "run_id": "run-20260918-mock-001",
+  "experiment_id": "verification-harness-2026-09-18-real-data-abcd-verification",
+  "status": "pass",
+  "upstream_revision": "0f16e2867befa6840783e58be38c9efb9229d742",
+  "command": "python -m harness.cli run --arms A,B,C,D1 --provider mock --run-id run-20260918-mock-001",
+  "started_at": "2026-09-18T12:30:00Z",
+  "finished_at": "2026-09-18T12:31:00Z",
+  "environment": {
+    "python": "3.12.10",
+    "provider": "mock",
+    "z3": "unavailable",
+    "symai": "unavailable",
+    "note": "upstream_revision pins FinQA; legalbench pinned revision daec8237410aa23e3faf4bc41ad8b3a7e1696826 in dataset-lock.json. Mock mechanics run is NOT a benchmark result."
+  },
+  "outputs": ["records.json", "metrics.json"],
+  "notes": "End-to-end mock mechanics run over the frozen 50 FinQA + 50 LegalBench sample. Confirms gold separation, deterministic A/B/C/D1 execution, capability detection (z3/symai unavailable), and metrics generation. Produces a mixed tradeoff (coverage vs accepted-accuracy), not a rigged win. Real Luna inference is pending."
+}

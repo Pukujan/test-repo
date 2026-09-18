@@ -1,0 +1,57 @@
+{
+  "aggregate": {
+    "A": {
+      "abstained_rate": 0.0,
+      "accepted_accuracy": 0.27,
+      "coverage": 1.0,
+      "false_accept_rate": 0.73,
+      "false_reject_rate": 0.0,
+      "n": 100,
+      "raw_accuracy": 0.27,
+      "rejected_rate": 0.0,
+      "selective_accuracy": 0.27
+    },
+    "B": {
+      "abstained_rate": 0.0,
+      "accepted_accuracy": 0.3176470588235294,
+      "coverage": 0.85,
+      "false_accept_rate": 0.6823529411764706,
+      "false_reject_rate": 0.0,
+      "n": 100,
+      "raw_accuracy": 0.27,
+      "rejected_rate": 0.15,
+      "selective_accuracy": 0.27
+    },
+    "C": {
+      "abstained_rate": 0.0,
+      "accepted_accuracy": 0.3176470588235294,
+      "coverage": 0.85,
+      "false_accept_rate": 0.6823529411764706,
+      "false_reject_rate": 0.0,
+      "n": 100,
+      "raw_accuracy": 0.27,
+      "rejected_rate": 0.15,
+      "selective_accuracy": 0.27
+    },
+    "D1": {
+      "abstained_rate": 0.0,
+      "accepted_accuracy": 0.3176470588235294,
+      "coverage": 0.85,
+      "false_accept_rate": 0.6823529411764706,
+      "false_reject_rate": 0.0,
+      "n": 100,
+      "raw_accuracy": 0.27,
+      "rejected_rate": 0.15,
+      "selective_accuracy": 0.27
+    },
+    "_marginal": {
+      "A_to_B": 0.0,
+      "B_to_C": 0.0,
+      "C_to_D1": 0.0
+    }
+  },
+  "note": "A/B/C from LocalExtractiveScoreProvider; D1 from LocalNSAITranslator. Both gold-blind. Not mock. Not Luna.",
+  "provider": "local-extractive",
+  "run_id": "run-20260918-local-001+d1",
+  "schema_version": "vh.metrics.v1"
+}
