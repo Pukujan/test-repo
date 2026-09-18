@@ -11,15 +11,15 @@ On real legal and financial benchmark examples, how much does each verification 
 
 ## Current focus
 
-Experiment concluded after mock mechanics plus primary gold-blind local A/B/C and distinct D1 NSAI runs on the frozen FinQA+LegalBench sample.
+Experiment concluded. Primary generative run is Grok-4.6 on the frozen FinQA+LegalBench sample; Luna remains unavailable.
 
 ## Last durable checkpoint
 
-`checkpoints/0002-local-primary-and-d1.md` — Primary local substitute run + distinct D1 NSAI export; selective-accuracy marginals are zero; conclusion written.
+`checkpoints/0003-grok-primary.md` — Grok-4.6 primary A/B/C/D1 run; selective-accuracy A→B marginal −0.01; layers add no reliability.
 
 ## Exact next action
 
-None — experiment completed. Optional follow-up is a new experiment with real Luna/logprobs or pinned SyMAI, not a mutation of this frozen sample.
+None — experiment completed. Grok replaced Luna for this sample.
 
 ## Blockers
 
@@ -27,13 +27,12 @@ None — experiment completed. Optional follow-up is a new experiment with real 
 
 ## Important findings
 
-- Luna and SyMAI were unavailable. Primary scores use gold-blind LocalExtractiveScoreProvider / LocalNSAITranslator. Mock run is mechanics-only.
-- On the frozen 100-item public sample, A raw accuracy is 0.27. B/C raise accepted-accuracy to 0.32 by cutting coverage to 0.85. Selective-accuracy marginals A→B, B→C, C→D1 are all 0.0.
-- D1 used a distinct NSAI-formatted export and separate responses; it still routes through the same B/C authority and did not improve reliability.
+- Owner directed Grok instead of Luna. Primary scores are grok-4.6, gold-blind, encoded in harness/grok_answers.py.
+- Grok A raw accuracy is 0.47 with 36% FinQA abstention when the visible table could not support the question.
+- B/C raise accepted-accuracy 0.73→0.75 and cut coverage 0.64→0.61. A→B selective marginal is −0.01. D1 matches C.
+- The earlier extractive substitute (raw 0.27) is a weaker baseline, not the primary generative result.
 - Z3 and SyMAI remain unavailable and were not substituted.
-- FinQA named-cell and table_* resolution now runs against the visible table. Program-equivalence vs gold programs is not claimed.
-- Gold/visible separation still holds: 200 exported packets scanned, 0 gold-token hits.
-- The repository is public; raw dataset bytes and gold stay gitignored.
+- Mock run is mechanics-only.
 
 ## Resume protocol
 
