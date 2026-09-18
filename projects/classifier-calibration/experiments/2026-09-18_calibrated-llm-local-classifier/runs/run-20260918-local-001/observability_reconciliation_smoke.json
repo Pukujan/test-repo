@@ -1,0 +1,16 @@
+{
+  "phase": "smoke",
+  "expected_sample_count": 12,
+  "completed_sample_count": 12,
+  "prediction_row_count": 12,
+  "root_traces_emitted": 12,
+  "backend_traces_found": 12,
+  "unique_sample_ids": 12,
+  "duplicate_sample_ids": [],
+  "missing_prediction_ids": [],
+  "missing_trace_ids": [],
+  "structured_event_count": 12,
+  "invalid_failed_inference_count": 0,
+  "aggregates_regenerable_from_rows": true,
+  "reconciled": true
+}

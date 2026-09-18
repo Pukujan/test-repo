@@ -3,7 +3,7 @@
 > Generated from `experiment.json` + `state.json`. Do not edit directly.
 
 **Experiment:** `classifier-calibration-2026-09-18-calibrated-llm-local-classifier`  
-**Status:** `ready`
+**Status:** `completed`
 
 ## Question
 
@@ -11,15 +11,15 @@ Can a calibrated LLM classifier and a locally trained lightweight classifier be 
 
 ## Current focus
 
-Prepare Run 1 with observability as part of the evidence contract: freeze the dataset splits, instrument a small smoke subset with stable sample/trace correlation, reconcile telemetry completeness, then execute the calibrated LLM and Potion/Model2Vec baselines on the same untouched test IDs.
+Run 1 complete: durable smoke+full artifacts under runs/run-20260918-local-001 with calibrated LocalClosedSetScoreProvider vs Potion/Model2Vec on frozen test IDs. Ready for controlled iteration from the recorded next hypothesis.
 
 ## Last durable checkpoint
 
-`checkpoints/0002-observability-contract.md` — Made benchmark observability a Run 1 acceptance requirement using OpenTelemetry correlation, Langfuse trace inspection, structured event logs, optional Promptfoo evaluation, optional Prometheus/Grafana runtime metrics, and machine-readable reconciliation.
+`checkpoints/0003-run-1-local-001.md` — Completed Run 1: synthetic fixture, frozen splits, smoke+full observability reconciliation, temperature-scaled local closed-set score provider, Potion/Model2Vec baseline, same-test comparison, and next hypothesis.
 
 ## Exact next action
 
-Locally clone Pukujan/test-repo; read HANDOFF.md, PLAN.md, and OBSERVABILITY.md; freeze train/calibration/test IDs; configure a privacy-safe telemetry content mode; run a small observability smoke subset and reconcile sample/prediction/trace/event counts before launching the full LLM calibration and Potion/Model2Vec baseline.
+Potion/Model2Vec errs more than the score provider. Next controlled change: try potion-base-32M (larger static embedding) with the same train/calibration/test IDs and re-fit temperature scaling on calibration only.
 
 ## Blockers
 
@@ -31,7 +31,9 @@ Locally clone Pukujan/test-repo; read HANDOFF.md, PLAN.md, and OBSERVABILITY.md;
 - Triage, consensus/jury, routing, graph construction, RAG, and unrelated orchestration remain explicitly out of scope.
 - OpenTelemetry is the instrumentation/correlation contract; Langfuse is the primary human trace/debug UI; Promptfoo is an optional eval runner; Prometheus/Grafana are reserved for local model-server/runtime metrics.
 - Structured row/event artifacts and deterministic metric files remain the durable evidence; dashboards are secondary views and must reconcile with those artifacts.
-- Run 1 must begin with a small observability smoke subset proving stable IDs, inspectable traces, structured events, privacy/content-mode compliance, and count reconciliation.
+- Run 1 used a documented LocalClosedSetScoreProvider (TF-IDF+LogReg logits) because no hosted LLM API keys or local generative LLM server were available; temperature scaling and the full comparison pipeline still ran.
+- Potion/Model2Vec (minishlab/potion-base-8M) trained successfully via model2vec[train]; classifier also temperature-scaled on calibration only.
+- Langfuse was not configured (no credentials); inspectable OTel traces were written to otel_traces.jsonl with content_mode=hashes_only.
 - The repository is public; private corpora, credentials, proprietary source text, model weights, raw sensitive predictions, and telemetry secrets must remain local and be represented here only by safe manifests, hashes, aggregate metrics, or sanitized fixtures.
 - The LLM calibration set and final test set must be disjoint; the final test set stays frozen during iteration.
 - Both the LLM and local classifier must be evaluated on the same test row IDs and label schema.
