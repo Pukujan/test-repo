@@ -1,0 +1,7 @@
+{
+  "aggregate": {
+    "D1": {"abstained_rate": 0.36, "accepted_accuracy": 0.7540983606557377, "coverage": 0.61, "false_accept_rate": 0.2459016393442623, "false_reject_rate": 0.0, "n": 100, "raw_accuracy": 0.46, "rejected_rate": 0.03, "selective_accuracy": 0.46}
+  },
+  "run_id": "run-20260918-grok-001-d1",
+  "schema_version": "vh.metrics.v1"
+}
