@@ -1,0 +1,126 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "classifier-calibration-2026-09-19-real-multidomain-teacher-student",
+  "checks": [
+    {
+      "id": "ONT-001",
+      "description": "Freeze the top-level ontology and label definitions before inference; initial core labels are legal, finance, science, technology, with explicit boundary examples.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "SRC-001",
+      "description": "Pin real public corpus sources at stable revisions/URLs with license/provenance notes and content/file digests where obtainable; prefer at least two distinct source families per domain.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "DATA-001",
+      "description": "Build a real-document dataset manifest with stable sample IDs, source IDs, document/chunk provenance, domain gold, and text/content digests without committing disallowed/private bytes.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "SPLIT-001",
+      "description": "Freeze disjoint train/calibration/test IDs before inference, with the primary test source-held-out by domain where feasible; record seed and source allocation.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LEAK-001",
+      "description": "Prove gold labels/source-only answer fields are absent from all model-visible prompts and from any feature explicitly passed to Potion except teacher-produced training labels.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "SHORTCUT-001",
+      "description": "Audit obvious dataset/source fingerprint shortcuts (source name, benchmark name, URL/domain token, boilerplate) and remove or separately report them so the classifier must use content semantics.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LLM-001",
+      "description": "Run real yolo-auto/qwen3.8-flash teacher classification with provider-proven real inference, exact prompt/config provenance, candidate-label logprobs when available, and no substitution.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "TEACH-001",
+      "description": "Measure teacher-label quality against independent gold on calibration/test and record disagreement/error slices; teacher labels must not be treated as truth.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "CAL-001",
+      "description": "Fit and evaluate qwen3.8-flash probability calibration on calibration gold only; preserve pre/post log-loss, Brier, ECE/reliability evidence.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "STUD-001",
+      "description": "Train Potion/Model2Vec on training texts using qwen3.8-flash teacher labels only; record model ID, head/config, seed, package versions, and exact training IDs.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "STUD-002",
+      "description": "Calibrate the trained student using calibration gold only when probabilities require calibration; never fit calibration on final test.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "EVAL-001",
+      "description": "Evaluate Qwen and Potion on exactly the same frozen independent gold test IDs and report Potion performance as the primary student outcome, with teacher/reference metrics alongside it.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "SHIFT-001",
+      "description": "Report performance separately on source-held-out test data and any same-source diagnostic slice so source/domain generalization is visible.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "MIXED-001",
+      "description": "Keep natural mixed-domain/cross-domain examples in a separate challenge slice unless independently reviewed multi-label gold exists; do not contaminate headline single-label metrics.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "MET-001",
+      "description": "Record accuracy, macro-F1, per-domain precision/recall/F1, confusion matrix, log-loss/Brier/ECE where applicable, invalid-output/provider-error counts, latency/tokens, and teacher-student disagreement.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "OBS-001",
+      "description": "Produce stable experiment/run/sample/trace correlation, structured events, inspectable traces, and machine-readable reconciliation; use Langfuse if genuinely configured, otherwise record unavailable and preserve OTel evidence.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "ERR-001",
+      "description": "Create an error taxonomy covering teacher errors, student-only errors, shared errors, source-shift errors, label-boundary ambiguity, and likely chunk/source artifacts.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "ITER-001",
+      "description": "After the baseline, define at most one evidence-driven controlled change for the next run without changing frozen test membership or labels in response to model errors.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "REP-001",
+      "description": "Record enough dataset, environment, prompt, model, classifier, seed, command, and observability information to reproduce the baseline.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LAB-001",
+      "description": "Run python tools/lab.py sync and python tools/lab.py validate before handoff; attach durable validation evidence when execution begins.",
+      "status": "pending",
+      "evidence": []
+    }
+  ]
+}

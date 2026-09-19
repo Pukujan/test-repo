@@ -1,6 +1,14 @@
 {
   "experiments": [
     {
+      "id": "classifier-calibration-2026-09-19-real-multidomain-teacher-student",
+      "path": "projects/classifier-calibration/experiments/2026-09-19_real-multidomain-teacher-student",
+      "project": "classifier-calibration",
+      "question": "On a frozen real public heterogeneous corpus spanning legal, finance, science, and technology, can a Potion/Model2Vec classifier trained from real qwen3.8-flash teacher labels reproduce useful domain classification behavior on an independent source-held-out gold test set, with calibrated probabilities and durable error analysis?",
+      "status": "ready",
+      "updated_at": "2026-09-19T05:42:00Z"
+    },
+    {
       "id": "classifier-calibration-2026-09-18-calibrated-llm-local-classifier",
       "path": "projects/classifier-calibration/experiments/2026-09-18_calibrated-llm-local-classifier",
       "project": "classifier-calibration",
@@ -20,7 +28,7 @@
       "id": "fossil-2026-09-14-shared-chat-completeness",
       "path": "projects/fossil/experiments/2026-09-14_shared-chat-completeness",
       "project": "fossil",
-      "question": "Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query its semantic history, and rebuild retrieval without losing meaning?",
+      "question": "Can current FOSSIL capture the entire long shared ChatGPT conversation, prove completeness, ingest it durably, query it, and rebuild retrieval without losing meaning?",
       "status": "completed",
       "updated_at": "2026-09-14T20:31:01Z"
     },
