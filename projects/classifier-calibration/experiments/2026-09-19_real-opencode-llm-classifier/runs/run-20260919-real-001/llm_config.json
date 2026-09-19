@@ -1,0 +1,20 @@
+{
+  "base_url": "https://yolo-auto.com/v1/chat/completions",
+  "credential_env": "QWEN_API_KEY",
+  "generation": {
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "logprobs": true,
+    "max_tokens": 1,
+    "seed": 20260919,
+    "temperature": 0.0,
+    "top_logprobs": 20
+  },
+  "model": "qwen3.8-flash",
+  "prompt_system": "You are a strict single-label topic classifier. Choose exactly one letter: A=sports, B=technology, C=politics, D=health. Reply with exactly one capital letter (A, B, C, or D) and nothing else. No explanation, no punctuation, no spaces, no newline.",
+  "prompt_user_template": "Topic text:\n{text}\n\nAnswer:",
+  "prompt_version": "real-letters-v1",
+  "provider": "yolo-auto",
+  "substitution_policy": "none: real or unavailable only"
+}

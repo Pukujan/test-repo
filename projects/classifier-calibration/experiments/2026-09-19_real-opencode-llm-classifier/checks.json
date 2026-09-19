@@ -1,0 +1,162 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "classifier-calibration-2026-09-19-real-opencode-llm-classifier",
+  "checks": [
+    {
+      "id": "DATA-001",
+      "description": "Freeze and record disjoint train, calibration, and test row IDs plus label schema and dataset digest/manifest, digest-identical to the completed substitute experiment.",
+      "status": "pass",
+      "evidence": [
+        {"label": "fixture", "path": "inputs/fixtures/synthetic_topics_v1.jsonl"},
+        {"label": "split_manifest", "path": "inputs/fixtures/split_manifest.json"},
+        {"label": "dataset_manifest", "path": "inputs/fixtures/dataset_manifest.json"}
+      ]
+    },
+    {
+      "id": "LLM-001",
+      "description": "Run the real OpenCode-accessible generative model (qwen3.8-flash via yolo-auto) as a closed-set classifier on calibration and test rows, preserving real candidate-label log-probabilities with full class coverage (no substitute).",
+      "status": "pass",
+      "evidence": [
+        {"label": "llm_config", "path": "runs/run-20260919-real-001/llm_config.json"},
+        {"label": "predictions_calibration", "path": "runs/run-20260919-real-001/predictions_calibration.json"},
+        {"label": "predictions_test", "path": "runs/run-20260919-real-001/predictions_test.json"},
+        {"label": "smoke", "path": "runs/run-20260919-real-001/smoke/smoke_predictions.json"},
+        {"label": "pipeline", "path": "scripts/real_llm_pipeline.py"}
+      ]
+    },
+    {
+      "id": "PROV-001",
+      "description": "Prove real (not substitute) inference: every prediction row carries model_id, provider_id, provider echo, invocation_path, timestamp, latency, tokens, and trace_id; provider_errors must be 0 and provenance=real.",
+      "status": "pass",
+      "evidence": [
+        {"label": "metrics_provenance", "path": "runs/run-20260919-real-001/metrics.json"},
+        {"label": "llm_config_substitution_policy", "path": "runs/run-20260919-real-001/llm_config.json"},
+        {"label": "events", "path": "runs/run-20260919-real-001/events.jsonl"}
+      ]
+    },
+    {
+      "id": "LEAK-001",
+      "description": "Prove no gold label appears in any model-visible message via a deterministic scan and per-sample pipeline assertion (_assert_no_gold).",
+      "status": "pass",
+      "evidence": [
+        {"label": "leak_proof", "path": "runs/run-20260919-real-001/leak_proof.txt"},
+        {"label": "pipeline_guard", "path": "scripts/real_llm_pipeline.py"}
+      ]
+    },
+    {
+      "id": "CAL-001",
+      "description": "Fit temperature scaling using calibration rows only (n=100) and record pre/post calibration metrics; never fit on test.",
+      "status": "pass",
+      "evidence": [
+        {"label": "metrics", "path": "runs/run-20260919-real-001/metrics.json"},
+        {"label": "predictions_calibration", "path": "runs/run-20260919-real-001/predictions_calibration.json"}
+      ]
+    },
+    {
+      "id": "CLS-001",
+      "description": "Train the first local Potion/Model2Vec classifier. Not applicable to this run: Potion baseline is reused from the completed 2026-09-18 experiment, not retrained.",
+      "status": "not_applicable",
+      "evidence": [
+        {"label": "potion_baseline_source", "ref": "2026-09-18_calibrated-llm-local-classifier runs/run-20260918-local-001 (8M) and run-20260918-local-002 (32M); see comparison.json potion entries"}
+      ]
+    },
+    {
+      "id": "CLS-002",
+      "description": "Calibrate the local classifier. Not applicable to this run: no local classifier is trained here; comparison uses recorded Potion calibration from the frozen completed experiment.",
+      "status": "not_applicable",
+      "evidence": [
+        {"label": "potion_baseline_source", "ref": "2026-09-18_calibrated-llm-local-classifier run-20260918-local-001/llm_calibration.json and classifier_metrics.json"}
+      ]
+    },
+    {
+      "id": "EVAL-001",
+      "description": "Evaluate the real LLM on exactly the same frozen test row IDs as the substitute/Potion baselines and record disagreement.",
+      "status": "pass",
+      "evidence": [
+        {"label": "predictions_test", "path": "runs/run-20260919-real-001/predictions_test.json"},
+        {"label": "comparison", "path": "runs/run-20260919-real-001/comparison.json"},
+        {"label": "split_manifest", "path": "inputs/fixtures/split_manifest.json"}
+      ]
+    },
+    {
+      "id": "MET-001",
+      "description": "Record accuracy, macro-F1, per-class metrics, confusion matrix, log-loss, Brier, and ECE for the real LLM run.",
+      "status": "pass",
+      "evidence": [
+        {"label": "metrics", "path": "runs/run-20260919-real-001/metrics.json"}
+      ]
+    },
+    {
+      "id": "OBS-001",
+      "description": "Assign stable experiment/run/sample IDs and propagate trace correlation identifiers through the real benchmark execution.",
+      "status": "pass",
+      "evidence": [
+        {"label": "events", "path": "runs/run-20260919-real-001/events.jsonl"},
+        {"label": "otel_traces", "path": "runs/run-20260919-real-001/otel_traces.jsonl"}
+      ]
+    },
+    {
+      "id": "OBS-002",
+      "description": "Produce structured per-sample events with model, prediction, score/logprob, timing, tokens, and correlation metadata.",
+      "status": "pass",
+      "evidence": [
+        {"label": "events", "path": "runs/run-20260919-real-001/events.jsonl"},
+        {"label": "predictions_test", "path": "runs/run-20260919-real-001/predictions_test.json"}
+      ]
+    },
+    {
+      "id": "OBS-003",
+      "description": "Capture inspectable OpenTelemetry traces for the smoke subset without violating the telemetry content mode (Langfuse unavailable -> local OTel JSONL).",
+      "status": "pass",
+      "evidence": [
+        {"label": "otel_traces", "path": "runs/run-20260919-real-001/otel_traces.jsonl"},
+        {"label": "smoke", "path": "runs/run-20260919-real-001/smoke/smoke_predictions.json"}
+      ]
+    },
+    {
+      "id": "OBS-004",
+      "description": "Reconcile expected samples, completed predictions, unique sample IDs, traces, and events in a machine-readable artifact (reconciled=true).",
+      "status": "pass",
+      "evidence": [
+        {"label": "reconciliation", "path": "runs/run-20260919-real-001/observability_reconciliation.json"}
+      ]
+    },
+    {
+      "id": "OBS-005",
+      "description": "Verify event/trace aggregates agree with deterministic row-level and run-level metric artifacts for the smoke subset and final run.",
+      "status": "pass",
+      "evidence": [
+        {"label": "reconciliation", "path": "runs/run-20260919-real-001/observability_reconciliation.json"},
+        {"label": "metrics", "path": "runs/run-20260919-real-001/metrics.json"}
+      ]
+    },
+    {
+      "id": "OBS-006",
+      "description": "Record observability config, provider/endpoint, content policy, and telemetry privacy boundary without committing secrets.",
+      "status": "pass",
+      "evidence": [
+        {"label": "run_manifest", "path": "runs/run-20260919-real-001/run.json"},
+        {"label": "llm_config", "path": "runs/run-20260919-real-001/llm_config.json"}
+      ]
+    },
+    {
+      "id": "ITER-001",
+      "description": "Inspect the disagreement/error slice and record one concrete next hypothesis or controlled change.",
+      "status": "pass",
+      "evidence": [
+        {"label": "error_analysis", "path": "runs/run-20260919-real-001/error_analysis.md"},
+        {"label": "comparison", "path": "runs/run-20260919-real-001/comparison.json"}
+      ]
+    },
+    {
+      "id": "REP-001",
+      "description": "Record local environment, model/prompt, seed, split, and command/config information to reproduce the run.",
+      "status": "pass",
+      "evidence": [
+        {"label": "run_manifest", "path": "runs/run-20260919-real-001/run.json"},
+        {"label": "llm_config", "path": "runs/run-20260919-real-001/llm_config.json"},
+        {"label": "analyze_script", "path": "scripts/analyze_errors.py"}
+      ]
+    }
+  ]
+}

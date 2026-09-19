@@ -9,6 +9,14 @@
       "updated_at": "2026-09-18T18:36:23Z"
     },
     {
+      "id": "classifier-calibration-2026-09-19-real-opencode-llm-classifier",
+      "path": "projects/classifier-calibration/experiments/2026-09-19_real-opencode-llm-classifier",
+      "project": "classifier-calibration",
+      "question": "When the previous fake TF-IDF+LogReg LLM substitute is replaced with the actual OpenCode-accessible generative model yolo-auto/qwen3.8-flash, how do real LLM classification accuracy, calibration, latency, and error patterns compare with Potion/Model2Vec on the same frozen examples? Secondary: does the real model's logprob-derived calibration behavior differ from the substitute?",
+      "status": "completed",
+      "updated_at": "2026-09-19T05:05:00Z"
+    },
+    {
       "id": "fossil-2026-09-14-shared-chat-completeness",
       "path": "projects/fossil/experiments/2026-09-14_shared-chat-completeness",
       "project": "fossil",

@@ -1,0 +1,29 @@
+{
+  "run_id": "run-20260919-real-001",
+  "experiment_id": "classifier-calibration-2026-09-19-real-opencode-llm-classifier",
+  "mode": "full",
+  "run_timestamp": "2026-09-19T04:42:09Z",
+  "model_id": "qwen3.8-flash",
+  "provider_id": "yolo-auto",
+  "provenance": "real",
+  "frozen_split_source": "synthetic-topics-v1 seed 20260918 (digest-identical to completed substitute experiment)",
+  "changed_variable": "substitute -> real generative LLM (qwen3.8-flash); no other variable changed",
+  "commands": [
+    "python scripts/real_llm_pipeline.py --mode smoke --model qwen3.8-flash --run-id run-20260919-real-001 --smoke-n 8",
+    "python scripts/real_llm_pipeline.py --mode full --model qwen3.8-flash --run-id run-20260919-real-001",
+    "python scripts/analyze_errors.py"
+  ],
+  "environment": {
+    "python": "3.12",
+    "transport": "https POST to https://yolo-auto.com/v1/chat/completions",
+    "required_header_note": "endpoint returns 403 without a User-Agent; pipeline sends User-Agent: classifier-bench/1.0",
+    "credential_env": "QWEN_API_KEY (value not committed)",
+    "enable_thinking": false,
+    "temperature": 0.0,
+    "logprobs": true,
+    "top_logprobs": 20
+  },
+  "artifact_digest_note": "predictions/metrics regenerated deterministically from config + frozen fixtures; gold never in prompts",
+  "langfuse_status": "unavailable",
+  "otel_export": "otel_traces.jsonl"
+}

@@ -1,0 +1,30 @@
+{
+  "dataset_id": "synthetic-topics",
+  "dataset_version": "synthetic-topics-v1",
+  "label_schema_version": "topics-v1",
+  "label_schema": [
+    "sports",
+    "technology",
+    "politics",
+    "health"
+  ],
+  "label_definitions": {
+    "sports": "Athletics, games, teams, scores, athletes.",
+    "technology": "Software, hardware, AI, gadgets, computing.",
+    "politics": "Elections, policy, government, legislation.",
+    "health": "Medicine, wellness, disease, nutrition, fitness."
+  },
+  "row_id_rule": "syn-XXXX zero-padded sequential IDs assigned before shuffle; stable thereafter",
+  "total_rows": 400,
+  "per_label_counts": {
+    "politics": 100,
+    "health": 100,
+    "technology": 100,
+    "sports": 100
+  },
+  "source": "public-safe synthetic generator in scripts/run1_pipeline.py",
+  "source_digest_sha256": "715aa7756713f6f46fcfa9aab82a7cd065a7dd2223ba72265bd71f6cd1ee556e",
+  "fixture_path": "inputs/fixtures/synthetic_topics_v1.jsonl",
+  "split_seed": 20260918,
+  "content_safety": "synthetic generic multi-class text; safe to commit"
+}

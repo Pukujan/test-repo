@@ -1,0 +1,58 @@
+# Checklist
+
+> Generated from `checks.json`. Do not edit directly.
+
+- [x] **DATA-001** — Freeze and record disjoint train, calibration, and test row IDs plus label schema and dataset digest/manifest, digest-identical to the completed substitute experiment. (`pass`)
+  - fixture: inputs/fixtures/synthetic_topics_v1.jsonl
+  - split_manifest: inputs/fixtures/split_manifest.json
+  - dataset_manifest: inputs/fixtures/dataset_manifest.json
+- [x] **LLM-001** — Run the real OpenCode-accessible generative model (qwen3.8-flash via yolo-auto) as a closed-set classifier on calibration and test rows, preserving real candidate-label log-probabilities with full class coverage (no substitute). (`pass`)
+  - llm_config: runs/run-20260919-real-001/llm_config.json
+  - predictions_calibration: runs/run-20260919-real-001/predictions_calibration.json
+  - predictions_test: runs/run-20260919-real-001/predictions_test.json
+  - smoke: runs/run-20260919-real-001/smoke/smoke_predictions.json
+  - pipeline: scripts/real_llm_pipeline.py
+- [x] **PROV-001** — Prove real (not substitute) inference: every prediction row carries model_id, provider_id, provider echo, invocation_path, timestamp, latency, tokens, and trace_id; provider_errors must be 0 and provenance=real. (`pass`)
+  - metrics_provenance: runs/run-20260919-real-001/metrics.json
+  - llm_config_substitution_policy: runs/run-20260919-real-001/llm_config.json
+  - events: runs/run-20260919-real-001/events.jsonl
+- [x] **LEAK-001** — Prove no gold label appears in any model-visible message via a deterministic scan and per-sample pipeline assertion (_assert_no_gold). (`pass`)
+  - leak_proof: runs/run-20260919-real-001/leak_proof.txt
+  - pipeline_guard: scripts/real_llm_pipeline.py
+- [x] **CAL-001** — Fit temperature scaling using calibration rows only (n=100) and record pre/post calibration metrics; never fit on test. (`pass`)
+  - metrics: runs/run-20260919-real-001/metrics.json
+  - predictions_calibration: runs/run-20260919-real-001/predictions_calibration.json
+- [n/a] **CLS-001** — Train the first local Potion/Model2Vec classifier. Not applicable to this run: Potion baseline is reused from the completed 2026-09-18 experiment, not retrained. (`not_applicable`)
+  - potion_baseline_source: 2026-09-18_calibrated-llm-local-classifier runs/run-20260918-local-001 (8M) and run-20260918-local-002 (32M); see comparison.json potion entries
+- [n/a] **CLS-002** — Calibrate the local classifier. Not applicable to this run: no local classifier is trained here; comparison uses recorded Potion calibration from the frozen completed experiment. (`not_applicable`)
+  - potion_baseline_source: 2026-09-18_calibrated-llm-local-classifier run-20260918-local-001/llm_calibration.json and classifier_metrics.json
+- [x] **EVAL-001** — Evaluate the real LLM on exactly the same frozen test row IDs as the substitute/Potion baselines and record disagreement. (`pass`)
+  - predictions_test: runs/run-20260919-real-001/predictions_test.json
+  - comparison: runs/run-20260919-real-001/comparison.json
+  - split_manifest: inputs/fixtures/split_manifest.json
+- [x] **MET-001** — Record accuracy, macro-F1, per-class metrics, confusion matrix, log-loss, Brier, and ECE for the real LLM run. (`pass`)
+  - metrics: runs/run-20260919-real-001/metrics.json
+- [x] **OBS-001** — Assign stable experiment/run/sample IDs and propagate trace correlation identifiers through the real benchmark execution. (`pass`)
+  - events: runs/run-20260919-real-001/events.jsonl
+  - otel_traces: runs/run-20260919-real-001/otel_traces.jsonl
+- [x] **OBS-002** — Produce structured per-sample events with model, prediction, score/logprob, timing, tokens, and correlation metadata. (`pass`)
+  - events: runs/run-20260919-real-001/events.jsonl
+  - predictions_test: runs/run-20260919-real-001/predictions_test.json
+- [x] **OBS-003** — Capture inspectable OpenTelemetry traces for the smoke subset without violating the telemetry content mode (Langfuse unavailable -> local OTel JSONL). (`pass`)
+  - otel_traces: runs/run-20260919-real-001/otel_traces.jsonl
+  - smoke: runs/run-20260919-real-001/smoke/smoke_predictions.json
+- [x] **OBS-004** — Reconcile expected samples, completed predictions, unique sample IDs, traces, and events in a machine-readable artifact (reconciled=true). (`pass`)
+  - reconciliation: runs/run-20260919-real-001/observability_reconciliation.json
+- [x] **OBS-005** — Verify event/trace aggregates agree with deterministic row-level and run-level metric artifacts for the smoke subset and final run. (`pass`)
+  - reconciliation: runs/run-20260919-real-001/observability_reconciliation.json
+  - metrics: runs/run-20260919-real-001/metrics.json
+- [x] **OBS-006** — Record observability config, provider/endpoint, content policy, and telemetry privacy boundary without committing secrets. (`pass`)
+  - run_manifest: runs/run-20260919-real-001/run.json
+  - llm_config: runs/run-20260919-real-001/llm_config.json
+- [x] **ITER-001** — Inspect the disagreement/error slice and record one concrete next hypothesis or controlled change. (`pass`)
+  - error_analysis: runs/run-20260919-real-001/error_analysis.md
+  - comparison: runs/run-20260919-real-001/comparison.json
+- [x] **REP-001** — Record local environment, model/prompt, seed, split, and command/config information to reproduce the run. (`pass`)
+  - run_manifest: runs/run-20260919-real-001/run.json
+  - llm_config: runs/run-20260919-real-001/llm_config.json
+  - analyze_script: scripts/analyze_errors.py

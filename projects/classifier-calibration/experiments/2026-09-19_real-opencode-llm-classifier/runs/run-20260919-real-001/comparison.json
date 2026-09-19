@@ -1,0 +1,46 @@
+{
+  "disagreement_summary": {
+    "real_vs_potion": "different single errors (syn-0147 vs syn-0176); equal accuracy 0.99",
+    "real_vs_substitute": "substitute perfect (1.00) on its own keyword-saturated fixture"
+  },
+  "n_test": 100,
+  "potion_base_32m": {
+    "accuracy": 0.99,
+    "error_ids": [
+      "syn-0176"
+    ],
+    "provenance": "real-local-model",
+    "source": "2026-09-18 run-2"
+  },
+  "potion_base_8m": {
+    "accuracy": 0.99,
+    "error_ids": [
+      "syn-0176"
+    ],
+    "provenance": "real-local-model",
+    "source": "2026-09-18 run-1"
+  },
+  "real_llm_qwen3.8_flash": {
+    "accuracy": 0.99,
+    "brier_calibrated": 0.0124,
+    "ece": 0.016921,
+    "error_ids": [
+      "syn-0147"
+    ],
+    "invalid_output_rate": 0.0,
+    "latency_ms_p50": 1068,
+    "latency_ms_p95": 1548,
+    "log_loss_calibrated": 0.0254,
+    "macro_f1": 0.99,
+    "provenance": "real",
+    "provider_errors": 0,
+    "temperature": 1.1256
+  },
+  "same_frozen_split": "synthetic-topics-v1 seed 20260918 (digest-identical fixtures)",
+  "substitute_tfidf_logreg": {
+    "accuracy": 1.0,
+    "error_ids": [],
+    "provenance": "substitute",
+    "source": "2026-09-18 run-20260918-local-001"
+  }
+}

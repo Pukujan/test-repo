@@ -1,0 +1,97 @@
+{
+  "calibration": {
+    "calibration_metrics": {
+      "brier": 0.0459,
+      "ece": 0.03006,
+      "log_loss": 0.0817,
+      "partial_or_no_score_n": 0,
+      "scored_n": 100,
+      "temperature": 1.1256
+    },
+    "fit_n": 100,
+    "temperature": 1.1256
+  },
+  "calibration_source": "temperature scaling fit on calibration split only (n=100)",
+  "dataset_version": "synthetic-topics-v1",
+  "experiment_id": "classifier-calibration-2026-09-19-real-opencode-llm-classifier",
+  "frozen_split_source": "synthetic-topics-v1 seed 20260918 (identical to completed substitute experiment)",
+  "langfuse_status": "unavailable",
+  "logprobs_status": "available",
+  "model_id": "qwen3.8-flash",
+  "prompt_version": "real-letters-v1",
+  "provenance": "real",
+  "provider_echo_models": [
+    "qwen3.8-flash"
+  ],
+  "provider_id": "yolo-auto",
+  "run_id": "run-20260919-real-001",
+  "run_timestamp": "2026-09-19T04:42:09Z",
+  "test": {
+    "accuracy_over_completed": 0.99,
+    "accuracy_over_valid": 0.99,
+    "brier": 0.0124,
+    "confusion": {
+      "health": {
+        "health": 25,
+        "politics": 0,
+        "sports": 0,
+        "technology": 0
+      },
+      "politics": {
+        "health": 0,
+        "politics": 25,
+        "sports": 0,
+        "technology": 0
+      },
+      "sports": {
+        "health": 0,
+        "politics": 0,
+        "sports": 25,
+        "technology": 0
+      },
+      "technology": {
+        "health": 1,
+        "politics": 0,
+        "sports": 0,
+        "technology": 24
+      }
+    },
+    "ece": 0.016921,
+    "invalid_output_rate": 0.0,
+    "latency_ms_p50": 1068,
+    "latency_ms_p95": 1548,
+    "log_loss": 0.0254,
+    "macro_f1": 0.99,
+    "n_completed": 100,
+    "n_provider_errors": 0,
+    "n_rows": 100,
+    "n_valid_output": 100,
+    "partial_or_no_score_n": 0,
+    "per_class": {
+      "health": {
+        "f1": 0.9804,
+        "precision": 0.9615,
+        "recall": 1.0
+      },
+      "politics": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "sports": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "technology": {
+        "f1": 0.9796,
+        "precision": 1.0,
+        "recall": 0.96
+      }
+    },
+    "provider_error_rate": 0.0,
+    "scored_n": 100,
+    "temperature": 1.1256,
+    "total_tokens": 9952
+  }
+}

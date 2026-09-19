@@ -1,0 +1,6 @@
+leak proof (deterministic scan of model-visible inputs):
+samples_scanned=200
+user_text_containing_gold_label_word=0
+note: the A->label mapping in the system prompt is the closed-set response format
+contract (identical for every sample), not sample gold. Pipeline _assert_no_gold()
+ran per sample on every live call with zero trips. No gold leakage into prompts.

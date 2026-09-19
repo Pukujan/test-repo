@@ -1,0 +1,20 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "classifier-calibration-2026-09-19-real-opencode-llm-classifier",
+  "project": "classifier-calibration",
+  "title": "Real OpenCode generative LLM vs Potion on the frozen synthetic split",
+  "created_at": "2026-09-19T04:45:00Z",
+  "question": "When the previous fake TF-IDF+LogReg LLM substitute is replaced with the actual OpenCode-accessible generative model yolo-auto/qwen3.8-flash, how do real LLM classification accuracy, calibration, latency, and error patterns compare with Potion/Model2Vec on the same frozen examples? Secondary: does the real model's logprob-derived calibration behavior differ from the substitute?",
+  "upstream": [
+    {
+      "kind": "issue",
+      "repository": "https://github.com/Pukujan/test-repo",
+      "number": 3,
+      "url": "https://github.com/Pukujan/test-repo/issues/3"
+    }
+  ],
+  "source_refs": [
+    "inputs/fixtures/dataset_manifest.json",
+    "runs/run-20260919-real-001/llm_config.json"
+  ]
+}

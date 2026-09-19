@@ -1,0 +1,11 @@
+{
+  "completed_predictions": 200,
+  "event_count": 200,
+  "expected_calibration_samples": 100,
+  "expected_test_samples": 100,
+  "langfuse_status": "unavailable",
+  "provider_errors": 0,
+  "reconciled": true,
+  "trace_count": 200,
+  "unique_sample_ids": 200
+}

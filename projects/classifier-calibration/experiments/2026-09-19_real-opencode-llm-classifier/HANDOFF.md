@@ -1,0 +1,48 @@
+# Current Handoff
+
+> Generated from `experiment.json` + `state.json`. Do not edit directly.
+
+**Experiment:** `classifier-calibration-2026-09-19-real-opencode-llm-classifier`  
+**Status:** `completed`
+
+## Question
+
+When the previous fake TF-IDF+LogReg LLM substitute is replaced with the actual OpenCode-accessible generative model yolo-auto/qwen3.8-flash, how do real LLM classification accuracy, calibration, latency, and error patterns compare with Potion/Model2Vec on the same frozen examples? Secondary: does the real model's logprob-derived calibration behavior differ from the substitute?
+
+## Current focus
+
+Experiment concluded: the real OpenCode model yolo-auto/qwen3.8-flash replaced the prior TF-IDF+LogReg LLM substitute on the identical frozen synthetic split, with real logprob calibration, error analysis, and comparison vs Potion recorded.
+
+## Last durable checkpoint
+
+`checkpoints/0001-real-inference-proven-and-run-complete.md` — Real inference proven (provider echo + full-score logprobs + provenance fields); full run run-20260919-real-001 completed at acc 0.99 with single error syn-0147; error/comparison/leak artifacts written; all checks terminal.
+
+## Exact next action
+
+None — experiment completed. Optional follow-up (separate experiment): a harder, non-synthetic multi-domain corpus where the substitute fixture's ceiling effect no longer dominates. Do not mutate synthetic-topics-v1 membership in response to model errors.
+
+## Blockers
+
+- None.
+
+## Important findings
+
+- Real (not substitute) inference was proven before benchmarking: provider echo model=qwen3.8-flash, real candidate-label logprobs at full class coverage, and per-row provenance fields (model_id, provider_id, invocation_path, timestamp, latency, tokens, trace_id) with provider_errors=0.
+- The yolo-auto endpoint returns 403 Forbidden without a User-Agent header; the fixed pipeline sends User-Agent: classifier-bench/1.0. This is a transport requirement, not a substitution.
+- enable_thinking:false via chat_template_kwargs keeps max_tokens=1 single-letter answers; temperature 0.0 with seed 20260919; top_logprobs=20 exposes all four candidate labels at the answer position.
+- Real LLM test accuracy 0.99, macro-F1 0.99, log-loss 0.0254, Brier 0.0124, ECE 0.0169 after temperature scaling (T=1.1256) fit on calibration only. Latency p50=1068ms, p95=1548ms, total 9952 tokens, 0 provider errors.
+- Single error: syn-0147 (technology misread as health) at ~0.69 confidence, a soft/coherent miss driven by health-adjacent vocabulary (cardio/neural), not an overconfident error.
+- Real LLM and Potion make DIFFERENT single errors on the frozen split (syn-0147 vs syn-0176); all three systems are essentially tied at the ceiling (real 0.99, Potion 0.99, substitute 1.00).
+- Ceiling effect: the synthetic corpus is keyword-saturated and close to the substitute's feature space, so the substitute's 1.00 is expected and neither proves nor disproves model superiority. A harder real-domain corpus is the valid next experiment.
+- LiteLLM proxy (localhost:4000) was down; all litellm/* models marked unavailable and NOT substituted, honoring the real-or-unavailable rule. Other yolo-auto models (qwen3.8-27b, yolo, yolo-small) reachable but excluded by owner scope.
+- Langfuse unavailable (no credentials); inspectable OTel-shaped JSONL traces used instead with reconciled=true over 200 events/traces and 200 unique sample IDs.
+- No gold label appeared in any model-visible message (deterministic scan + per-sample _assert_no_gold guard). The A-D letter mapping in the system prompt is the closed-set format contract, not gold leakage.
+- The repository is public; only public-safe fixtures, aggregate metrics, sanitized config, and env-var references (never the key value) are committed.
+
+## Resume protocol
+
+1. Read this file and the experiment-local `AGENTS.md`.
+2. Read the last checkpoint above.
+3. Verify live upstream refs before mutation.
+4. Continue from the exact next action; do not redo passed work without evidence.
+5. Before handoff, append a checkpoint, update machine state/checks, run `python tools/lab.py sync`, then `python tools/lab.py validate`.

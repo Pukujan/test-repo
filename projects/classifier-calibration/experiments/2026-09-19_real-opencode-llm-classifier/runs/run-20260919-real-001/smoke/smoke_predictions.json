@@ -1,0 +1,348 @@
+{
+  "rows": [
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -7.818655,
+        "politics": -7.256155,
+        "sports": -0.006156,
+        "technology": -6.068655
+      },
+      "latency_ms": 3044,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 98,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0000",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:36Z",
+      "total_tokens": 99,
+      "trace_id": "84be3845d69845419ff716f2d69b8ca0",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -7.627462,
+        "politics": -7.939962,
+        "sports": -0.002462,
+        "technology": -7.314962
+      },
+      "latency_ms": 3496,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 97,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0005",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:36Z",
+      "total_tokens": 98,
+      "trace_id": "928fdd524513474ea0346b7833c52ad5",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -10.18896,
+        "politics": -10.06396,
+        "sports": -0.00146,
+        "technology": -8.31396
+      },
+      "latency_ms": 2718,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 99,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0006",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:35Z",
+      "total_tokens": 100,
+      "trace_id": "51319bfa16bd41339ca79302534b2556",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -9.93822,
+        "politics": -10.93822,
+        "sports": -0.00072,
+        "technology": -8.68822
+      },
+      "latency_ms": 2585,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 100,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0007",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:35Z",
+      "total_tokens": 101,
+      "trace_id": "12facc82f7f54d48beadf6ec482cbbda",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -8.753636,
+        "politics": -8.191136,
+        "sports": -0.003636,
+        "technology": -7.378636
+      },
+      "latency_ms": 2567,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 97,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0014",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:35Z",
+      "total_tokens": 98,
+      "trace_id": "90822c2fdab24105b122975a6998433a",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -7.504241,
+        "politics": -7.816741,
+        "sports": -0.004241,
+        "technology": -6.254241
+      },
+      "latency_ms": 2623,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 99,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0017",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:35Z",
+      "total_tokens": 100,
+      "trace_id": "904fdcb20890439d9484411c68a74686",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -9.8774,
+        "politics": -10.3149,
+        "sports": -0.002401,
+        "technology": -9.3774
+      },
+      "latency_ms": 887,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 100,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0018",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:36Z",
+      "total_tokens": 101,
+      "trace_id": "7c8aa85909bd4e4c953d61b41a1a4ffc",
+      "valid_output": true
+    },
+    {
+      "attempts": 1,
+      "completion_tokens": 1,
+      "gold_label": "sports",
+      "invocation_path": "https://yolo-auto.com/v1/chat/completions",
+      "label_logprobs": {
+        "health": -7.314761,
+        "politics": -7.627261,
+        "sports": -0.002261,
+        "technology": -8.377261
+      },
+      "latency_ms": 994,
+      "logprobs_available": true,
+      "mode": "smoke",
+      "model_id": "qwen3.8-flash",
+      "model_text": "A",
+      "predicted_label": "A",
+      "prompt_tokens": 98,
+      "prompt_version": "real-letters-v1",
+      "provider_echo_model": "qwen3.8-flash",
+      "provider_id": "yolo-auto",
+      "request_params": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "logprobs": true,
+        "max_tokens": 1,
+        "model": "qwen3.8-flash",
+        "seed": 20260919,
+        "temperature": 0.0,
+        "top_logprobs": 20
+      },
+      "response_content": "A",
+      "sample_id": "syn-0021",
+      "schema": "real-llm-prediction.v1",
+      "score_coverage": "full",
+      "split": "smoke",
+      "status": "ok",
+      "timestamp": "2026-09-19T04:39:36Z",
+      "total_tokens": 99,
+      "trace_id": "22981014099e48d0b95d9e96455f32e8",
+      "valid_output": true
+    }
+  ]
+}
