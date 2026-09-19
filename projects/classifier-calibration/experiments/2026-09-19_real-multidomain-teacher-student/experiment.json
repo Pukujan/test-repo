@@ -1,0 +1,14 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "classifier-calibration-2026-09-19-real-multidomain-teacher-student",
+  "project": "classifier-calibration",
+  "title": "Real multi-domain teacher-student classification",
+  "created_at": "2026-09-19T05:42:00Z",
+  "question": "On a frozen real public heterogeneous corpus spanning legal, finance, science, and technology, can a Potion/Model2Vec classifier trained from real qwen3.8-flash teacher labels reproduce useful domain classification behavior on an independent source-held-out gold test set, with calibrated probabilities and durable error analysis?",
+  "upstream": [],
+  "source_refs": [
+    "PLAN.md",
+    "inputs/README.md",
+    "ONTOLOGY.md"
+  ]
+}
