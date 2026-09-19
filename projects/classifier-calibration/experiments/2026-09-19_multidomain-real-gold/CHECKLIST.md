@@ -1,0 +1,37 @@
+# Checklist
+
+> Generated from `checks.json`. Do not edit directly.
+
+- [x] **SRC-001** — Pin every train/teacher/calibration and held-out test source by sha256 + exact upstream revision (where immutable) in inputs/source-lock.json; raw bytes not committed. (`pass`)
+  - source_lock: inputs/source-lock.json
+  - gitignore: .gitignore
+- [x] **SRC-002** — Prove source-holdout: primary test source_ids are disjoint from train/teacher/calibration source_ids per domain. (`pass`)
+  - dataset_manifest: inputs/dataset_manifest.json
+  - split_test: inputs/split_test.json
+  - split_train: inputs/split_train.json
+- [x] **ONT-001** — Pin the legal/finance/science/technology ontology, letter contract, and label->source mapping in inputs/ontology.json. (`pass`)
+  - ontology: inputs/ontology.json
+- [x] **AUD-001** — Audit exact + fuzzy (char n-gram) duplicates across train vs test and within splits. (`pass`)
+  - audit_report: inputs/audit_report.json
+  - build_script: scripts/build_and_audit.py
+- [x] **AUD-002** — Audit source/benchmark-name leakage (regex blocklist) in model-visible text. (`pass`)
+  - audit_report: inputs/audit_report.json
+- [x] **AUD-003** — Audit obvious dataset fingerprints (boilerplate/NNTP/answer-marker artifacts) in test text. (`pass`)
+  - audit_report: inputs/audit_report.json
+- [x] **AUD-004** — Audit gold leakage with the narrow documented rule (copyable id / answer field / MC marker); bare topical words are not leakage. (`pass`)
+  - gold_policy: inputs/gold_policy.md
+  - audit_report: inputs/audit_report.json
+- [x] **FRZ-001** — Freeze dataset_manifest.json + split_*.json with row counts and digests; commit frozen contract before inference. (`pass`)
+  - dataset_manifest: inputs/dataset_manifest.json
+  - split_train: inputs/split_train.json
+  - split_calibration: inputs/split_calibration.json
+  - split_test: inputs/split_test.json
+- [ ] **TEACH-001** — Produce Qwen3.8-flash (yolo-auto) teacher labels on train split with provenance (provider echo, timestamp, latency, trace_id); real or unavailable, never substitute. (`pending`)
+- [ ] **TEACH-002** — Teacher predictions on calibration + test recorded with real logprobs; provider_errors counted not substituted. (`pending`)
+- [ ] **CAL-001** — Calibrate the Qwen teacher on the calibration split only; record pre/post log-loss/Brier/ECE. (`pending`)
+- [ ] **POT-001** — Train Potion/Model2Vec on Qwen teacher labels (NOT real gold); record exact model/config/env. (`pending`)
+- [ ] **POT-002** — Calibrate Potion on the same calibration split; record method and parameters. (`pending`)
+- [ ] **EVAL-001** — Evaluate teacher and Potion on the same untouched real-gold source-held-out test IDs. (`pending`)
+- [ ] **EVAL-002** — Record accuracy, macro-F1, per-class metrics, confusion matrix, log-loss, Brier, ECE for both systems. (`pending`)
+- [ ] **OBS-001** — Reconcile expected/completed rows, unique ids, events and traces in a machine-readable artifact; OTel JSONL used when Langfuse unavailable. (`pending`)
+- [ ] **ITER-001** — Error analysis on held-out test + one controlled iteration (single documented variable change). (`pending`)

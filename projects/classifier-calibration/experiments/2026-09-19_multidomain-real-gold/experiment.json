@@ -1,0 +1,12 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "classifier-calibration-2026-09-19-multidomain-real-gold",
+  "project": "classifier-calibration",
+  "title": "Multi-domain source-held-out real-gold classifier (Qwen teacher -> Potion)",
+  "created_at": "2026-09-19T06:00:00Z",
+  "question": "On a harder multi-domain benchmark where the primary test set is source-held-out from training/teacher/calibration, how do a calibrated Qwen3.8-flash teacher and a Potion classifier trained on Qwen labels (not real gold) compare on the same untouched real-gold test set, and what error pattern does one controlled iteration address?",
+  "upstream": [
+    {"kind": "issue", "repository": "https://github.com/Pukujan/test-repo", "number": 3, "url": "https://github.com/Pukujan/test-repo/issues/3"}
+  ],
+  "source_refs": ["inputs/source-lock.json", "inputs/ontology.json", "inputs/gold_policy.md"]
+}

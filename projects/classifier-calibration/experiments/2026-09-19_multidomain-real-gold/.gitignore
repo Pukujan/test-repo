@@ -1,0 +1,11 @@
+# Raw source bytes and gold are pinned by digest in inputs/source-lock.json but
+# MUST NOT be committed: public repo + licensed/derived text (AG News, 20newsgroups,
+# FiQA) + gold separation. Regenerate from pinned revisions and verify digests.
+local_data/
+gold_index/
+runs/**/gold/
+runs/**/teacher/
+*.parquet
+*.parquet.gz
+__pycache__/
+*.pyc

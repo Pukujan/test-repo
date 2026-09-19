@@ -1,0 +1,28 @@
+{
+  "schema_version": "lab.ontology.v1",
+  "ontology_id": "topic4-multidomain-v1",
+  "task": "closed-set single-label topical classification over legal/finance/science/technology",
+  "answer_form": "single letter; the letter->domain mapping is the closed-set response contract (identical for every sample), NOT sample gold",
+  "labels": [
+    {"letter": "A", "domain": "legal",
+     "definition": "text whose primary subject is law/legal instruments: statutes, regulations, case law, rulings, legal obligations.",
+     "train_sources": ["courtlistener", "eurlex"], "test_sources": ["legislation_uk"]},
+    {"letter": "B", "domain": "finance",
+     "definition": "text whose primary subject is finance/markets/companies/business: earnings, trading, investment, corporate financial activity.",
+     "train_sources": ["fiqa"], "test_sources": ["agnews_biz"]},
+    {"letter": "C", "domain": "science",
+     "definition": "text whose primary subject is natural/biological/physical/mathematical science or medical research.",
+     "train_sources": ["arxiv_stem", "pubmed"], "test_sources": ["20ng_sci"]},
+    {"letter": "D", "domain": "technology",
+     "definition": "text whose primary subject is computing/software/hardware/engineering technology (excluding finance and natural science).",
+     "train_sources": ["arxiv_cs"], "test_sources": ["20ng_comp"]}
+  ],
+  "boundary_rules": [
+    "machine-learning papers that are applied to finance are ambiguous; assign by primary subject: methods/CS = technology, markets/companies = finance.",
+    "bioinformatics / quantitative biology = science unless the primary artifact is a computing system.",
+    "crypto/quant trading text = finance when the subject is markets, technology when the subject is the algorithm/system.",
+    "statistical-method papers posted in both cs.*/stat = science (math/stat) when theory-led, technology when the contribution is a software/CS system."
+  ],
+  "ambiguity_policy": "gold is the single best-fit domain; ties broken by primary subject noun, recorded as a teacher-disagreement slice, not by editing the ontology after seeing errors.",
+  "frozen_note": "Ontology is frozen before any teacher inference. Boundary rules may only be clarified, not repurposed, via a corrective checkpoint."
+}

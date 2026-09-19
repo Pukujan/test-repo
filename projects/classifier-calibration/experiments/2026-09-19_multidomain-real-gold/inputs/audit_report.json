@@ -1,0 +1,60 @@
+{
+  "clean": true,
+  "duplicates": {
+    "test_internal_exact_pairs": 0,
+    "test_vs_train_exact": 0,
+    "test_vs_train_fuzzy_gt_0.6": 0
+  },
+  "fingerprint_count": 0,
+  "fingerprint_test_rows": [],
+  "gold_leak_count": 0,
+  "gold_leak_test_rows": [],
+  "name_leak_count": 0,
+  "name_leak_test_rows": [],
+  "pruned_counts": {
+    "benchmark_name": 2,
+    "fingerprint": 1,
+    "gold_id_or_answer": 14,
+    "internal_exact_dup": 7
+  },
+  "pruned_from_test": {
+    "benchmark_name": [
+      "20ng-comp.graphics-1-0-20",
+      "20ng-sci.med-13-300-65"
+    ],
+    "fingerprint": [
+      "20ng-sci.crypt-11-1000-179"
+    ],
+    "gold_id_or_answer": [
+      "20ng-comp.os.ms-windows.misc-2-0-5",
+      "20ng-comp.windows.x-5-100-38",
+      "20ng-comp.graphics-1-100-50",
+      "20ng-comp.sys.mac.hardware-4-300-102",
+      "20ng-comp.windows.x-5-400-116",
+      "20ng-comp.windows.x-5-600-160",
+      "20ng-sci.med-13-0-2",
+      "20ng-sci.crypt-11-200-41",
+      "20ng-sci.med-13-400-72",
+      "20ng-sci.electronics-12-400-86",
+      "20ng-sci.med-13-400-90",
+      "20ng-sci.crypt-11-700-133",
+      "20ng-sci.med-13-900-163",
+      "20ng-sci.space-14-1000-181"
+    ],
+    "internal_exact_dup": [
+      "uk-ukpga_2018_12-94",
+      "uk-ukpga_2018_12-222",
+      "uk-ukpga_2018_12-240",
+      "uk-ukpga_2018_12-255",
+      "uk-ukpga_2018_12-687",
+      "uk-ukpga_2018_12-750",
+      "uk-ukpga_2018_12-967"
+    ]
+  },
+  "rows": {
+    "calibration": 312,
+    "test": 774,
+    "train": 759
+  },
+  "schema_version": "lab.audit.v1"
+}

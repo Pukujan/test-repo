@@ -1,0 +1,81 @@
+{
+  "calibration_fraction": 0.3,
+  "calibration_text_digest": "88cedc7a27319df77ab69c8ce76d231030846f63c1b1dbfc66f3ca2b358efb51",
+  "dataset_id": "multidomain-real-gold-v1",
+  "dataset_version": "seed-20260919",
+  "domain_counts": {
+    "calibration": {
+      "finance": 71,
+      "legal": 56,
+      "science": 107,
+      "technology": 78
+    },
+    "test": {
+      "finance": 200,
+      "legal": 193,
+      "science": 190,
+      "technology": 191
+    },
+    "train": {
+      "finance": 179,
+      "legal": 168,
+      "science": 240,
+      "technology": 172
+    }
+  },
+  "note": "raw text + gold gitignored; pin only digests + per-row ids",
+  "per_domain_sources": {
+    "finance": {
+      "test": [
+        "agnews_biz"
+      ],
+      "train": [
+        "fiqa"
+      ]
+    },
+    "legal": {
+      "test": [
+        "legislation_uk"
+      ],
+      "train": [
+        "courtlistener",
+        "eurlex"
+      ]
+    },
+    "science": {
+      "test": [
+        "20ng_sci"
+      ],
+      "train": [
+        "arxiv_stem",
+        "pubmed"
+      ]
+    },
+    "technology": {
+      "test": [
+        "20ng_comp"
+      ],
+      "train": [
+        "arxiv_cs"
+      ]
+    }
+  },
+  "rows_cleaned": 150,
+  "schema_version": "lab.dataset_manifest.v1",
+  "seed": 20260919,
+  "source_role": {
+    "20ng_comp": "test",
+    "20ng_sci": "test",
+    "agnews_biz": "test",
+    "arxiv_cs": "train",
+    "arxiv_stem": "train",
+    "courtlistener": "train",
+    "eurlex": "train",
+    "fiqa": "train",
+    "legislation_uk": "test",
+    "pubmed": "train"
+  },
+  "test_source_disjoint_from_train": true,
+  "test_text_digest": "588c992461efd513bbef2f4c568e411f9b4f5cf030d3b1bb287ab2f5c53a8f49",
+  "train_text_digest": "6bc612c8c7407e6a81be59b25a0e8d294d7bc52f9d15924d472526cbc895a25b"
+}

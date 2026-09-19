@@ -1,0 +1,94 @@
+{
+  "schema_version": "lab.source_lock.v1",
+  "dataset_id": "multidomain-real-gold-v1",
+  "created_at": "2026-09-19T07:00:00Z",
+  "policy": "Digest-pin only. Raw corpus bytes and gold are licensed/derived and are NOT committed (see .gitignore). Re-download from the pinned revision, verify sha256, then rebuild via scripts/build_and_audit.py.",
+  "acquisition_note": "All sources no-auth/200 from the run host. Gated HF datasets (LEDGAR, CaseHOLD, PhraseBank mirrors) returned HTTP 401 without consent and are excluded by policy, not silently substituted.",
+  "sources": {
+    "arxiv_cs": {
+      "role": "train/teacher/calibration", "domain": "technology",
+      "upstream": "arXiv API http://export.arxiv.org/api/query?search_query=cat:cs.*",
+      "acquisition": "Atom feed, summary field, sortBy=submittedDate descending, live at fetch time",
+      "revision_note": "arXiv is not immutable-pinnable; frozen by local sha256 of fetched rows",
+      "fetched_sha256": "31fca5a3b618e1296772bda554541c46d36a2b01ec662193dd9ebc5b67bcbd34",
+      "fidelity": "reconstructed", "completeness": "bounded-sample"
+    },
+    "arxiv_stem": {
+      "role": "train/teacher/calibration", "domain": "science",
+      "upstream": "arXiv API search_query=cat:physics.* OR cat:q-bio.* OR cat:math.* OR cat:stat.*",
+      "acquisition": "Atom feed, summary field, live at fetch time",
+      "revision_note": "not immutable-pinnable; frozen by local sha256",
+      "fetched_sha256": "d50d7b388f257281170b917ebb4c874dad7c9ca13ccd16f28de24f4ba44b02e6",
+      "fidelity": "reconstructed", "completeness": "bounded-sample"
+    },
+    "pubmed": {
+      "role": "train/teacher/calibration", "domain": "science",
+      "upstream": "NCBI eutils esearch/efetch (db=pubmed, rettype=abstract)",
+      "acquisition": "abstract text blocks, live at fetch time",
+      "revision_note": "PMID list captured in local_data; not immutable-pinnable",
+      "fetched_sha256": "19412d0e55965cbe073b8e45984e47a207997dffd04eb0dbd6651d3a5e2d9919",
+      "fidelity": "reconstructed", "completeness": "bounded-sample"
+    },
+    "fiqa": {
+      "role": "train/teacher/calibration", "domain": "finance",
+      "upstream": "https://huggingface.co/datasets/beir/fiqa",
+      "upstream_revision": "979c07a7cb5ccc6ca009792241fa1250b98055dd",
+      "acquisition": "corpus/corpus-00000-of-00001.parquet (in-tree parquet; datasets-server rows 404s for this repo)",
+      "fidelity": "verbatim", "completeness": "bounded-sample",
+      "license": "FiQA subset terms; redistribute as derived snippets only"
+    },
+    "courtlistener": {
+      "role": "train/teacher/calibration", "domain": "legal",
+      "upstream": "CourtListener API v4 /search?type=o (public.uscourts.opinions)",
+      "acquisition": "opinions[].snippet / syllabus, live at fetch time",
+      "revision_note": "not immutable-pinnable; frozen by local sha256",
+      "fetched_sha256": "5df0b9e5181d4a9395c7a55ab758cfffd27ebef04be8def903ac32411d1a2486",
+      "fidelity": "reconstructed", "completeness": "bounded-sample", "low_yield_note": "only 44 usable snippets (most result bodies unhighlighted); EUR-Lex carries legal train volume"
+    },
+    "eurlex": {
+      "role": "train/teacher/calibration", "domain": "legal",
+      "upstream": "EUR-Lex CELEX TXT pages (public EU law, reusable)",
+      "acquisition": "Article-chunked text from live CELEX pages at fetch time",
+      "revision_note": "CELEX ids pinned per act; page bytes not immutable-pinnable",
+      "fetched_sha256": "3d9a253d1d620135e9f441ad61ffee31b6f928d3f804d1cff8f1b691bfe61eb9",
+      "fidelity": "reconstructed", "completeness": "bounded-sample",
+      "celex_ids": ["32016R0679", "32016L0680", "32002L0087", "32011L0036", "32004L0038", "32014L0024", "32013L0048", "32019L0790", "32000L0043", "32012L0019"]
+    },
+    "20ng_comp": {
+      "role": "test", "domain": "technology",
+      "upstream": "https://huggingface.co/datasets/SetFit/20_newsgroups",
+      "upstream_revision": "f1b91292074e7cfb69be58b642d583ec262f30ed",
+      "acquisition": "datasets-server rows split=test, label_text prefix comp.",
+      "fidelity": "verbatim", "completeness": "sample",
+      "gold_semantics": "independent topical label (newsgroup name), NOT source membership",
+      "known_limitation": "20newsgroups is memorization-prone; audit fingerprints/name/gold and prune leaked rows; ceiling risk documented"
+    },
+    "20ng_sci": {
+      "role": "test", "domain": "science",
+      "upstream": "https://huggingface.co/datasets/SetFit/20_newsgroups",
+      "upstream_revision": "f1b91292074e7cfb69be58b642d583ec262f30ed",
+      "acquisition": "datasets-server rows split=test, label_text prefix sci.",
+      "fidelity": "verbatim", "completeness": "sample",
+      "gold_semantics": "independent topical label",
+      "known_limitation": "as 20ng_comp"
+    },
+    "agnews_biz": {
+      "role": "test", "domain": "finance",
+      "upstream": "https://huggingface.co/datasets/ag_news",
+      "upstream_revision": "eb185aade064a813bc0b7f42de02595523103ca4",
+      "acquisition": "data/test-00000-of-00001.parquet, label==2 (business)",
+      "fidelity": "verbatim", "completeness": "sample",
+      "gold_semantics": "independent topical label (business)",
+      "license": "derived from aggregated news; pin only, no redistribution"
+    },
+    "legislation_uk": {
+      "role": "test", "domain": "legal",
+      "upstream": "https://www.legislation.gov.uk/ data.xml (UK public statutes)",
+      "acquisition": "section/para chunks from live act XML at fetch time",
+      "revision_note": "acts version-pinned via data.xml at fetch time",
+      "fetched_sha256": "17633d8476cf2a432922a1d6398fb7e30fa5f002b35b60de606943b1e86864dc",
+      "fidelity": "reconstructed", "completeness": "sample",
+      "gold_semantics": "domain membership (public statute text)"
+    }
+  }
+}
