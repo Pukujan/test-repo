@@ -3,7 +3,7 @@
 > Generated from `experiment.json` + `state.json`. Do not edit directly.
 
 **Experiment:** `classifier-calibration-2026-09-19-real-multidomain-teacher-student`  
-**Status:** `ready`
+**Status:** `superseded`
 
 ## Question
 
@@ -11,15 +11,15 @@ On a frozen real public heterogeneous corpus spanning legal, finance, science, a
 
 ## Current focus
 
-Build and freeze the first real heterogeneous public corpus and ontology before any benchmark inference. The primary experiment is qwen3.8-flash teacher labels -> Potion/Model2Vec student -> independent source-held-out gold evaluation, not another model-vs-model contest.
+Superseded. A parallel sibling experiment already froze and committed the equivalent real multi-domain source-held-out contract; this plan-only directory is retained as design history only.
 
 ## Last durable checkpoint
 
-`checkpoints/0001-experiment-plan.md` — Created the real multi-domain teacher-student experiment, fixed the ontology/split/data-leakage rules, and defined the exact first execution sequence.
+`checkpoints/0002-superseded-by-executed-contract.md` — Duplicate-question collision with 2026-09-19_multidomain-real-gold flagged before any Qwen call; this plan is superseded by that executed contract. No PASS claimed.
 
 ## Exact next action
 
-Select and pin at least two stable public sources per top-level domain (legal, finance, science, technology) where feasible; write inputs/source-lock.json, inputs/ontology.json, and a dataset manifest; construct source-aware train/calibration/test IDs with a source-held-out primary test; run leak/source-fingerprint audits; do not invoke Qwen or train Potion until the frozen manifests are committed and validated.
+Do not execute this plan and do not spend Qwen calls here. Continue in projects/classifier-calibration/experiments/2026-09-19_multidomain-real-gold: produce yolo-auto/qwen3.8-flash teacher labels on its frozen train split only, then calibrate, train Potion on teacher labels, and evaluate on its untouched source-held-out real-gold test.
 
 ## Blockers
 
@@ -40,7 +40,7 @@ Select and pin at least two stable public sources per top-level domain (legal, f
 ## Resume protocol
 
 1. Read this file and the experiment-local `AGENTS.md`.
-2. Read `PLAN.md`, `ONTOLOGY.md`, and the last checkpoint above.
-3. Verify source licenses/revisions and live model/provider state before mutation.
+2. Read the last checkpoint above.
+3. Verify live upstream refs before mutation.
 4. Continue from the exact next action; do not redo passed work without evidence.
 5. Before handoff, append a checkpoint, update machine state/checks, run `python tools/lab.py sync`, then `python tools/lab.py validate`.
