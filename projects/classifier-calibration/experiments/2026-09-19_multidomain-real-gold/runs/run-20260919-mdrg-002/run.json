@@ -1,0 +1,38 @@
+{
+  "schema_version": "mdrg.run.v1",
+  "experiment_id": "classifier-calibration-2026-09-19-multidomain-real-gold",
+  "run_id": "run-20260919-mdrg-002",
+  "parent_run_id": "run-20260919-mdrg-001",
+  "dataset_id": "multidomain-real-gold-v1",
+  "dataset_version": "seed-20260919",
+  "controlled_change": "teacher prompt mdrg-letters-v1 -> mdrg-letters-v2 (single documented variable: science/technology boundary disambiguation sentence). Splits, ontology, gold policy, seed, model, decoding, Potion pipeline config, and temperature-fitting method are unchanged. Same frozen test ids.",
+  "frozen_contract_gate": "scripts/common.py assert_contract(): reconstructed train/cal/test text digests + split id-sets byte-identical to inputs/dataset_manifest.json and inputs/split_*.json before every model call; test split untouched until both systems fixed",
+  "teacher": {
+    "provider": "yolo-auto",
+    "model": "qwen3.8-flash",
+    "base_url": "https://yolo-auto.com/v1/chat/completions",
+    "generation": {"temperature": 0.0, "max_tokens": 1, "seed": 20260919, "logprobs": true,
+                   "top_logprobs": 20, "chat_template_kwargs": {"enable_thinking": false}},
+    "prompt_version": "mdrg-letters-v2",
+    "credential_env": "QWEN_API_KEY",
+    "substitution_policy": "none: real or unavailable only",
+    "leak_guard": "common.assert_no_gold per sample"
+  },
+  "train_teacher_labels": {
+    "n_rows": 759, "n_ok": 759, "n_provider_errors": 0, "n_valid_output": 759,
+    "score_coverage_full": 759, "provider_echo_models": ["qwen3.8-flash"],
+    "teacher_vs_source_membership_agreement": 0.8854
+  },
+  "calibration_teacher_labels": {
+    "n_rows": 312, "n_ok": 312, "n_provider_errors": 0,
+    "teacher_vs_source_membership_agreement": 0.859
+  },
+  "test_teacher_labels": {
+    "n_rows": 774, "n_ok": 774, "n_provider_errors": 0,
+    "score_coverage": {"full": 773, "partial": 1},
+    "partial_coverage_handling": "common.teacher_logit_vector: missing label token gets observed-min minus 10 nats (~0 probability); no fabricated scores",
+    "teacher_vs_real_gold_agreement": 0.8062,
+    "teacher_vs_real_gold_agreement_rule": "decoded model_text letter; evaluation in eval/ uses the logit-argmax rule (0.8320) consistently for raw+calibrated probabilities (see checkpoint 0004 prediction-rule note)"
+  },
+  "start_timestamp": "2026-09-20T02:30:00Z"
+}

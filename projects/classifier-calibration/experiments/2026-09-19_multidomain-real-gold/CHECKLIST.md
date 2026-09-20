@@ -31,11 +31,35 @@
   - teacher_events: runs/run-20260919-mdrg-001/events.jsonl
   - teacher_traces: runs/run-20260919-mdrg-001/otel_traces.jsonl
   - checkpoint: checkpoints/0003-teacher-train-labels.md
-- [ ] **TEACH-002** — Teacher predictions on calibration + test recorded with real logprobs; provider_errors counted not substituted. (`pending`)
-- [ ] **CAL-001** — Calibrate the Qwen teacher on the calibration split only; record pre/post log-loss/Brier/ECE. (`pending`)
-- [ ] **POT-001** — Train Potion/Model2Vec on Qwen teacher labels (NOT real gold); record exact model/config/env. (`pending`)
-- [ ] **POT-002** — Calibrate Potion on the same calibration split; record method and parameters. (`pending`)
-- [ ] **EVAL-001** — Evaluate teacher and Potion on the same untouched real-gold source-held-out test IDs. (`pending`)
-- [ ] **EVAL-002** — Record accuracy, macro-F1, per-class metrics, confusion matrix, log-loss, Brier, ECE for both systems. (`pending`)
-- [ ] **OBS-001** — Reconcile expected/completed rows, unique ids, events and traces in a machine-readable artifact; OTel JSONL used when Langfuse unavailable. (`pending`)
-- [ ] **ITER-001** — Error analysis on held-out test + one controlled iteration (single documented variable change). (`pending`)
+- [x] **TEACH-002** — Teacher predictions on calibration + test recorded with real logprobs; provider_errors counted not substituted. (`pass`)
+  - run001_provenance: runs/run-20260919-mdrg-001/run.json
+  - run001_eval_provider_errors: runs/run-20260919-mdrg-001/eval/eval_summary.json
+  - run002_provenance: runs/run-20260919-mdrg-002/run.json
+  - run002_obs: runs/run-20260919-mdrg-002/observability_reconciliation.json
+  - checkpoint: checkpoints/0004-calibration-student-eval.md
+- [x] **CAL-001** — Calibrate the Qwen teacher on the calibration split only; record pre/post log-loss/Brier/ECE. (`pass`)
+  - run001_calibration: runs/run-20260919-mdrg-001/calibration/calibration_summary.json
+  - run002_calibration: runs/run-20260919-mdrg-002/calibration/calibration_summary.json
+  - calibration_script: scripts/calibrate_and_train_potion.py
+- [x] **POT-001** — Train Potion/Model2Vec on Qwen teacher labels (NOT real gold); record exact model/config/env. (`pass`)
+  - run001_calibration_summary: runs/run-20260919-mdrg-001/calibration/calibration_summary.json
+  - run002_calibration_summary: runs/run-20260919-mdrg-002/calibration/calibration_summary.json
+  - training_script: scripts/calibrate_and_train_potion.py
+- [x] **POT-002** — Calibrate Potion on the same calibration split; record method and parameters. (`pass`)
+  - run001_potion_temp: runs/run-20260919-mdrg-001/calibration/calibration_summary.json
+  - run002_potion_temp: runs/run-20260919-mdrg-002/calibration/calibration_summary.json
+- [x] **EVAL-001** — Evaluate teacher and Potion on the same untouched real-gold source-held-out test IDs. (`pass`)
+  - run001_eval: runs/run-20260919-mdrg-001/eval/eval_summary.json
+  - run002_eval: runs/run-20260919-mdrg-002/eval/eval_summary.json
+  - checkpoint: checkpoints/0004-calibration-student-eval.md
+- [x] **EVAL-002** — Record accuracy, macro-F1, per-class metrics, confusion matrix, log-loss, Brier, ECE for both systems. (`pass`)
+  - run001_eval: runs/run-20260919-mdrg-001/eval/eval_summary.json
+  - run002_eval: runs/run-20260919-mdrg-002/eval/eval_summary.json
+- [x] **OBS-001** — Reconcile expected/completed rows, unique ids, events and traces in a machine-readable artifact; OTel JSONL used when Langfuse unavailable. (`pass`)
+  - run001_reconciliation: runs/run-20260919-mdrg-001/observability_reconciliation.json
+  - run002_reconciliation: runs/run-20260919-mdrg-002/observability_reconciliation.json
+- [x] **ITER-001** — Error analysis on held-out test + one controlled iteration (single documented variable change). (`pass`)
+  - error_analysis: runs/run-20260919-mdrg-002/error_analysis.json
+  - run002_provenance: runs/run-20260919-mdrg-002/run.json
+  - checkpoint: checkpoints/0005-controlled-iteration-conclusion.md
+  - conclusion: conclusion.md

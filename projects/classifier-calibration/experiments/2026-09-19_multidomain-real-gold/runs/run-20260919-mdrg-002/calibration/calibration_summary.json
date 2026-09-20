@@ -1,0 +1,73 @@
+{
+  "artifact_paths_gitignored": [
+    "models/",
+    "runs/**/preds/",
+    "runs/**/teacher/"
+  ],
+  "cal001_teacher_temperature": {
+    "n": 312,
+    "note": "logprobs at temp 0 used as logits; T fit by golden-section NLL on calibration gold only",
+    "post": {
+      "accuracy": 0.891026,
+      "brier": 0.181579,
+      "ece": 0.033201,
+      "log_loss": 0.366492
+    },
+    "pre": {
+      "accuracy": 0.891026,
+      "brier": 0.187018,
+      "ece": 0.06107,
+      "log_loss": 0.429734
+    },
+    "split": "calibration",
+    "teacher_vs_source_membership_agreement_cal_pre": 0.891026,
+    "temperature": 1.578456
+  },
+  "dataset_version": "seed-20260919",
+  "environment": {
+    "git_commit": "58ce6138edcdcc977f9ffcdd6f8fe16dd5952d00",
+    "model2vec": "0.8.2",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "sklearn": "1.9.0"
+  },
+  "frozen_contract_gate": "assert_contract() passed before any artifact was written; test split not loaded",
+  "pot001_potion_train": {
+    "classifier": {
+      "C": 50.0,
+      "max_iter": 1000,
+      "random_state": 20260919,
+      "type": "LogisticRegression"
+    },
+    "embedding_model": "minishlab/potion-base-32M",
+    "n_train_rows": 759,
+    "teacher_label_distribution_on_train": {
+      "finance": 149,
+      "legal": 172,
+      "science": 212,
+      "technology": 226
+    },
+    "train_agreement_teacher_vs_source_membership": 0.885375,
+    "train_target": "Qwen3.8-flash teacher labels (never real gold)"
+  },
+  "pot002_potion_temperature": {
+    "n": 312,
+    "post": {
+      "accuracy": 0.865385,
+      "brier": 0.213891,
+      "ece": 0.041129,
+      "log_loss": 0.418548
+    },
+    "pre": {
+      "accuracy": 0.865385,
+      "brier": 0.222309,
+      "ece": 0.078053,
+      "log_loss": 0.519856
+    },
+    "split": "calibration",
+    "temperature": 1.785227
+  },
+  "run_id": "run-20260919-mdrg-002",
+  "schema_version": "mdrg.calibration-potion.v1"
+}

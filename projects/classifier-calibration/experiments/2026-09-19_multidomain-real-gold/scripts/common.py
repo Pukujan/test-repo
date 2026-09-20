@@ -39,6 +39,18 @@ DOMAINS = ["legal", "finance", "science", "technology"]
 
 PROMPT_VERSION = "mdrg-letters-v1"
 
+PROMPT_SYSTEM_V2 = (
+    "You are a strict single-label topic classifier. Choose exactly one letter: "
+    "A=legal, B=finance, C=science, D=technology. "
+    "Science (C) covers natural-science and space-research discussion, including "
+    "scientific instruments, missions, physics, astronomy, and biology research; "
+    "technology (D) covers computing, software, networking, and consumer products. "
+    "If hardware or spacecraft equipment is discussed in a research context, prefer C. "
+    "Reply with exactly one capital letter (A, B, C, or D) and nothing else. "
+    "No explanation, no punctuation, no spaces, no newline."
+)
+PROMPT_VERSIONS = {PROMPT_VERSION: None, "mdrg-letters-v2": PROMPT_SYSTEM_V2}
+
 NAME_BLOCKLIST = [
     r"\bag[_ ]news\b", r"\b20[_ ]?news ?groups?\b", r"\bnewsgroups?\b",
     r"\bfiqa\b", r"\bphrasebank\b", r"\bleg[dl]ar\b", r"\bcasehold\b",
@@ -175,7 +187,7 @@ def load_split(split: str):
     return {"train": train_all, "calibration": cal_all, "test": test_all}[split]
 
 
-def prompt_pair(sample):
+def prompt_pair(sample, prompt_version: str | None = None):
     """Model-visible prompt. Gold/newsgroup/label fields are NEVER included."""
     system = (
         "You are a strict single-label topic classifier. Choose exactly one letter: "
@@ -183,8 +195,22 @@ def prompt_pair(sample):
         "Reply with exactly one capital letter (A, B, C, or D) and nothing else. "
         "No explanation, no punctuation, no spaces, no newline."
     )
+    if prompt_version and prompt_version in PROMPT_VERSIONS:
+        custom = PROMPT_VERSIONS[prompt_version]
+        if custom is not None:
+            system = custom
     user = f"Topic text:\n{sample['text']}\n\nAnswer:"
     return system, user
+
+
+def teacher_logit_vector(label_logprobs, missing_margin=10.0):
+    """4-letter logit vector A,B,C,D. Labels absent from top_logprobs (rare, when the
+    provider returns fewer tokens than classes) get observed-min minus missing_margin,
+    i.e. ~0 probability. Marked as partial coverage upstream; never a fabricated score."""
+    ls = ["A", "B", "C", "D"]
+    obs = [label_logprobs[l] for l in ls if l in label_logprobs]
+    floor = min(obs) - missing_margin if obs else -30.0
+    return [label_logprobs.get(l, floor) for l in ls]
 
 
 def assert_no_gold(messages, gold_domain: str) -> None:

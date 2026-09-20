@@ -1,0 +1,42 @@
+{
+  "consistent": true,
+  "events_total": 1845,
+  "run_id": "run-20260919-mdrg-001",
+  "schema_version": "mdrg.obs.v1",
+  "splits": {
+    "calibration": {
+      "error_rows": 0,
+      "events_logged": 312,
+      "expected_rows": 312,
+      "ids_unique": true,
+      "missing_ids": 0,
+      "ok_rows": 312,
+      "traces_logged": 312,
+      "unexpected_ids": 0,
+      "unique_ids_logged": 312
+    },
+    "test": {
+      "error_rows": 0,
+      "events_logged": 774,
+      "expected_rows": 774,
+      "ids_unique": true,
+      "missing_ids": 0,
+      "ok_rows": 774,
+      "traces_logged": 774,
+      "unexpected_ids": 0,
+      "unique_ids_logged": 774
+    },
+    "train": {
+      "error_rows": 0,
+      "events_logged": 759,
+      "expected_rows": 759,
+      "ids_unique": true,
+      "missing_ids": 0,
+      "ok_rows": 759,
+      "traces_logged": 759,
+      "unexpected_ids": 0,
+      "unique_ids_logged": 759
+    }
+  },
+  "traces_total": 1845
+}

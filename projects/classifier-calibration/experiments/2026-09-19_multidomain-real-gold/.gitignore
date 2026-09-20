@@ -5,6 +5,8 @@ local_data/
 gold_index/
 runs/**/gold/
 runs/**/teacher/
+runs/**/preds/
+models/
 *.parquet
 *.parquet.gz
 __pycache__/

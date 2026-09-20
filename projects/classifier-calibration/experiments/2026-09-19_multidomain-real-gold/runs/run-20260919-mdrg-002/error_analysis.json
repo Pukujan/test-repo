@@ -1,0 +1,78 @@
+{
+  "effect_on_test_same_frozen_ids": {
+    "potion": {
+      "accuracy": {
+        "v1": 0.673127,
+        "v2": 0.697674
+      },
+      "brier": {
+        "v1": 0.533137,
+        "v2": 0.50036
+      },
+      "ece": {
+        "v1": 0.135454,
+        "v2": 0.131189
+      },
+      "log_loss": {
+        "v1": 1.111549,
+        "v2": 0.999009
+      },
+      "macro_f1": {
+        "v1": 0.651485,
+        "v2": 0.672595
+      }
+    },
+    "potion_science_recall": {
+      "v1": 0.236842,
+      "v2": 0.273684
+    },
+    "qwen": {
+      "accuracy": {
+        "v1": 0.793282,
+        "v2": 0.832041
+      },
+      "brier": {
+        "v1": 0.329683,
+        "v2": 0.263625
+      },
+      "ece": {
+        "v1": 0.112927,
+        "v2": 0.076587
+      },
+      "log_loss": {
+        "v1": 0.659858,
+        "v2": 0.526404
+      },
+      "macro_f1": {
+        "v1": 0.774632,
+        "v2": 0.820541
+      }
+    },
+    "qwen_20ng_sci_source_accuracy": {
+      "v1": 0.394737,
+      "v2": 0.505263
+    },
+    "qwen_science_recall": {
+      "v1": 0.394737,
+      "v2": 0.505263
+    },
+    "qwen_science_to_technology_confusions": {
+      "v1": 91,
+      "v2": 64
+    }
+  },
+  "error_pattern_targeted": {
+    "description": "run-001: science collapsed into technology on held-out 20ng_sci (sci.space/sci.electronics read as tech)",
+    "potion_science_recall_v1": 0.236842,
+    "potion_science_to_technology_confusions_v1": 110,
+    "qwen_science_recall_v1": 0.394737,
+    "qwen_science_to_technology_confusions_v1": 91,
+    "qwen_technology_precision_v1": 0.642612
+  },
+  "parent_run_id": "run-20260919-mdrg-001",
+  "residual_pattern": "science remains weakest class for both systems; next single-variable candidate is train-domain composition (new dataset_version) or class-balanced Potion logits",
+  "run_id": "run-20260919-mdrg-002",
+  "schema_version": "mdrg.iter001.v1",
+  "single_controlled_variable": "teacher prompt mdrg-letters-v1 -> mdrg-letters-v2 (science/technology boundary rule); all else identical",
+  "test_split_note": "both systems fixed (train+calibration only) before any test call; identical frozen test ids across runs"
+}
