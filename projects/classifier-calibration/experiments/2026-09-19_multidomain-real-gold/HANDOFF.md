@@ -3,7 +3,7 @@
 > Generated from `experiment.json` + `state.json`. Do not edit directly.
 
 **Experiment:** `classifier-calibration-2026-09-19-multidomain-real-gold`  
-**Status:** `ready`
+**Status:** `running`
 
 ## Question
 
@@ -11,15 +11,15 @@ On a harder multi-domain benchmark where the primary test set is source-held-out
 
 ## Current focus
 
-Frozen multi-domain source-held-out data contract committed. The corpus was fetched (digest-pinned), cleaned, split, and audited clean (0 duplicates, 0 name/fingerprint/gold leaks on the surviving test set; 24 rows pruned by documented rules). No model inference has touched the test split.
+Stage 1 done: Qwen3.8-flash teacher labels on the frozen train split (759/759, 0 errors, full logprobs, echo verified, 86.82% source-membership agreement, teacher noise kept). Contract gate verified byte-identical before any call. Test split untouched.
 
 ## Last durable checkpoint
 
-`checkpoints/0002-frozen-contract-committed.md` — Source map, ontology, gold policy, dataset+split manifests frozen and audited; contract committed. Next: Qwen teacher labels (train only).
+`checkpoints/0003-teacher-train-labels.md` — Qwen teacher labels on train only; provenance + real logprobs; TEACH-001 pass. Next: teacher on calibration split, then Potion on teacher labels.
 
 ## Exact next action
 
-Produce Qwen3.8-flash (yolo-auto/qwen3.8-flash) teacher labels on the train split only, with provenance + real logprobs; real or unavailable, never substitute. Then calibrate Qwen (calibration split only), train Potion on teacher labels, calibrate Potion, evaluate both on the untouched real-gold held-out test, error analysis + one controlled iteration.
+Run qwen_teacher.py --split calibration (for CAL-001 temperature fit + teacher quality vs calibration gold), then train Potion on Qwen teacher labels only (POT-001), calibrate Potion on calibration split (POT-002), then teacher predictions on the untouched frozen test split, evaluate both on the same frozen test ids (EVAL-001/002), reconcile observability (OBS-001), error analysis + one controlled iteration (ITER-001).
 
 ## Blockers
 

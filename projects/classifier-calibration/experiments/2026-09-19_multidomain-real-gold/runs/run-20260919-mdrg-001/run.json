@@ -1,0 +1,28 @@
+{
+  "schema_version": "mdrg.run.v1",
+  "experiment_id": "classifier-calibration-2026-09-19-multidomain-real-gold",
+  "run_id": "run-20260919-mdrg-001",
+  "dataset_id": "multidomain-real-gold-v1",
+  "dataset_version": "seed-20260919",
+  "frozen_contract_gate": "scripts/common.py assert_contract(): reconstructed train/cal/test text digests + split id-sets byte-identical to inputs/dataset_manifest.json and inputs/split_*.json before any model call",
+  "teacher": {
+    "provider": "yolo-auto",
+    "model": "qwen3.8-flash",
+    "base_url": "https://yolo-auto.com/v1/chat/completions",
+    "generation": {"temperature": 0.0, "max_tokens": 1, "seed": 20260919, "logprobs": true,
+                   "top_logprobs": 20, "chat_template_kwargs": {"enable_thinking": false}},
+    "prompt_system": "You are a strict single-label topic classifier. Choose exactly one letter: A=legal, B=finance, C=science, D=technology. Reply with exactly one capital letter (A, B, C, or D) and nothing else. No explanation, no punctuation, no spaces, no newline.",
+    "prompt_user_template": "Topic text:\n{text}\n\nAnswer:",
+    "prompt_version": "mdrg-letters-v1",
+    "credential_env": "QWEN_API_KEY",
+    "substitution_policy": "none: real or unavailable only",
+    "leak_guard": "common.assert_no_gold per sample: no gold/label/newsgroup/category field or the gold domain string in model-visible messages"
+  },
+  "train_teacher_labels": {
+    "n_rows": 759, "n_ok": 759, "n_provider_errors": 0, "n_valid_output": 759,
+    "score_coverage_full": 759, "provider_echo_models": ["qwen3.8-flash"],
+    "teacher_vs_source_membership_agreement": 0.8682,
+    "note": "teacher labels are the training target for Potion; source membership never model-visible; teacher noise kept (no silent cleaning)"
+  },
+  "start_timestamp": "2026-09-19T09:40:00Z"
+}

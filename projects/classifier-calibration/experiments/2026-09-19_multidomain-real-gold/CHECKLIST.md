@@ -26,7 +26,11 @@
   - split_train: inputs/split_train.json
   - split_calibration: inputs/split_calibration.json
   - split_test: inputs/split_test.json
-- [ ] **TEACH-001** — Produce Qwen3.8-flash (yolo-auto) teacher labels on train split with provenance (provider echo, timestamp, latency, trace_id); real or unavailable, never substitute. (`pending`)
+- [x] **TEACH-001** — Produce Qwen3.8-flash (yolo-auto) teacher labels on train split with provenance (provider echo, timestamp, latency, trace_id); real or unavailable, never substitute. (`pass`)
+  - teacher_provenance: runs/run-20260919-mdrg-001/run.json
+  - teacher_events: runs/run-20260919-mdrg-001/events.jsonl
+  - teacher_traces: runs/run-20260919-mdrg-001/otel_traces.jsonl
+  - checkpoint: checkpoints/0003-teacher-train-labels.md
 - [ ] **TEACH-002** — Teacher predictions on calibration + test recorded with real logprobs; provider_errors counted not substituted. (`pending`)
 - [ ] **CAL-001** — Calibrate the Qwen teacher on the calibration split only; record pre/post log-loss/Brier/ECE. (`pending`)
 - [ ] **POT-001** — Train Potion/Model2Vec on Qwen teacher labels (NOT real gold); record exact model/config/env. (`pending`)

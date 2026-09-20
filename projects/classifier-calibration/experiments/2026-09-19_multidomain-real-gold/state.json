@@ -1,15 +1,15 @@
 {
   "schema_version": "lab.state.v1",
   "experiment_id": "classifier-calibration-2026-09-19-multidomain-real-gold",
-  "status": "ready",
-  "updated_at": "2026-09-19T07:15:00Z",
-  "current_focus": "Frozen multi-domain source-held-out data contract committed. The corpus was fetched (digest-pinned), cleaned, split, and audited clean (0 duplicates, 0 name/fingerprint/gold leaks on the surviving test set; 24 rows pruned by documented rules). No model inference has touched the test split.",
+  "status": "running",
+  "updated_at": "2026-09-19T09:45:00Z",
+  "current_focus": "Stage 1 done: Qwen3.8-flash teacher labels on the frozen train split (759/759, 0 errors, full logprobs, echo verified, 86.82% source-membership agreement, teacher noise kept). Contract gate verified byte-identical before any call. Test split untouched.",
   "last_checkpoint": {
-    "id": "cp-0002",
-    "path": "checkpoints/0002-frozen-contract-committed.md",
-    "summary": "Source map, ontology, gold policy, dataset+split manifests frozen and audited; contract committed. Next: Qwen teacher labels (train only)."
+    "id": "cp-0003",
+    "path": "checkpoints/0003-teacher-train-labels.md",
+    "summary": "Qwen teacher labels on train only; provenance + real logprobs; TEACH-001 pass. Next: teacher on calibration split, then Potion on teacher labels."
   },
-  "next_action": "Produce Qwen3.8-flash (yolo-auto/qwen3.8-flash) teacher labels on the train split only, with provenance + real logprobs; real or unavailable, never substitute. Then calibrate Qwen (calibration split only), train Potion on teacher labels, calibrate Potion, evaluate both on the untouched real-gold held-out test, error analysis + one controlled iteration.",
+  "next_action": "Run qwen_teacher.py --split calibration (for CAL-001 temperature fit + teacher quality vs calibration gold), then train Potion on Qwen teacher labels only (POT-001), calibrate Potion on calibration split (POT-002), then teacher predictions on the untouched frozen test split, evaluate both on the same frozen test ids (EVAL-001/002), reconcile observability (OBS-001), error analysis + one controlled iteration (ITER-001).",
   "blockers": [],
   "important_findings": [
     "Source-holdout is real: train/teacher/calibration sources (arxiv_cs, arxiv_stem, pubmed, fiqa, courtlistener, eurlex) share NO corpus with the four held-out test sources (20ng_comp, 20ng_sci, agnews_biz, legislation_uk). test_source_disjoint_from_train=true.",
