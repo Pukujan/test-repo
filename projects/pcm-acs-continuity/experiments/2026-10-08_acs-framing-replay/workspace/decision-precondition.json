@@ -1,0 +1,8 @@
+{
+  "schema": "pcm.decision-precondition.v1",
+  "repository": "Pukujan/test-repo",
+  "issue_number": 8,
+  "task_id": "LAB-0001",
+  "expected_issue_state": "open",
+  "expected_issue_updated_at": "2026-10-08T21:06:58Z"
+}

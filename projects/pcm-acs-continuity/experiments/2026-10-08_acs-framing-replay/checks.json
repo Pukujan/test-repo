@@ -1,0 +1,45 @@
+{
+  "schema_version": "lab.checks.v1",
+  "experiment_id": "pcm-acs-continuity-2026-10-08-acs-framing-replay",
+  "checks": [
+    {
+      "id": "SETUP-001",
+      "description": "Fixture, initial checkpoint, issue URL and precondition are durably recorded.",
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "bounded first checkpoint",
+          "path": "checkpoints/0001-initial-task-handoff.md"
+        },
+        {
+          "label": "frozen issue precondition",
+          "path": "workspace/decision-precondition.json"
+        }
+      ]
+    },
+    {
+      "id": "RUN-001",
+      "description": "A fresh local Claude session receives the fixed continuation task and produces an attributable output/artifact.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "LIVE-001",
+      "description": "Live issue authority and current decision are checked during resumption; status is recorded.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "ACTION-001",
+      "description": "Next action follows the governing issue rather than blindly reusing the dated checkpoint.",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "RECORD-001",
+      "description": "Actual agent output and outcome are captured as an experiment run with limitations, not inferred success.",
+      "status": "pending",
+      "evidence": []
+    }
+  ]
+}

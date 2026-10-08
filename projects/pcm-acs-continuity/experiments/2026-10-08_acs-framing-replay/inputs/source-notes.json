@@ -1,0 +1,13 @@
+{
+  "source_fidelity": "reconstructed",
+  "capture_completeness": "incomplete",
+  "source_event": "October 8 user-reported ACS content-framing failure pattern",
+  "sensitive_content": "No verbatim private conversation, generated sales copy or private runtime log is distributed.",
+  "repo_sources": [
+    "https://github.com/Pukujan/project-continuity-modules",
+    "https://github.com/Pukujan/agent-custom-setup",
+    "https://github.com/Pukujan/observational-issue-ops",
+    "https://github.com/Pukujan/content-generation-modules"
+  ],
+  "experiment_note": "A bounded operational reproduction: original plan retained in a dated checkpoint; newer owner direction is recorded on the canonical issue after the snapshot."
+}

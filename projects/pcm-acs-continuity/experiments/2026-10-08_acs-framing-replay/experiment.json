@@ -1,0 +1,33 @@
+{
+  "schema_version": "lab.experiment.v1",
+  "id": "pcm-acs-continuity-2026-10-08-acs-framing-replay",
+  "project": "pcm-acs-continuity",
+  "title": "Reconstruct an ACS product introduction continuation under live issue authority",
+  "created_at": "2026-10-08T21:06:58Z",
+  "question": "Can a Claude agent resume an existing agent-stack introduction task from dated workspace checkpoints and the owning GitHub issue, using a pinned PCM/ACS coordination check without inventing product claims?",
+  "upstream": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/Pukujan/project-continuity-modules",
+      "revision": "975bf1e495902deac4b72044eefb13c9b12b77e2",
+      "note": "Draft PCM decision preflight implementation, PR #242."
+    },
+    {
+      "kind": "git",
+      "repository": "https://github.com/Pukujan/agent-custom-setup",
+      "revision": "65d31d00a52e5afcc1a63ab7b406b6c5f7e7a5d0",
+      "note": "Draft opt-in ACS adapter, PR #86."
+    },
+    {
+      "kind": "issue",
+      "repository": "https://github.com/Pukujan/test-repo",
+      "number": 8,
+      "url": "https://github.com/Pukujan/test-repo/issues/8"
+    }
+  ],
+  "source_refs": [
+    "inputs/source-notes.json",
+    "workspace/PRODUCT_CONTEXT.md",
+    "workspace/decision-precondition.json"
+  ]
+}
