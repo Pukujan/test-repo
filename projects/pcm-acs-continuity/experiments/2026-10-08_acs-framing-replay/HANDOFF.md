@@ -38,4 +38,3 @@ Continue the initial introductory draft from workspace/CURRENT.md and issue #8, 
 3. Verify live upstream refs before mutation.
 4. Continue from the exact next action; do not redo passed work without evidence.
 5. Before handoff, append a checkpoint, update machine state/checks, run `python tools/lab.py sync`, then `python tools/lab.py validate`.
-
