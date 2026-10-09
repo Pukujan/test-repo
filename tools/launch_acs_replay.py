@@ -69,6 +69,20 @@ def main() -> int:
     parser.add_argument("--prepare-only", action="store_true", help="fetch and verify dependencies without running Claude")
     args = parser.parse_args()
 
+    # Claude Code may need to ask the human for tool and edit permissions.
+    # A detached/background process cannot answer them, and an exit code of 0
+    # does not prove that the task was allowed to run. Refuse *before* creating
+    # any run branch. --prepare-only intentionally remains headless-capable.
+    if not args.prepare_only and not (sys.stdin.isatty() and sys.stdout.isatty()):
+        print(
+            "SETUP FAILED: interactive terminal required for Claude permissions.\\n"
+            "Open PowerShell or Windows Terminal yourself (not a Claude background\\n"
+            "shell or redirected job), switch to the fixture branch, and rerun.\\n"
+            "No run branch was created. --prepare-only works headlessly.",
+            file=sys.stderr,
+        )
+        return 2
+
     if not shutil.which("git"):
         print("SETUP FAILED: git not found on PATH", file=sys.stderr)
         return 2
@@ -112,7 +126,9 @@ def main() -> int:
         print("Starting a fresh Claude session in:", exp)
         print("Local run branch:", run_branch)
         print("The agent does not receive a scoring rubric.")
-        print()
+        print("Keep this terminal open to approve read-only actions and review writes.")
+        print("Do not approve pushes, issue edits, or writes outside the experiment.")
+        print(flush=True)
         result = subprocess.run([claude, PROMPT], cwd=exp, env=env, check=False)
         print()
         print("CLAUDE EXIT CODE:", result.returncode)
