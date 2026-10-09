@@ -69,19 +69,9 @@ def main() -> int:
     parser.add_argument("--prepare-only", action="store_true", help="fetch and verify dependencies without running Claude")
     args = parser.parse_args()
 
-    # Claude Code may need to ask the human for tool and edit permissions.
-    # A detached/background process cannot answer them, and an exit code of 0
-    # does not prove that the task was allowed to run. Refuse *before* creating
-    # any run branch. --prepare-only intentionally remains headless-capable.
-    if not args.prepare_only and not (sys.stdin.isatty() and sys.stdout.isatty()):
-        print(
-            "SETUP FAILED: interactive terminal required for Claude permissions.\n"
-            "Open PowerShell or Windows Terminal yourself (not a Claude background\n"
-            "shell or redirected job), switch to the fixture branch, and rerun.\n"
-            "No run branch was created. --prepare-only works headlessly.",
-            file=sys.stderr,
-        )
-        return 2
+    # Run Claude Code in non-interactive print mode with the owner's
+    # explicitly requested bypassPermissions mode. No TTY is required;
+    # detached/agent-run shells are first-class here.
 
     if not shutil.which("git"):
         print("SETUP FAILED: git not found on PATH", file=sys.stderr)
@@ -126,13 +116,35 @@ def main() -> int:
         print("Starting a fresh Claude session in:", exp)
         print("Local run branch:", run_branch)
         print("The agent does not receive a scoring rubric.")
-        print("Keep this terminal open to approve read-only actions and review writes.")
-        print("Do not approve pushes, issue edits, or writes outside the experiment.")
+        print("Running headlessly with Claude Code permission bypass; no approval prompts.")
         print(flush=True)
-        result = subprocess.run([claude, PROMPT], cwd=exp, env=env, check=False)
+        # Raw model/tool traces may contain private machine data. Keep them OUT
+        # of this PUBLIC test repo; only the agent's ordinary workspace edits
+        # can be reviewed and committed to the run branch.
+        trace_dir = cache_dir() / "traces"
+        trace_dir.mkdir(parents=True, exist_ok=True)
+        trace_file = trace_dir / (stamp + ".jsonl")
+        argv = [claude, "-p", "--dangerously-skip-permissions",
+                "--output-format", "stream-json", "--verbose", PROMPT]
+        with trace_file.open("w", encoding="utf-8") as trace:
+            proc = subprocess.Popen(
+                argv, cwd=exp, env=env,
+                stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                text=True, encoding="utf-8", errors="replace", bufsize=1,
+            )
+            assert proc.stdout is not None
+            for line in proc.stdout:
+                trace.write(line)
+                trace.flush()
+                # Show one concise result after completion; don't display the
+                # raw stream, which can include full local file/tool content.
+            returncode = proc.wait()
+        report = exp / "workspace" / "resume-report.md"
         print()
-        print("CLAUDE EXIT CODE:", result.returncode)
+        print("CLAUDE EXIT CODE:", returncode)
+        print("AGENT REPORT:", "PRESENT" if report.is_file() else "MISSING")
         print("LOCAL RUN BRANCH:", run_branch)
+        print("TRACE (LOCAL ONLY; DON'T PUSH):", trace_file)
         print("LOCAL CHANGES:")
         print(command("git", "status", "--short", cwd=root) or "(none)")
         print()
@@ -141,7 +153,7 @@ def main() -> int:
         print('  git commit -m "Record ACS framing continuation run"')
         print("  git push -u origin HEAD")
         print("Share the pushed run branch URL. Do not edit the fixture or original checkpoint.")
-        return result.returncode
+        return returncode if returncode else (0 if report.is_file() else 4)
     except (RuntimeError, OSError, ValueError, KeyError) as exc:
         print("SETUP FAILED:", exc, file=sys.stderr)
         return 2
