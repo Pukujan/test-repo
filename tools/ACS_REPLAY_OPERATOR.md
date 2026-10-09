@@ -22,6 +22,27 @@ It rejects a moved source branch instead of silently installing newer code. It c
 
 No further prompt is needed: the launcher supplies the continuation request. Allow normal read-only commands; review any requested writes and keep them inside the named experiment. Do **not** enable permission skipping or permit the agent to push/change the owning issue.
 
+## Permission-gate prerequisite / retry after a blocked run
+
+**Launch from an actual interactive PowerShell or Windows Terminal window with a human present.** Do **not** ask another Claude instance to run the launcher through its background/non-TTY shell or redirect its output to a log. Nested Claude Code asks for ordinary tool permissions; if there is no operator to approve them, a completed process and exit code 0 can still mean **zero measured task actions**. The launcher now refuses noninteractive stdin/stdout *before creating a run branch*. Preparation-only is safe in automation:
+
+~~~powershell
+python tools/launch_acs_replay.py --prepare-only
+~~~
+
+After an inconclusive headless attempt that left a **clean** local run branch, retain it; do not delete or alter it as "evidence". In the same repository clone, open a fresh interactive terminal and run:
+
+~~~powershell
+git status --short
+git switch experiment/acs-framing-continuity-2026-10-08
+git pull --ff-only origin experiment/acs-framing-continuity-2026-10-08
+python tools/launch_acs_replay.py
+~~~
+
+Do not continue if the previous branch has uncommitted work—inspect it first. Do not use Claude permission-bypass flags or broad auto-accept settings. The human may approve read-only issue/preflight commands and review writes **only inside this experiment**. Decline any git push, issue edit, or changes elsewhere from the participant. The launcher itself does not request authorization to mutate GitHub.
+
+**Trial validity:** missing live-issue reads, missing preflight result, or no observable next action/report due to permissions = **INCONCLUSIVE**, not a model/PCM failure or success. Preserve the raw CLI transcript if available, but do not synthesize missing evidence.
+
 ## After Claude exits
 
 The launcher prints three Git commands to record your local experiment files on the run branch. Review the diff first, push your run branch, and send its URL back for assessment. A plain terminal transcript plus the changed files also works if you prefer not to push.
