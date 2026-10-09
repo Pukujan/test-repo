@@ -20,28 +20,25 @@ The launcher uses a cache **outside the working repository** for two exact pinne
 
 It rejects a moved source branch instead of silently installing newer code. It creates a separate local run branch, starts a fresh Claude session inside the experiment, and supplies the pinned PCM and ACS module paths through the environment. **It does not run the private grader or edit the owning GitHub issue.**
 
-No further prompt is needed: the launcher supplies the continuation request. Allow normal read-only commands; review any requested writes and keep them inside the named experiment. Do **not** enable permission skipping or permit the agent to push/change the owning issue.
+No further prompt is needed: the launcher supplies the continuation request and runs Claude Code in non-interactive print mode with the owner's explicitly requested `--dangerously-skip-permissions` setting. A TTY and per-command approval are not required. The fixture task itself remains bounded to this experiment and asks Claude not to push or modify the issue.
 
-## Permission-gate prerequisite / retry after a blocked run
+## Headless retry after the blocked attempt
 
-**Launch from an actual interactive PowerShell or Windows Terminal window with a human present.** Do **not** ask another Claude instance to run the launcher through its background/non-TTY shell or redirect its output to a log. Nested Claude Code asks for ordinary tool permissions; if there is no operator to approve them, a completed process and exit code 0 can still mean **zero measured task actions**. The launcher now refuses noninteractive stdin/stdout *before creating a run branch*. Preparation-only is safe in automation:
+The earlier nested Claude process was launched interactively within a background non-TTY shell. Its permission prompts were denied, so that attempt produced no gradeable behavior. This is a harness failure, not a PCM verdict.
 
-~~~powershell
-python tools/launch_acs_replay.py --prepare-only
-~~~
+The updated launcher uses `claude -p --dangerously-skip-permissions --output-format stream-json --verbose` and writes its raw trace **outside the public repository**, under the user's cache directory. The raw trace is not meant to be committed. Only commit the bounded experiment artifacts after reviewing them.
 
-After an inconclusive headless attempt that left a **clean** local run branch, retain it; do not delete or alter it as "evidence". In the same repository clone, open a fresh interactive terminal and run:
+From the existing checkout, if it is clean:
 
 ~~~powershell
-git status --short
 git switch experiment/acs-framing-continuity-2026-10-08
 git pull --ff-only origin experiment/acs-framing-continuity-2026-10-08
 python tools/launch_acs_replay.py
 ~~~
 
-Do not continue if the previous branch has uncommitted work—inspect it first. Do not use Claude permission-bypass flags or broad auto-accept settings. The human may approve read-only issue/preflight commands and review writes **only inside this experiment**. Decline any git push, issue edit, or changes elsewhere from the participant. The launcher itself does not request authorization to mutate GitHub.
+This can be invoked by another local Claude agent in its ordinary shell; if that outer agent is subject to its own execution restrictions, this script does not override them.
 
-**Trial validity:** missing live-issue reads, missing preflight result, or no observable next action/report due to permissions = **INCONCLUSIVE**, not a model/PCM failure or success. Preserve the raw CLI transcript if available, but do not synthesize missing evidence.
+**Trial validity:** no live-issue read, no preflight result and no observable next action or report is INCONCLUSIVE. The launcher returns nonzero if the expected report is missing, even if Claude itself exits zero.
 
 ## After Claude exits
 
