@@ -20,26 +20,74 @@
     {
       "id": "RUN-001",
       "description": "A fresh local Claude session receives the fixed continuation task and produces an attributable output/artifact.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "participant run record",
+          "path": "runs/run-20261009-acs-framing-direct-024548/run.json"
+        },
+        {
+          "label": "participant report",
+          "path": "workspace/resume-report.md"
+        }
+      ]
     },
     {
       "id": "LIVE-001",
       "description": "Live issue authority and current decision are checked during resumption; status is recorded.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "participant issue snapshot",
+          "path": "runs/run-20261009-acs-framing-direct-024548/live-issue-snapshot.txt"
+        },
+        {
+          "label": "preflight result",
+          "path": "runs/run-20261009-acs-framing-direct-024548/preflight-result.json"
+        },
+        {
+          "label": "live comment",
+          "ref": "https://github.com/Pukujan/test-repo/issues/8#issuecomment-6069146234"
+        }
+      ]
     },
     {
       "id": "ACTION-001",
       "description": "Next action follows the governing issue rather than blindly reusing the dated checkpoint.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "reconciled projection",
+          "path": "workspace/CURRENT-reconciled.md"
+        },
+        {
+          "label": "corrected draft",
+          "path": "workspace/deliverables/stack-introduction.md"
+        },
+        {
+          "label": "independent evaluation",
+          "path": "runs/run-20261009-acs-framing-direct-024548/evaluation.md"
+        }
+      ]
     },
     {
       "id": "RECORD-001",
       "description": "Actual agent output and outcome are captured as an experiment run with limitations, not inferred success.",
-      "status": "pending",
-      "evidence": []
+      "status": "pass",
+      "evidence": [
+        {
+          "label": "run record",
+          "path": "runs/run-20261009-acs-framing-direct-024548/run.json"
+        },
+        {
+          "label": "independent machine-readable verdict",
+          "path": "runs/run-20261009-acs-framing-direct-024548/evaluation.json"
+        },
+        {
+          "label": "limitations and conclusion",
+          "path": "conclusion.md"
+        }
+      ]
     }
   ]
 }
