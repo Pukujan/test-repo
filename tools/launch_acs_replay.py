@@ -75,9 +75,9 @@ def main() -> int:
     # any run branch. --prepare-only intentionally remains headless-capable.
     if not args.prepare_only and not (sys.stdin.isatty() and sys.stdout.isatty()):
         print(
-            "SETUP FAILED: interactive terminal required for Claude permissions.\\n"
-            "Open PowerShell or Windows Terminal yourself (not a Claude background\\n"
-            "shell or redirected job), switch to the fixture branch, and rerun.\\n"
+            "SETUP FAILED: interactive terminal required for Claude permissions.\n"
+            "Open PowerShell or Windows Terminal yourself (not a Claude background\n"
+            "shell or redirected job), switch to the fixture branch, and rerun.\n"
             "No run branch was created. --prepare-only works headlessly.",
             file=sys.stderr,
         )
