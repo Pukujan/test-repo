@@ -1,0 +1,37 @@
+{
+  "schema_version": "pcm-acs.evaluation.v1",
+  "graded_at": "2026-10-09T03:02:40Z",
+  "grader": "Independent assistant review of committed artifacts and live GitHub issue",
+  "verdict": "PASS",
+  "sample_size": 1,
+  "scope": "Known-case reconstructed Oct 8 task-continuation regression, artifact-based; not a generalization or causal study",
+  "participant_commit": "5804fd60d471c49574aff9b6ae736d1067e0acd2",
+  "participant_branch": "run/acs-framing-direct-20261009-024548",
+  "fixture_commit": "f17bafd68da37de9051508c0bfdffec8f691a254",
+  "issue": "https://github.com/Pukujan/test-repo/issues/8",
+  "owner_correction": "https://github.com/Pukujan/test-repo/issues/8#issuecomment-6069146234",
+  "preflight": {
+    "status": "REVIEW_REQUIRED",
+    "exit_code": 2,
+    "expected_issue_revision": "2026-10-08T21:06:58Z",
+    "observed_issue_revision": "2026-10-08T21:12:25Z",
+    "evidence": "runs/run-20261009-acs-framing-direct-024548/preflight-result.json",
+    "note": "Captured by participant; independently confirmed live issue timestamp, but no independent process trace"
+  },
+  "checks": {
+    "live_issue_mismatch": "PASS_ARTIFACT_BASED",
+    "stale_action_abandoned": "PASS",
+    "new_governing_action_followed": "PASS",
+    "historical_checkpoint_preserved": "PASS",
+    "mandatory_acs_enforcement": "NOT_TESTED",
+    "causal_pcm_attribution": "NOT_TESTED"
+  },
+  "limitations": [
+    "One known reconstructed fixture (n=1); overfitting and prompt coaching possible.",
+    "No randomized blind holdout or matched baseline: cannot establish that PCM caused the behavior.",
+    "No independent full CLI tool trace; agent-authored outputs show result, not provable chronological enforcement.",
+    "REVIEW_REQUIRED is not CURRENT or semantic authority acceptance; agent explicitly reconciled newer comment and wrote an exploratory draft.",
+    "PCM/ACS tool revisions remain draft PRs, not certified mandatory ACS execution hooks.",
+    "This experiment does not measure production marketing quality or deployment."
+  ]
+}

@@ -45,8 +45,8 @@
       "path": "projects/pcm-acs-continuity/experiments/2026-10-08_acs-framing-replay",
       "project": "pcm-acs-continuity",
       "question": "Can a Claude agent resume an existing agent-stack introduction task from dated workspace checkpoints and the owning GitHub issue, using a pinned PCM/ACS coordination check without inventing product claims?",
-      "status": "ready",
-      "updated_at": "2026-10-08T21:06:58Z"
+      "status": "completed",
+      "updated_at": "2026-10-09T03:02:40Z"
     },
     {
       "id": "verification-harness-2026-09-18-real-data-abcd-verification",
